@@ -8,20 +8,22 @@ Investigating the effect of pyrolysis temperature and ramp rate on electrochemic
 ## Sample Naming Convention
 
 ```
-MMB1 - A10
-│       │└─ Temperature code: digit × 100 = pyrolysis temp in °C
-│       └── Series (A = hard carbon temperature series)
-└────────── Material/batch series (MMB1)
+MMB1_10A
+│    │ └── Series letter: "A" = first synthesis run
+│    └──── Temperature code: temp(°C) ÷ 100
+└───────── Material: MMB1 = BioNa standard biochar
 ```
 
+Ramp rate variants (1200 °C only) append `-xC/min`; use `-xCrm` for path-safe filenames.  
 See `Samples/Sample_Nomenclature.md` for the full matrix.
 
 ## Pyrolysis Conditions
 
-- **Temperatures:** 600, 800, 1000, 1200 °C
-- **Ramp rates:** 600/800/1000 °C → 3 °C/min only; 1200 °C → 1, 3, 10 °C/min
-- **Ramp rate naming suffix** (1200 °C only): `-xCrm` e.g. `MMB1-A12-10Crm` (no `/` for path safety)
-- **Total samples: 6**
+- **Temperatures:** 600, 800, 1000, 1200 °C (other temps exist in lab but out of scope)
+- **Atmosphere:** N2 (50%)
+- **Standard ramp:** 180 °C/h (3 °C/min); 1200 °C also run at 60 °C/h (1°C/min) and 600 °C/h (10°C/min)
+- **Hold time:** 2 h
+- **Total samples: 6** (5 completed, 1 pending — MMB1_12A_10Crm)
 
 ## Standard Processes
 
@@ -32,9 +34,10 @@ See `Samples/Sample_Nomenclature.md` for the full matrix.
 
 ```
 BioNa_Special_Course/
-├── Experimental_Data/   # Raw data per sample/experiment
-├── Formal_Docs/         # Reports, thesis chapters
-├── Literature_Review/   # Papers and summaries
-├── Processes/           # Standard operating procedures
-└── Samples/             # Sample naming, matrix, and status tracking
+├── Experimental_Data/   # Raw data per sample/experiment (gitignored — OneDrive)
+├── Formal_Docs/         # Reports, supervisor updates, thesis chapters
+├── Instruments/         # Equipment names and specs
+├── Literature_Review/   # Papers (PDFs gitignored) and reading log
+├── Processes/           # Standard operating procedures and failure logs
+└── Samples/             # Sample naming, pyrolysis matrix, and status tracking
 ```

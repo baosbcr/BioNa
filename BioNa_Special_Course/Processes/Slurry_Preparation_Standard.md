@@ -47,7 +47,8 @@ All Thinky steps: **2000 rpm, 10 min**
 
 ---
 
-## Pre-Calendering Check
+## Pre-Slurry: Grinding
 
-Verify particle size is within acceptable range before proceeding to calendering.  
-See `Processes/Calendering_Notes.md` for gap/temperature settings and known failure modes.
+Hard carbon powder must be ground to a fine particle size before slurry preparation.  
+Insufficient grinding → particle size too large → calendering failure.  
+See `Processes/Calendering_Notes.md` for failure log and calendering settings.

@@ -19,7 +19,8 @@
 - Particle size too large, and/or
 - Calendering gap (0.04 mm) too small relative to particle size
 
-**Action taken:** Slurry to be remade. Particle size must be verified before calendering.  
+**Action taken:** Slurry to be remade. Powder must be ground before slurry prep (now confirmed done for all samples).  
+**Material risk:** MMB1_10A powder supply may be limited after this failed attempt — weigh remaining powder before committing to a new slurry batch.  
 See `Samples/Sample_Nomenclature.md` for updated A10 status.
 
 ---

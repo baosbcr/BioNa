@@ -39,6 +39,9 @@
 
 | Parameter | Value |
 |---|---|
-| Model | TBD |
-| Atmosphere | TBD (more info to follow) |
-| Used for | Hard carbon pyrolysis (600–1200 °C) |
+| Model | TBD (located in Furnace Lab) |
+| Atmosphere | N2 (50%) |
+| Standard ramp | 180 °C/h (3 °C/min) |
+| Hold time | 2 h |
+| Temperature range used | 600–1300 °C |
+| Used for | Hard carbon pyrolysis |
