@@ -30,11 +30,12 @@ MMB1_10A - 1C/min
 
 | Sample ID | Date | By | Temp (°C) | Ramp (°C/h) | Mass in (g) | Mass out (g) | Yield (%) | Coin Cell | XRD | XRF | N2-BET | Raman |
 |---|---|---|---|---|---|---|---|---|---|---|---|---|
-| MMB1_6A | 26-05-2026 | NS | 600 | 180 | 10.0015 | 6.8485 | 68.47% | NOT DONE | DONE | — | — | — |
-| MMB1_8A | 27-05-2026 | JM+NS | 800 | 180 | 10.0002 | 6.5844 | 65.84% | NOT DONE | DONE | — | — | — |
-| MMB1_10A | 28-05-2026 | JM+NS | 1000 | 180 | 10.0095 | 6.3498 | 63.43% | NOT DONE | DONE | — | — | — |
-| MMB1_12A | 01-06-2026 | JM+NS | 1200 | 180 | 10.0062 | 6.2284 | 62.24% | NOT DONE | DONE | — | — | — |
-| MMB1_12A_1Crm | 29-06-2026 | NS | 1200 | 60 | 10.0015 | 6.3281 | 63.27% | — | DONE | — | — | — |
+| MMB1A (base biochar) | — | — | — | — | — | — | — | — | — | — | — | DONE |
+| MMB1_6A | 26-05-2026 | NS | 600 | 180 | 10.0015 | 6.8485 | 68.47% | NOT DONE | DONE | — | — | DONE |
+| MMB1_8A | 27-05-2026 | JM+NS | 800 | 180 | 10.0002 | 6.5844 | 65.84% | NOT DONE | DONE | — | — | DONE |
+| MMB1_10A | 28-05-2026 | JM+NS | 1000 | 180 | 10.0095 | 6.3498 | 63.43% | NOT DONE | DONE | — | — | DONE |
+| MMB1_12A | 01-06-2026 | JM+NS | 1200 | 180 | 10.0062 | 6.2284 | 62.24% | NOT DONE | DONE | — | — | DONE |
+| MMB1_12A_1Crm | 29-06-2026 | NS | 1200 | 60 | 10.0015 | 6.3281 | 63.27% | — | DONE | — | — | DONE |
 | MMB1_12A_10Crm | xx-06-2026 | JM+NS | 1200 | 600 | — | — | — | — | — | — | — | — |
 
 > MMB1_12A_10Crm: **NOT DONE** — pyrolysis pending as of 2026-06-16.
