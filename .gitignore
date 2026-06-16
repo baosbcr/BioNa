@@ -12,9 +12,11 @@ __pycache__/
 # Jupyter
 .ipynb_checkpoints/
 
-# Large data files (track selectively)
-*.raw
-*.dat
+# Experimental data — managed via OneDrive, not git
+BioNa_Special_Course/Experimental_Data/*
+!BioNa_Special_Course/Experimental_Data/.gitkeep
+BioNa_Special_Course/Processes/*
+!BioNa_Special_Course/Processes/.gitkeep
 
 # LaTeX build artifacts
 *.aux
