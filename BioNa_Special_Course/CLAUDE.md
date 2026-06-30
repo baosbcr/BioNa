@@ -30,12 +30,24 @@ See `Samples/Sample_Nomenclature.md` for the full matrix.
 - **Slurry preparation:** `Processes/Slurry_Preparation_Standard.md`
   - Thinky Mixer ARE-250, aqueous CMC/SBR binder system, C45 conductive carbon
 
+## Characterization
+
+- **Raman:** `Processes/RamanSesh.md` (calibration: Si reference @ 520.5 cm⁻¹, WiRE 4.4).
+  - Standard acquisition: 532 nm green laser, 5% power, 60 s × 4 accumulations, cosmic-ray
+    removal ON, static mode (D/G bands ~1350/1580 cm⁻¹).
+  - Raw `.txt` spectra (tab-separated `#Wave  #Intensity`): `Experimental_Data/Raman/`,
+    named `<SampleID>_<accumTime>-<nAccum>-LP<power%>.txt` (e.g. `MMB1_8A_60s-4Ac-LP5.txt`).
+    Full file→sample mapping and provenance in `Processes/RamanSesh.md`.
+
 ## Directory Structure
 
 ```
 BioNa_Special_Course/
 ├── Experimental_Data/   # Raw data per sample/experiment (gitignored — OneDrive)
+│                        #   └── Raman/  raw .txt spectra
 ├── Formal_Docs/         # Reports, supervisor updates, thesis chapters
+├── images/              # Lab photos by process step (Pyrolysis, Raman, XRD,
+│                        #   Electrode_Calendering, Sample_Prep); see images/README.md
 ├── Instruments/         # Equipment names and specs
 ├── Literature_Review/   # Papers (PDFs gitignored) and reading log
 ├── Processes/           # Standard operating procedures and failure logs
