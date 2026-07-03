@@ -61,9 +61,11 @@ Coated as **two sheets**:
 
 ---
 
-## Thickness (total = coating + substrate)
+## Thickness — as-coated (total = coating + substrate)
 
-> All readings include the carbon-coated foil substrate (~0.016–0.017 mm). Table-top micrometer.
+> Measured on the **coated, not-yet-calendered** electrode — **calendering still pending** for this
+> sample. Readings include the carbon-coated foil substrate (~0.016–0.017 mm). Table-top micrometer.
+> *(Raw note says "calendared" — a habitual slip for "coated"; see `_raw/README.md`.)*
 > ⚠️ These readings are **~10× thinner** than 6A/10A (~0.02 mm total → only ~5 µm coating). See observations.
 
 **Coating #1**

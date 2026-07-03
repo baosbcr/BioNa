@@ -41,9 +41,11 @@ All Thinky steps at standard settings (2000 rpm, 10 min).
 
 ---
 
-## Thickness (total = coating + substrate)
+## Thickness — as-coated (total = coating + substrate)
 
-> All readings include the carbon-coated foil substrate (~0.016–0.017 mm). Table-top micrometer.
+> Measured on the **coated, not-yet-calendered** electrode — **calendering still pending** for this
+> sample. Readings include the carbon-coated foil substrate (~0.016–0.017 mm). Table-top micrometer.
+> *(Raw note says "calendared" — a habitual slip for "coated"; see `_raw/README.md`.)*
 
 | Location | Thickness (mm) |
 |---|---|

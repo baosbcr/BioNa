@@ -16,3 +16,7 @@ raw record intact.
 Known slips already resolved in the cleaned logs:
 - "200mL" pipette → **200 µL** (weight-confirmed: 0.195 g).
 - 10A active material written "MMB1-6A" → **MMB1_10A** (copy-paste carryover).
+- **"calendared" → "coated".** Habitual slip: in these notes "calendared" almost always means
+  *coated*. Only the destroyed sample was ever actually calendered (see `../../Calendering_Notes.md`);
+  6A / 8A / 10A here are coated and **still awaiting calendering**. So the thickness readings are
+  **as-coated**, not post-calendering.
