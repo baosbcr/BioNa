@@ -1,3 +1,4 @@
+
 # Standard Slurry Preparation — Hard Carbon Anode
 
 **Equipment:** Thinky Mixer ARE-250
@@ -12,7 +13,7 @@
 | Hard Carbon | Active material | 3.64 | ~93.1% |
 | Carbon Black C45 | Conductive additive | 0.167 | ~4.3% |
 | CMC | Binder | 0.1 | ~2.6% |
-| SBR | Binder | 5 drops (**weigh each batch**) | TBD |
+| SBR | Binder | 200 µL ≈ 0.195 g (**weigh each batch**) | TBD |
 
 > Total dry mass (excl. SBR): ~3.91 g
 
@@ -33,8 +34,11 @@ All Thinky steps: **2000 rpm, 10 min**
 | 7 | Mix — 2000 rpm, 10 min |
 | 8 | Add **3.64 g hard carbon** |
 | 9 | Mix — 2000 rpm, 10 min |
-| 10 | Add **SBR (5 drops — record mass)** |
+| 10 | **Shake SBR before use.** Dispense **200 µL** with a calibrated pipette (≈0.195 g) — **record mass each batch** |
 | 11 | Mix — 2000 rpm, 10 min |
+
+> **SBR dosing:** switched from "5 drops" (imprecise) to a **200 µL calibrated pipette** for rigour.
+> Weight-confirmed: 200 µL ≈ 0.195 g (SBR latex ≈ 0.98 g/mL). See `Processes/Electrode_Prep_Logs/MMB1_8A_Electrode_Prep.md`.
 
 ---
 
