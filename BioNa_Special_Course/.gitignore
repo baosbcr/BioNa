@@ -1,0 +1,16 @@
+# --- Secrets: never commit (repo pushes to GitHub) ---
+SzymonWebApp/*
+!SzymonWebApp/README.md
+
+# --- Large / synced data (per CLAUDE.md: OneDrive) ---
+Experimental_Data/
+!Experimental_Data/.gitkeep
+
+# --- Literature PDFs (per CLAUDE.md) ---
+Literature_Review/**/*.pdf
+
+# --- OS / editor cruft ---
+.DS_Store
+Thumbs.db
+__MACOSX/
+*.tmp

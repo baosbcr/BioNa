@@ -33,6 +33,58 @@
 | Gap (current) | 0.04 mm |
 | Used for | Electrode densification |
 
+> Standard compression target (fixed ratio vs fixed final thickness) still to be decided —
+> see `Biona_Academy/Open_Questions.md`.
+
+---
+
+## Coating Table / Film Applicator
+
+| Parameter | Value |
+|---|---|
+| Model | TBD |
+| Blade speed | TBD (observed critical — to standardise) |
+| Used for | Doctor-blade coating of slurry onto foil |
+
+> See `Biona_Academy/Open_Questions.md` (doctor blade / coating table TODOs).
+
+---
+
+## Doctor Blade
+
+| Parameter | Value |
+|---|---|
+| Model | TBD |
+| Gap used | 100 µm |
+| Tape | None (tape vs no-tape to be tested) |
+| Used for | Defining wet coating thickness |
+
+---
+
+## Table-Top Micrometer
+
+| Parameter | Value |
+|---|---|
+| Model | TBD |
+| Used for | Coating / foil thickness measurement |
+| Substrate baseline | Carbon-coated Al foil ≈ 0.016–0.017 mm |
+| Uncertainty | TBD |
+
+> All reported coating thicknesses are **total** (coating + substrate). See
+> `Biona_Academy/Open_Questions.md`.
+
+---
+
+## Szymon Web App (data processing)
+
+| Parameter | Value |
+|---|---|
+| Host | biona.energy / charts.biona.energy (client-cert auth) |
+| Input format | `.mbr` (not raw `.txt`/xy) |
+| Used for | Raman / XRD background removal + auto key metrics |
+
+> See `Processes/Data_Processing_SzymonWebApp.md`. Credentials in `SzymonWebApp/` (git-ignored).
+
 ---
 
 ## Pyrolysis Furnace

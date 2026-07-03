@@ -9,6 +9,16 @@
 
 ---
 
+## Thickness measurement
+
+- Measured with the table-top micrometer; all reported values are **total** (coating +
+  carbon-coated foil substrate, ~0.016–0.017 mm).
+- Per-batch readings live in `Processes/Electrode_Prep_Logs/`.
+- **Open:** standardise the calendering target (fixed compression ratio vs fixed final thickness)
+  and quantify micrometer uncertainty — see `Biona_Academy/Open_Questions.md`.
+
+---
+
 ## Failure Log
 
 ### 2026-06-16 — MMB1-A10 (first slurry attempt)
