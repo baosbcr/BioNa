@@ -28,12 +28,14 @@ All Thinky steps at standard settings (2000 rpm, 10 min).
   Method used: seal container → tare → add water → re-measure with lid → record the increase.
   Evaporative losses are **not** subtracted.
 - **SBR dosing — three figures, don't conflate them:**
-  - **Old burner pipette:** 5 drops measured on the scale = **0.1228 g** (a real bench measurement of
-    per-drop loading, ≈0.025 g/drop). This came out too low → **+1 drop** added.
-  - **~0.2 g/drop:** supervisor's *experienced guess* at what a drop should weigh — not measured.
-  - **200 µL calibrated pipette:** measured at **0.195 g / 200 µL** — the rigorous method since adopted
-    as standard (see `Processes/Slurry_Preparation_Standard.md`). Its closeness to the 0.2 g guess is
-    coincidental.
+  - **Old burner pipette:** 5 drops weighed on the scale = **0.1228 g** (bench measurement of per-drop
+    loading, ≈0.025 g/drop). Too low → **+1 drop added, not weighed** (so the batch's true SBR mass is
+    unknown, ≈0.1228 g + one unmeasured drop).
+  - **~0.2 g/drop:** supervisor's off-hand estimate ("should be about 0.2 g") — not measured. It's what
+    prompted the move to a rigorous, repeatable method.
+  - **200 µL calibrated pipette:** weighed **once** at **0.195 g / 200 µL** — adopted as the standard
+    going forward (see `Processes/Slurry_Preparation_Standard.md`). Still to be re-measured several
+    times for a mean ± spread.
 
 ---
 

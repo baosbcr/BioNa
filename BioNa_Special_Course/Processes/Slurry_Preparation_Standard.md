@@ -38,7 +38,14 @@ All Thinky steps: **2000 rpm, 10 min**
 | 11 | Mix — 2000 rpm, 10 min |
 
 > **SBR dosing:** switched from "5 drops" (imprecise) to a **200 µL calibrated pipette** for rigour.
-> Weight-confirmed: 200 µL ≈ 0.195 g (SBR latex ≈ 0.98 g/mL). See `Processes/Electrode_Prep_Logs/MMB1_8A_Electrode_Prep.md`.
+> The 200 µL delivery has been weighed **only once** (0.195 g). **TODO: weigh it several times** to get
+> a mean ± spread before treating 0.195 g as the reference value.
+> See `Processes/Electrode_Prep_Logs/MMB1_8A_Electrode_Prep.md`.
+>
+> ⚠️ **Warm-slurry evaporation:** slurry exits the Thinky Mixer warm and loses water fast enough to
+> shift scale readings noticeably. The SBR (and other) masses recorded per batch are therefore
+> **biased low / noisy**. Weigh in a **sealed container** where possible (seal → tare → add → remeasure
+> with lid), and treat recorded masses as approximate. Quantifying this loss is a **TODO**.
 
 ---
 

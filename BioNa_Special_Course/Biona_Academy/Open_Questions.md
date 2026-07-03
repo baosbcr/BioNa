@@ -15,6 +15,13 @@ doc and remove it here.
 - **TODO:** quantify the **micrometer uncertainty** (instrument resolution + repeatability).
 - **Offer:** more coating measurements can be taken on request.
 
+## SBR dosing & weighing
+
+- **Re-measure the 200 µL pipette SBR loading** — currently weighed only once (0.195 g). Repeat
+  several times for a mean ± spread before treating 0.195 g as the reference.
+- **Quantify warm-slurry evaporation** — slurry exits the Thinky Mixer warm; water loss biases the
+  recorded SBR (and other) masses. Weigh sealed where possible; quantify the typical loss.
+
 ## Calendering standardisation
 
 - **Open decision:** define a target for calendering — either a fixed **compression ratio**, or a
