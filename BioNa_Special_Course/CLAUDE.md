@@ -21,9 +21,12 @@ See `Samples/Sample_Nomenclature.md` for the full matrix.
 
 - **Temperatures:** 600, 800, 1000, 1200 °C (other temps exist in lab but out of scope)
 - **Atmosphere:** N2 (50%)
-- **Standard ramp:** 180 °C/h (3 °C/min); 1200 °C also run at 60 °C/h (1°C/min) and 600 °C/h (10°C/min)
+- **Standard ramp:** 180 °C/h (3 °C/min); 1200 °C also run at 60 °C/h (1°C/min) and 120 °C/h (2°C/min)
+  - The 600 °C/h (10 °C/min) variant (**MMB1_12A_10Crm**) is **CANCELLED** — furnace cannot reach that
+    ramp rate. Replaced by **MMB1_12A_2Crm** (120 °C/h, 2 °C/min), already synthesised and handed to JCR;
+    XRD/Raman inbound from supervisor. Net effect: the 1200 °C ramp series is now 1/2/3 °C/min (no fast ramp).
 - **Hold time:** 2 h
-- **Total samples: 6** (5 completed, 1 pending — MMB1_12A_10Crm)
+- **Total samples: 6** (MMB1_12A_10Crm dropped, MMB1_12A_2Crm added in its place — see `Samples/Sample_Nomenclature.md`)
 
 ## Standard Processes
 

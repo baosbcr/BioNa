@@ -1,6 +1,7 @@
 # Electrode Prep Log — MMB1_10A
 
 **Sample:** MMB1_10A (1000 °C, 180 °C/h)
+**BioNa Exp #:** 43
 **Covers:** slurry → coating → drying → thickness
 **Standard reference:** `Processes/Slurry_Preparation_Standard.md`
 
