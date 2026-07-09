@@ -49,6 +49,40 @@ All Thinky steps: **2000 rpm, 10 min**
 
 ---
 
+## Technique Notes & Best Practices
+
+### CMC addition — disperse, don't dump
+**Spread the CMC evenly across the water surface; never let it sit as a clump.** Undispersed CMC is the
+main cause of agglomerates that survive many Thinky cycles — once a lump forms, its dry core is slow to
+wet and can persist through repeated mixing (2C: a single persistent agglomerate needed **4 × 5 min = +20 min**
+extra to break down). Sprinkling CMC across the water rather than dropping it in one spot is the key
+preventive step. Progressive **warming** during repeated mixing does help dissolution, but it's a remedy,
+not a substitute for good initial dispersion.
+
+### Weighing substances & the evaporation problem — weighing "boats"
+- **Water (solvent):** evaporates on the open scale even at ambient temperature, so the reading drifts down
+  while weighing. This is **acceptable** — the water is meant to dry off during the drying step anyway, and the
+  small evaporative loss has **negligible effect on slurry viscosity at coating time**. Record the **initial
+  (peak) reading** and do **not** subtract evaporation.
+- **SBR (and other retained components):** different story — SBR **stays in the electrode**, so a dosing/
+  evaporation error there shifts the final composition. Dose precisely (200 µL calibrated pipette) and treat
+  the recorded mass as approximate, not the water-style "peak reading."
+- **Why boats:** because evaporation makes in-situ weighing on the mixing container unreliable, solids are
+  weighed in **weighing boats** before addition.
+  - ⚠️ **Boat-retention caveat:** trace material clings to the boat (static + fine powder), so the mass actually
+    delivered is **slightly less than weighed**. No fix decided yet, but this loss is expected to be **roughly
+    deterministic/repeatable** — for a given material, static state and particle size, a similar trace fraction
+    stays behind each time, making it a **consistent (if unquantified) bias**, not random noise.
+  - **TODO:** quantify boat retention (weigh boat before/after transfer) if precision ever demands it.
+
+### Gloves & contamination — TODO: formalise a glove procedure
+White gloves are worn to **protect the sample**, but they visibly pick up carbon (C45 / hard carbon) — black
+dust is clearly transferred. Standard lab practice (**swap gloves frequently**) still applies here: change
+gloves **as often as practical** to avoid cross-contaminating samples, surfaces and instruments with carbon.
+**TODO:** write a proper glove / contamination-control procedure for electrode prep.
+
+---
+
 ## Drying Protocol
 
 | Stage | Temperature | Duration | Atmosphere |

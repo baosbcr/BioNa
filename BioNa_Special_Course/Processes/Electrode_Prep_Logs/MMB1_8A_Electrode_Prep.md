@@ -88,6 +88,43 @@ Coated as **two sheets**:
 | Edge 1 | 0.024 |
 | Edge 2 | 0.024 |
 
+### Remeasured 18-point grid (2026-07-08)
+
+18 points on **one sheet only** — the second sheet was not gridded as the readings were conclusively
+uniform. **6 lengthwise × 3 widthwise**. Lengthwise spacing **2.5 cm** from the top; widthwise = near
+each edge + centre of the ~6 cm-wide coating. Columns as recorded: **Left / Centre / Right**. Values in **mm**.
+
+| From top | Left | Centre | Right |
+|---|---|---|---|
+| 0 cm    | 0.022 | 0.022 | 0.021 |
+| 2.5 cm  | 0.022 | 0.023 | 0.022 |
+| 5 cm    | 0.022 | 0.022 | 0.022 |
+| 7.5 cm  | 0.021 | 0.022 | 0.022 |
+| 10 cm   | 0.022 | 0.021 | 0.022 |
+| 12.5 cm | 0.022 | 0.023 | 0.022 |
+
+**Summary:** mean 0.022 mm · min 0.021 · max 0.023 · range 0.002 mm (n = 18).
+Extremely uniform — coating is essentially at substrate thickness (~5–6 µm of active material).
+Heatmap: `images/Electrode_Calendering/MMB1_8A_thickness_heatmap.png`.
+
+---
+
+## Calendering (2026-07-08)
+
+**Both sheets, full — no cut** (sheet 1 gridded: n = 18, mean 0.022 mm, CV 2.5%; sheet 2 confirmed uniform, ungridded).
+
+**Target:** 10% compression (nominal).
+**Roll gap set: 0.020 mm** (total spacing), both sheets — 0.90 × 0.022 mm mean. **Done as recommended.**
+**Reasoning / caveats:**
+- Same 10%-of-total-mean convention as 6A/10A.
+- Coating is only ~5–6 µm over a ~16.5 µm incompressible substrate, so 10%-of-total (2 µm) is really ~35–40%
+  of the *active* layer; 10%-of-coating (~0.5 µm) is below micrometer resolution.
+- Given full spring-back on 10A/6A, expect **no measurable thickness change** — effectively a contact/kiss
+  pass; risk of embossing the foil if pressed harder.
+
+**Post-calender thickness:** not gridded — coating too thin (~5 µm) for a 10% change to be measurable, and
+exact points can't be relocated.
+
 ---
 
 ## Observations

@@ -48,6 +48,8 @@ All Thinky steps at standard settings (2000 rpm, 10 min).
 > sample. Readings include the carbon-coated foil substrate (~0.016–0.017 mm). Table-top micrometer.
 > *(Raw note says "calendared" — a habitual slip for "coated"; see `_raw/README.md`.)*
 
+### Preliminary readings (superseded by the 18-point grid below)
+
 | Location | Thickness (mm) |
 |---|---|
 | Top | 0.177 |
@@ -57,6 +59,41 @@ All Thinky steps at standard settings (2000 rpm, 10 min).
 | Random 1 | 0.132 |
 | Random 2 | 0.171 |
 | Random 3 | 0.161 |
+
+### Remeasured 18-point grid (2026-07-08)
+
+18 points per sheet: **6 lengthwise × 3 widthwise**. Lengthwise spacing **3 cm**, starting from the top
+of the ~180 mm usable coating; widthwise = near each edge + centre of the ~6 cm-wide coating.
+Columns as recorded: **Left / Centre / Right**. All values in **mm** (total = coating + substrate).
+
+| From top | Left | Centre | Right |
+|---|---|---|---|
+| 0 cm  | 0.128 | 0.160 | 0.201 |
+| 3 cm  | 0.208 | 0.246 | 0.206 |
+| 6 cm  | 0.150 | 0.181 | 0.190 |
+| 9 cm  | 0.130 | 0.209 | 0.198 |
+| 12 cm | 0.256 | 0.215 | 0.173 |
+| 15 cm | 0.214 | 0.178 | 0.273 |
+
+**Summary:** mean 0.195 mm · min 0.128 · max 0.273 · range 0.145 mm (n = 18).
+Scattered, no clear lengthwise gradient. Heatmap: `images/Electrode_Calendering/MMB1_6A_thickness_heatmap.png`.
+
+---
+
+## Calendering (2026-07-08)
+
+**Full sheet — no pre-calender cut** (n = 18, mean total 0.195 mm, range 0.128–0.273, CV 20%).
+
+**Target:** 10% compression.
+**Roll gap set: 0.175 mm** (total spacing) — 0.90 × 0.195 mm mean. **Done as recommended.**
+**Reasoning / caveats:**
+- Nominal 10%-of-mean gap, same basis as 10A.
+- 10A at its nominal gap achieved ~0% actual compression (full spring-back) — 6A likely behaves similarly; a
+  tighter gap and/or multiple passes would be needed to actually reach 10%.
+- Fixed gap over a high-variability sheet: thinnest cells (~0.128) pass untouched, thickest (~0.273) see ~36%.
+
+**Post-calender thickness:** not gridded — exact pre-calender points can't be relocated, so per-point deltas
+aren't meaningful (see 10A for the same limitation).
 
 ---
 

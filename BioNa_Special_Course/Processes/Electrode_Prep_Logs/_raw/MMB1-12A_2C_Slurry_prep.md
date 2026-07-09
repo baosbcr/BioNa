@@ -1,0 +1,13 @@
+4.9ml water (aim 4.9g / 4.9mL, pipete) | 4.591g initial, drifting down to 4.5884g and still falling - evaporation on the open scale even at ambient temp. not subtracted.
+0.10019g CMC added to thinky container (aim 0.100g)
+thinky at std settings (2000rpm, 10min)
+agglomerates after CMC mix? yes (if yes, extra mix time: 20 min @ 2000rpm (4*5min due to sussful finding of a persistent aglomerate noting its sie decreases with each extra mix ut the temperature of the mix is also increasing which probably aids in dissolution of cmc))
+0.16707g C45 added (aim 0.167g)
+thinky at std settings (2000rpm, 10min)
+2.5ml water added with pipete (aim 2.5g / 2.5mL) | Not measured, added (measured? ____g / not measured - evaporation)
+thinky at std settings (2000rpm, 10min)
+3.64361g MMB1_12A_2C hard carbon (aim 3.64g)
+thinky at std settings (2000rpm, 10min)
+200 microliters SBR added with pipete (aim ~0.195g / 200uL) | Not measured, added (measured? ____g / not measured - evaporation)
+thinky at std settings (2000rpm, 10min)
+coating: done 2 sheets, 100 micrometer doctor blade, tape? yes(est +35um if taped)
