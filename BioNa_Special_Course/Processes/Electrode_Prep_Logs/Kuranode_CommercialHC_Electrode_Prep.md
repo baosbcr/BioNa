@@ -3,7 +3,7 @@
 **Sample:** Kuranode — Kuraray **commercial** hard carbon (Na-ion benchmark)
 **BioNa Exp #:** 49 *(spun off from the aborted MMB1_12A_3C attempt #1, Exp #48 session)*
 **Coating date:** 2026-07-09
-**Covers:** slurry *(coating → drying → thickness → calendering pending)*
+**Covers:** slurry → coating → drying → thickness → calendering *(⚠️ delamination — see Calendering)*
 **Standard reference:** `Processes/Slurry_Preparation_Standard.md`
 **Raw notes:** `_raw/MMB1-12A_3C_attempt1-ABORTED-commercialHC_Slurry_prep.md`
 
@@ -75,19 +75,77 @@ All Thinky steps at standard settings (2000 rpm, 10 min). No agglomerates report
 
 ---
 
-## Thickness — as-coated
+## Thickness — as-coated (total = coating + substrate)
 
-_pending_
+> Measured 2026-07-14 after drying. Table-top micrometer (Mahr MarCator 1075 R). Readings include the
+> carbon-coated foil substrate (~0.016–0.017 mm). **One sheet**, gridded **6 lengthwise × 3 widthwise =
+> 18 points**, rows **3.3 cm apart** over **180 mm usable length**. Columns as recorded: **Left / Centre /
+> Right**. Values in **mm**.
+>
+> ⚠️ **Taped-blade run (+~35 µm):** subtract ~0.035 mm from the coating before cross-sample coating
+> comparisons (irrelevant to the calender gap). Substrate ~0.0165 mm separate.
+
+| From top | Left | Centre | Right |
+|---|---|---|---|
+| 0 cm    | 0.087 | 0.087 | 0.088 |
+| 3.3 cm  | 0.106 | 0.103 | 0.106 |
+| 6.6 cm  | 0.097 | 0.099 | 0.098 |
+| 9.9 cm  | 0.100 | 0.101 | 0.104 |
+| 13.2 cm | 0.097 | 0.101 | 0.095 |
+| 16.5 cm | 0.099 | 0.102 | 0.099 |
+
+**Summary:** **median 0.099** · mean 0.098 · std 0.0059 · **CV 6.0%** · min 0.087 · max 0.106 (n = 18).
+
+> **Reference-grade uniformity.** CV **6.0%** vs **22–37%** for the MMB1 biochar sheets (1C/2C/3C) — an order
+> of magnitude tighter. Thin, even coating; the only mild feature is the **top row (0.087–0.088)**, ~10 µm
+> below the body. Attributed to the **properly ground, small commercial-HC particle size** — the biochar
+> spikes are large-particle-under-gauge artefacts that simply aren't present here. Coating (median − substrate)
+> ≈ 0.083 mm.
 
 ---
 
-## Calendering
+## Calendering (2026-07-14)
 
-_pending_
+**Target:** 10% compression on the **median** total thickness (same basis as 1C/2C/3C).
+
+| Sheet | Median total | Roll gap set |
+|---|---|---|
+| 1 (only) | 0.099 mm | **0.09 mm** |
+
+Gap = 0.90 × 0.099 = 0.089 → **0.09 mm**. Well clear of the 0.04 mm regime that destroyed the original
+10A — no large-particle risk given the tight distribution.
+
+### Outcome — ⚠️ delamination (coating peeled off the foil)
+
+**Adhesion failure, not compression.** At **~20 point-like regions** the calender **peeled the coating clean
+off the carbon-coated foil — "band-aid" style — exposing bare current collector**. The remainder of the sheet
+looks intact. This is *not* the near-zero-compression spring-back seen on 10A/1C (where a thick coating
+rebounded); here a thin, even layer **failed at the coating–foil interface** under the nip.
+
+**Prime suspect: the off-standard SBR-first mix order.** This electrode's binder (SBR) was mixed into the
+CMC/C45/water base **before the hard carbon was present**, plus an extra drop after (see the OFF-STANDARD
+note above). The log flagged at prep time that this could leave the **binder poorly distributed over the
+hard-carbon surface → weak adhesion / calendering behaviour**. The band-aid peel-off is consistent with that
+risk materialising. Secondary contributors to weigh: possible roll tack/temperature and the very thin layer
+offering little cohesive reserve — but interfacial adhesion is the leading explanation.
+
+**Implications:**
+- Reinforces that this is a **qualitative "what happens" test, not a clean commercial-HC benchmark** — a
+  **controlled Kuranode build (standard SBR-last order)** is needed before blaming the material.
+- Areas with exposed foil are **unusable for coin-cell disks**; punch disks only from **intact regions**, and
+  record which grid zones are bare.
+
+**Post-calender thickness:** not gridded (points can't be relocated 1:1); the ~20 peel-off spots are visual /
+mapped qualitatively.
 
 ---
 
 ## Observations
 
-_pending — of particular interest here: does the commercial Kuranode + off-standard mix order coat/calender
-differently from the MMB1 biochar electrodes?_
+- **Coating/thickness:** Kuranode coated **exceptionally evenly** — CV 6.0% vs 22–37% for the MMB1 biochar
+  sheets. Confirms the small, properly-ground commercial-HC particle size eliminates the large-particle
+  thickness spikes seen across the biochar series.
+- **Calendering:** ⚠️ **coating delaminated / peeled off the foil at ~20 spots (band-aid effect)** — an
+  **adhesion failure**, most likely driven by the **off-standard SBR-first mix order** (binder distributed
+  without active material present). See Calendering section. Needs a controlled standard-order Kuranode build
+  to separate material vs process effects.

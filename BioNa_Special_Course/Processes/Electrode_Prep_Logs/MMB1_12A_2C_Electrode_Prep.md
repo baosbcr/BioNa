@@ -3,7 +3,7 @@
 **Sample:** MMB1_12A_2C (1200 °C, 120 °C/h = 2 °C/min ramp)
 **BioNa Exp #:** 47
 **Coating date:** 2026-07-09
-**Covers:** slurry *(coating → drying → thickness → calendering pending)*
+**Covers:** slurry → coating → drying → thickness *(calendering: gap recommended, execution pending)*
 **Standard reference:** `Processes/Slurry_Preparation_Standard.md`
 
 > Prepared in the same session as **MMB1_12A_3C** (2C mixed first). See
@@ -64,15 +64,78 @@ All Thinky steps at standard settings (2000 rpm, 10 min).
 
 ---
 
-## Thickness — as-coated
+## Thickness — as-coated (total = coating + substrate)
 
-_pending_
+> Measured 2026-07-14 after drying. Table-top micrometer (Mahr MarCator 1075 R). Readings include the
+> carbon-coated foil substrate (~0.016–0.017 mm). **Two sheets coated**, both gridded: **6 lengthwise ×
+> 3 widthwise = 18 points**, rows **3 cm apart** over **150 mm usable length**. Columns as recorded:
+> **Left / Right / Centre**. Values in **mm**.
+>
+> ⚠️ **Taped-blade run (+~35 µm):** coating applied with a taped blade (~135 µm effective), so the coating
+> layer is ~35 µm thicker than an untaped run. **Subtract ~0.035 mm** from the coating before comparing
+> against untaped 6A/8A/10A. Substrate ~0.0165 mm is separate. *(Tape is irrelevant to the calender gap —
+> see below.)*
+>
+> ⚠️ **Large-particle artefacts:** the high outliers (esp. sheet 2's 0.619, 0.417) are **large particles
+> under the gauge, not region-dependent coating variation** — same as 1C. **Median is the representative
+> thickness**, not mean/max.
+
+### Sheet 1 — 150 mm usable · 3 cm lengthwise spacing
+
+| From top | Left | Right | Centre |
+|---|---|---|---|
+| 0 cm  | 0.216 | 0.318 | 0.250 |
+| 3 cm  | 0.203 | 0.275 | 0.288 |
+| 6 cm  | 0.197 | 0.133 | 0.200 |
+| 9 cm  | 0.241 | 0.241 | 0.260 |
+| 12 cm | 0.197 | 0.316 | 0.282 |
+| 15 cm | 0.277 | 0.266 | 0.370 |
+
+**Summary:** **median 0.255** · mean 0.252 · std 0.056 · CV 22.2% · min 0.133 · max 0.370 (n = 18).
+
+### Sheet 2 — 150 mm usable · 3 cm lengthwise spacing
+
+| From top | Left | Right | Centre |
+|---|---|---|---|
+| 0 cm  | 0.125 | 0.284 | 0.221 |
+| 3 cm  | 0.328 | 0.316 | 0.190 |
+| 6 cm  | 0.417 | 0.231 | 0.311 |
+| 9 cm  | 0.619 | 0.322 | 0.369 |
+| 12 cm | 0.195 | 0.380 | 0.267 |
+| 15 cm | 0.363 | 0.356 | 0.223 |
+
+**Summary:** **median 0.314** · mean 0.307 · std 0.110 · CV 36.0% · min 0.125 · max 0.619 (n = 18).
+Much higher scatter than sheet 1 (CV 36% vs 22%); the thickest points (0.619, 0.417) sit on the **left
+edge**, consistent with particle-driven spikes rather than a uniform thick band.
+
+> **Representative thickness:** sheet 1 **median 0.255 mm**, sheet 2 **median 0.314 mm** total. Sheet 2 is
+> genuinely thicker (not just noisier). Coating (median − substrate) ≈ 0.239 / 0.298 mm; adjusted for the
+> ~35 µm blade tape, untaped-equivalent coating ≈ 0.20 / 0.26 mm.
 
 ---
 
 ## Calendering
 
-_pending_
+Recommended settings — **not yet executed** (gap set on **median** total thickness, 10% compression target,
+same basis as 1C; the large-particle spikes make the mean unrepresentative, esp. sheet 2).
+
+| Sheet | Median total | Roll gap set |
+|---|---|---|
+| 1 | 0.255 mm | **0.23 mm** |
+| 2 | 0.314 mm | **0.28 mm** |
+
+**Reasoning / caveats:**
+- Gap = 0.90 × median (0.2295 → **0.23 mm**; 0.2822 → **0.28 mm**).
+- **Blade tape (+35 µm) is irrelevant to the gap** — we compress the *measured* thickness; tape only matters
+  for cross-sample coating comparisons.
+- **Spring-back:** both 10A and 1C returned to ~0% permanent compression at their nominal 10% gap. Expect the
+  same here — a tighter gap and/or multiple stepped passes would be needed to actually reach 10%.
+- **Sheet 2 (CV 36%)** will calender less uniformly; scatter is particle-driven (left-edge spikes), not a
+  clean band, so the large agglomerates get crushed hardest at 0.28 mm. Consider a pre-calender cut only if a
+  visibly uneven band is present (as on 10A).
+
+**Post-calender thickness:** to be measured after calendering (not gridded 1:1 — exact points can't be
+relocated, as with 6A/8A/10A/1C).
 
 ---
 

@@ -3,7 +3,7 @@
 **Sample:** MMB1_12A_3C (1200 °C, 180 °C/h = 3 °C/min ramp — **standard ramp**; = base MMB1_12A)
 **BioNa Exp #:** 48
 **Coating date:** 2026-07-09
-**Covers:** slurry *(coating → drying → thickness → calendering pending)*
+**Covers:** slurry → coating → drying → thickness → calendering *(stamping next)*
 **Standard reference:** `Processes/Slurry_Preparation_Standard.md`
 
 > Prepared in the same session as **MMB1_12A_2C** (2C mixed first, then 3C). See
@@ -64,18 +64,62 @@ All Thinky steps at standard settings (2000 rpm, 10 min).
 
 ---
 
-## Thickness — as-coated
+## Thickness — as-coated (total = coating + substrate)
 
-_pending_
+> Measured 2026-07-14 after drying. Table-top micrometer (Mahr MarCator 1075 R). Readings include the
+> carbon-coated foil substrate (~0.016–0.017 mm). **One sheet**, gridded **6 lengthwise × 3 widthwise =
+> 18 points**, rows **3 cm apart** over **150 mm usable length**. Columns as recorded: **Left / Centre /
+> Right**. Values in **mm**.
+>
+> ⚠️ **Taped-blade run (+~35 µm):** subtract ~0.035 mm from the coating before cross-sample coating
+> comparisons (irrelevant to the calender gap). Substrate ~0.0165 mm separate.
+>
+> ⚠️ **Visible wave** ran across the **9 cm row** and happened to coincide with the measurement line — those
+> three readings (0.614 / 0.640 / 0.595) reflect real coating **waviness/topography**, not gauge artefacts.
+
+| From top | Left | Centre | Right |
+|---|---|---|---|
+| 0 cm  | 0.704 | 0.400 | 0.406 |
+| 3 cm  | 0.285 | 0.280 | 0.209 |
+| 6 cm  | 0.562 | 0.439 | 0.284 |
+| 9 cm  | 0.614 | 0.640 | 0.595 |
+| 12 cm | 0.455 | 0.472 | 0.509 |
+| 15 cm | 0.596 | 0.659 | 0.476 |
+
+**Summary:** **median 0.474** · mean 0.477 · std 0.146 · CV 30.7% · min 0.209 · max 0.704 (n = 18).
+
+> **Thickest coating in the series** — median 0.474 mm total vs ~0.25–0.31 for 1C/2C (same taped, standard-order
+> process). Coating (median − substrate) ≈ 0.458 mm; adjusted for the ~35 µm blade tape, untaped-equivalent
+> ≈ 0.42 mm. The high scatter (CV 31%) is a mix of the 9 cm wave and general heavy-coat non-uniformity.
 
 ---
 
-## Calendering
+## Calendering (2026-07-14)
 
-_pending_
+**Target:** 10% compression on the **median** total thickness (same basis as 1C/2C, and Kuranode).
+
+| Sheet | Median total | Roll gap set |
+|---|---|---|
+| 1 (only) | 0.474 mm | **0.43 mm** |
+
+Gap = 0.90 × 0.474 = 0.427 → **0.43 mm**.
+
+### Outcome — mostly spring-back, high spots took a set
+
+Sheet looks **mostly unaffected** — **near-full spring-back to ~0% permanent compression**, same tendency as
+10A and 1C. The **exceptions are the high spots** (incl. the 9 cm wave / proud regions), which **were flattened**
+where they exceeded the 0.43 mm gap. **No delamination** — the coating stayed well adhered (contrast Kuranode's
+band-aid peel-off; this is a standard-order biochar build). Consistent with the recurring lesson: to actually
+reach 10% on these biochar coatings, set the gap **tighter than 10%-of-median** and/or use **multiple stepped
+passes**.
+
+**Post-calender thickness:** not gridded (points can't be relocated 1:1); the flattened high spots are visual.
 
 ---
 
 ## Observations
 
-_pending_
+- **Thickest coating in the biochar series** (median 0.474 mm total) — a genuinely heavy layer, plus a
+  **visible wave** across the 9 cm row.
+- **Calendered well, held together** (no delamination), but **near-full spring-back** at the 0.43 mm gap —
+  only the high spots / wave took a permanent set. Same rebound tendency as 10A/1C.
