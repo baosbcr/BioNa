@@ -110,3 +110,32 @@ the *true* punch-to-punch spread is somewhat wider than 3.2%.
 
 > **8A is the outlier** — its ~18–25× lighter loading (from the ~5 µm coating anomaly) makes it hard to compare
 > on equal footing. 6A / 10A / 12A_1C form a consistent 7.5–10.8 mg/cm² hard-carbon band.
+
+---
+
+## Cell Assembly & Cycling
+
+**3 sodium half-cells assembled 2026-07-14** from 12A_1C disks — **the first labelled cells** (addresses the
+"label disks" recommendation above), so per-cell active mass is now known individually rather than as a set.
+
+Electrode (total disk) mass recorded at assembly, rounded to 0.1 mg. Active mass = (disk − 5.50 mg tare) × f,
+f = 0.8873. Area 1.2668 cm².
+
+| Cell | Disk mass (mg) | Coating (mg) | **Hard-carbon mass (mg)** | Coating load (mg/cm²) | Hard-C load (mg/cm²) | Status |
+|---|---|---|---|---|---|---|
+| CC19 | 20.2 | 14.70 | **13.043** | 11.604 | 10.296 | cycling |
+| CC20 | 19.6 | 14.10 | **12.511** | 11.130 | 9.876 | cycling |
+| CC21 | 20.0 | 14.50 | **12.866** | 11.446 | 10.156 | cycling |
+
+**Use the per-cell hard-carbon mass** (13.043 / 12.511 / 12.866 mg) to normalise each cell's gravimetric
+capacity (mAh/g) — no longer the population value.
+
+> ⚠️ **Traceability notes:**
+> - Masses are **as-recorded at assembly, rounded to 0.1 mg** (vs 0.01 mg in the punch table) → per-cell active
+>   mass carries ~±0.1 mg extra rounding uncertainty (~±0.8% on hard-carbon mass).
+> - **CC20 (19.6 mg) and CC21 (20.0 mg) sit at/below the 17-kept punch range** (min 20.19 mg); CC20 is near the
+>   three culled low disks (19.42–19.76). Likely an assembly-day re-weigh or use of a low-mass disk — flagged so
+>   the disk→cell mapping stays honest. Not a problem for cycling, only for cross-referencing the punch table.
+> - **Na half-cell / Na in excess** → these masses set only the working-electrode normalisation, not balancing.
+
+**Cycling:** started 2026-07-14, **in progress**. Capacity / rate results — _pending_.
