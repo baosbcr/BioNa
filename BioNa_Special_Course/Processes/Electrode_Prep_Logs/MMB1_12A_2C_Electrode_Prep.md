@@ -3,7 +3,7 @@
 **Sample:** MMB1_12A_2C (1200 °C, 120 °C/h = 2 °C/min ramp)
 **BioNa Exp #:** 47
 **Coating date:** 2026-07-09
-**Covers:** slurry → coating → drying → thickness *(calendering: gap recommended, execution pending)*
+**Covers:** slurry → coating → drying → thickness → calendering *(stamping next)*
 **Standard reference:** `Processes/Slurry_Preparation_Standard.md`
 
 > Prepared in the same session as **MMB1_12A_3C** (2C mixed first). See
@@ -114,10 +114,10 @@ edge**, consistent with particle-driven spikes rather than a uniform thick band.
 
 ---
 
-## Calendering
+## Calendering (2026-07-15)
 
-Recommended settings — **not yet executed** (gap set on **median** total thickness, 10% compression target,
-same basis as 1C; the large-particle spikes make the mean unrepresentative, esp. sheet 2).
+Gap set on **median** total thickness, 10% compression target, same basis as 1C/3C/Kuranode (large-particle
+spikes make the mean unrepresentative, esp. sheet 2).
 
 | Sheet | Median total | Roll gap set |
 |---|---|---|
@@ -128,17 +128,22 @@ same basis as 1C; the large-particle spikes make the mean unrepresentative, esp.
 - Gap = 0.90 × median (0.2295 → **0.23 mm**; 0.2822 → **0.28 mm**).
 - **Blade tape (+35 µm) is irrelevant to the gap** — we compress the *measured* thickness; tape only matters
   for cross-sample coating comparisons.
-- **Spring-back:** both 10A and 1C returned to ~0% permanent compression at their nominal 10% gap. Expect the
-  same here — a tighter gap and/or multiple stepped passes would be needed to actually reach 10%.
 - **Sheet 2 (CV 36%)** will calender less uniformly; scatter is particle-driven (left-edge spikes), not a
-  clean band, so the large agglomerates get crushed hardest at 0.28 mm. Consider a pre-calender cut only if a
-  visibly uneven band is present (as on 10A).
+  clean band, so the large agglomerates get crushed hardest at 0.28 mm.
 
-**Post-calender thickness:** to be measured after calendering (not gridded 1:1 — exact points can't be
-relocated, as with 6A/8A/10A/1C).
+### Outcome — mostly spring-back, no delamination
+
+Both sheets: **near-full spring-back to ~0% permanent compression**, same as 3C (and 10A/1C) — only proud
+high spots took a set. **No delamination** — coating stayed well adhered (standard-order biochar build;
+contrast Kuranode's band-aid peel-off). Reinforces the recurring lesson: to actually reach 10% on these
+biochar coatings, set the gap **tighter than 10%-of-median** and/or use **multiple stepped passes**.
+
+**Post-calender thickness:** not gridded 1:1 (exact points can't be relocated, as with 6A/8A/10A/1C).
 
 ---
 
 ## Observations
 
-_pending_
+- **Two sheets**, sheet 2 genuinely thicker (median 0.314 vs 0.255 mm) and much more scattered (CV 36% vs 22%).
+- **Calendered well, held together** (no delamination); **near-full spring-back** at the 0.23/0.28 mm gaps —
+  only high spots took a permanent set. Same rebound tendency as 3C/10A/1C.
