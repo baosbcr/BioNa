@@ -11,8 +11,8 @@ doc and remove it here.
   (≈16–17 µm) on the table-top micrometer.
 - **All reported coating thicknesses are TOTAL** (coating + substrate). To get coating-only,
   subtract ~0.017 mm.
-- **TODO:** micrometer make/model is unknown → identify and add to `Instruments/Instruments.md`.
-- **TODO:** quantify the **micrometer uncertainty** (instrument resolution + repeatability).
+- Make/model + uncertainty resolved in `Instruments/Instruments.md`: Mahr MarCator 1075 R **digital**
+  indicator (order no. 4336030) + 820 NG/FG stand; manufacturer span of error **±0.005 mm (5 µm)**.
 - **Offer:** more coating measurements can be taken on request.
 
 ## SBR dosing & weighing

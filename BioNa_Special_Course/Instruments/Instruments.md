@@ -107,10 +107,10 @@
 
 | Parameter | Value |
 |---|---|
-| Indicator | Mahr **MarCator 1075 R** dial indicator |
+| Indicator | Mahr **MarCator 1075 R Digital Indicator** (LCD readout, not analog dial — order no. **4336030** variant) |
 | Stand / base | Mahr **820 NG/FG** measuring stand; reference surface **DIN 876 grade 0** |
-| Resolution | 0.001 mm (1 µm) — matches recorded thickness data |
-| Uncertainty | per **DIN 878** for dial indicators — **confirm class/error span** (est. ±1–2 µm) |
+| Resolution | 0.001 mm (1 µm) — matches recorded thickness data; identifies the 4336030 order-no. variant |
+| Uncertainty | Manufacturer-specified **span of error G = ±0.005 mm (5 µm)**, "in any zero point" (Mahr datasheet, not a DIN 878 figure — supersedes prior ±1–2 µm estimate) |
 | Used for | Coating / foil thickness measurement |
 | Substrate baseline | Carbon-coated Al foil ≈ 0.016–0.017 mm |
 
