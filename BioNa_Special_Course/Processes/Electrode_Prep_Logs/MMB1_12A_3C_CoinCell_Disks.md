@@ -125,3 +125,41 @@ lowest of the biochar series thanks to the appearance/mass sort. The thick set i
 | **12A_3C standard** | 1200 °C, 3 °C/min | 13 | **19.07** | **16.92** | 4.0% | ±0.80% (die) | most uniform biochar set |
 | **12A_3C thick** | 1200 °C, 3 °C/min | 6 | **22.97** | **20.38** | 7.2% | ±0.80% (die) | high-loading set, saved separately |
 | Kuranode | commercial HC | 18 | 7.10 | 6.26 | 7.1% | ±0.88% (die) | off-standard mix; delaminated on calender |
+
+---
+
+## Cell Assembly & Cycling
+
+> ⚠️ **Cycler C-rate basis differs from measured mass.** The cycling program's applied current (C-rate) was
+> set from a flat **5.55 mg foil tare + 91% active-mass assumption**, not from the per-cell hard-carbon mass
+> below. See `Biona_Academy/Open_Questions.md` for the full note — recompute specific capacity from the
+> measured mass, don't back it out from the nominal C-rate.
+
+**3 sodium half-cells assembled 2026-07-15** (CC25, CC26, CC27) from 12A_3C disks — **the first cells built
+from this sample**, before the labelled-disk practice below. Per-cell hard-carbon masses **pending from
+supervisor** — see `Biona_Academy/Open_Questions.md` ("Missing coin-cell electrode weights").
+
+| Cell | Disk mass (mg) | Coating (mg) | Hard-carbon mass (mg) | Coating load (mg/cm²) | Hard-C load (mg/cm²) | Status |
+|---|---|---|---|---|---|---|
+| CC25 | _TBD_ | — | — | — | — | cycling |
+| CC26 | _TBD_ | — | — | — | — | cycling |
+| CC27 | _TBD_ | — | — | — | — | cycling |
+
+**Cycling:** started 2026-07-15, **in progress**.
+
+### 2 more cells assembled 2026-07-16 (CC39, CC40)
+
+Electrode (total disk) mass recorded at assembly, rounded to 0.1 mg. Active mass = (disk − 5.50 mg tare) × f,
+f = 0.8873. Area 1.2668 cm².
+
+| Cell | Disk mass (mg) | Coating (mg) | **Hard-carbon mass (mg)** | Coating load (mg/cm²) | Hard-C load (mg/cm²) | Status |
+|---|---|---|---|---|---|---|
+| CC39 | 26.6 | 21.10 | **18.722** | 16.657 | 14.779 | cycling |
+| CC40 | 28.6 | 23.10 | **20.497** | 18.235 | 16.180 | cycling |
+
+Both sit within/near the **standard set** range (27.72–30.82 mg disk mass) — CC39 slightly below (26.6 mg),
+CC40 near the low end (28.6 mg); not flagged as anomalous, consistent with normal disk-to-disk spread (CV 4%).
+
+> **Na half-cell / Na in excess** → these masses set only the working-electrode normalisation, not balancing.
+
+**Cycling:** started 2026-07-16, **in progress**. Capacity / rate results — _pending_ for all 5 cells.

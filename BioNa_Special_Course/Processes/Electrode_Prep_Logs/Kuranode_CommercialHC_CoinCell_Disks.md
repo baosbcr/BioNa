@@ -114,3 +114,31 @@ disks are mild proud spots, not the delamination zones (which were avoided).
 | 12A_3C standard | 1200 °C, 3 °C/min | 13 | 19.07 | 16.92 | 4.0% | ±0.80% (die) | most uniform biochar set |
 | 12A_3C thick | 1200 °C, 3 °C/min | 6 | 22.97 | 20.38 | 7.2% | ±0.80% (die) | high-loading set, saved separately |
 | **Kuranode** | commercial HC | 18 | **7.10** | **6.26** | 7.1% | ±0.88% (die) | off-standard mix; delaminated; qualitative only |
+
+---
+
+## Cell Assembly & Cycling
+
+> ⚠️ **Cycler C-rate basis differs from measured mass.** The cycling program's applied current (C-rate) was
+> set from a flat **5.55 mg foil tare + 91% active-mass assumption**, not from the per-cell hard-carbon mass
+> below. See `Biona_Academy/Open_Questions.md` for the full note — recompute specific capacity from the
+> measured mass, don't back it out from the nominal C-rate.
+
+**2 sodium half-cells assembled 2026-07-16** (CC33, CC34), cell-naming series **KT1-9**, from Kuranode disks.
+
+Electrode (total disk) mass recorded at assembly, rounded to 0.1 mg. Active mass = (disk − 5.50 mg tare) × f,
+f = 0.882. Area 1.2668 cm².
+
+| Cell | Disk mass (mg) | Coating (mg) | **Hard-carbon mass (mg)** | Coating load (mg/cm²) | Hard-C load (mg/cm²) | Status |
+|---|---|---|---|---|---|---|
+| CC33 | 14.0 | 8.50 | **7.497** | 6.710 | 5.918 | cycling |
+| CC34 | 13.8 | 8.30 | **7.321** | 6.552 | 5.779 | cycling |
+
+Both sit just below the 18-disk punch range (min disk mass 14.10 mg) — minor, consistent with the ±3.6%-scale
+disk-to-disk noise seen elsewhere; not flagged as anomalous.
+
+> **Na half-cell / Na in excess** → these masses set only the working-electrode normalisation, not balancing.
+> Recall this Kuranode batch is **off-standard** (SBR mixed before HC + extra drop, delaminated on
+> calendering) — treat as a qualitative test, not a clean commercial-HC benchmark (see notes at top of file).
+
+**Cycling:** started 2026-07-16, **in progress**. Capacity / rate results — _pending_.

@@ -118,3 +118,33 @@ band was cut off before punching).
 | 6A  | 8.48  | 7.53  | 3.6% | ±0.85% (die) | baseline |
 | 8A  | 0.479 | 0.430 | 4.3% | ±5.6% (tare) | anomalously thin (~5 µm) |
 | 10A | **11.58** | **10.28** | 2.1% | ±0.82% (die) | heaviest, most uniform |
+
+---
+
+## Cell Assembly & Cycling
+
+> ⚠️ **Cycler C-rate basis differs from measured mass.** The cycling program's applied current (C-rate) was
+> set from a flat **5.55 mg foil tare + 91% active-mass assumption**, not from the per-cell hard-carbon mass
+> below. See `Biona_Academy/Open_Questions.md` for the full note — recompute specific capacity from the
+> measured mass, don't back it out from the nominal C-rate.
+
+**2 sodium half-cells assembled 2026-07-16** (CC28, CC29) from 10A disks.
+
+Electrode (total disk) mass recorded at assembly, rounded to 0.1 mg. Active mass = (disk − 5.50 mg tare) × f,
+f = 0.8881. Area 1.2668 cm².
+
+| Cell | Disk mass (mg) | Coating (mg) | **Hard-carbon mass (mg)** | Coating load (mg/cm²) | Hard-C load (mg/cm²) | Status |
+|---|---|---|---|---|---|---|
+| CC28 | 18.9 | 13.40 | **11.901** | 10.578 | 9.394 | cycling |
+| CC29 | 18.4 | 12.90 | **11.456** | 10.183 | 9.044 | cycling |
+
+**Use the per-cell hard-carbon mass** (11.901 / 11.456 mg) to normalise each cell's gravimetric capacity
+(mAh/g) — no longer the population value (10.28 ± 0.22 mg/cm² above).
+
+> ⚠️ **Both cells sit just below the 20-disk punch range** (min disk mass 19.53 mg vs 18.9/18.4 mg here) —
+> plausible (assembly-day re-weigh, or drawn from a lower-mass disk not in the retained punch table), but
+> flagged for traceability, same caveat as noted for CC20/CC21 on 12A_1C.
+>
+> **Na half-cell / Na in excess** → these masses set only the working-electrode normalisation, not balancing.
+
+**Cycling:** started 2026-07-16, **in progress**. Capacity / rate results — _pending_.

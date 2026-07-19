@@ -115,6 +115,11 @@ the *true* punch-to-punch spread is somewhat wider than 3.2%.
 
 ## Cell Assembly & Cycling
 
+> ⚠️ **Cycler C-rate basis differs from measured mass.** The cycling program's applied current (C-rate) was
+> set from a flat **5.55 mg foil tare + 91% active-mass assumption**, not from the per-cell hard-carbon mass
+> below. See `Biona_Academy/Open_Questions.md` for the full note — recompute specific capacity from the
+> measured mass, don't back it out from the nominal C-rate.
+
 **3 sodium half-cells assembled 2026-07-14** from 12A_1C disks — **the first labelled cells** (addresses the
 "label disks" recommendation above), so per-cell active mass is now known individually rather than as a set.
 
@@ -139,3 +144,16 @@ capacity (mAh/g) — no longer the population value.
 > - **Na half-cell / Na in excess** → these masses set only the working-electrode normalisation, not balancing.
 
 **Cycling:** started 2026-07-14, **in progress**. Capacity / rate results — _pending_.
+
+### 2 more cells assembled 2026-07-16 (CC35, CC36)
+
+Same formula as above (f = 0.8873, area 1.2668 cm², tare 5.50 mg).
+
+| Cell | Disk mass (mg) | Coating (mg) | **Hard-carbon mass (mg)** | Coating load (mg/cm²) | Hard-C load (mg/cm²) | Status |
+|---|---|---|---|---|---|---|
+| CC35 | 19.6 | 14.10 | **12.511** | 11.131 | 9.876 | cycling |
+| CC36 | 18.9 | 13.40 | **11.890** | 10.578 | 9.386 | cycling |
+
+CC35 matches CC20's disk mass exactly (19.6 mg → identical derived values); coincidence, not a duplicate
+record — separate cell, separate assembly date. CC36 sits below the 17-kept punch range (min 20.19 mg), same
+plausible-but-flagged caveat as CC20/CC21. **Cycling:** started 2026-07-16, **in progress**.

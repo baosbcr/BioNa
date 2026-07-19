@@ -120,3 +120,32 @@ measurement/tare noise**. It cannot be claimed as real coating non-uniformity.
   ambiguity and unlock per-cell mAh/g.
 - Fill in the real **balance**, **die**, and (critically for 8A) **foil-tare** specs in `Instruments.md`,
   then re-run `disk_loading.py`.
+
+---
+
+## Cell Assembly & Cycling
+
+> ⚠️ **Cycler C-rate basis differs from measured mass.** The cycling program's applied current (C-rate) was
+> set from a flat **5.55 mg foil tare + 91% active-mass assumption**, not from the per-cell hard-carbon mass
+> below. See `Biona_Academy/Open_Questions.md` for the full note — recompute specific capacity from the
+> measured mass, don't back it out from the nominal C-rate.
+
+**1 sodium half-cell assembled 2026-07-16** (CC30) from an 8A disk.
+
+Electrode (total disk) mass recorded at assembly, rounded to 0.1 mg. Active mass = (disk − 5.50 mg tare) × f,
+f = 0.8977. Area 1.2668 cm².
+
+| Cell | Disk mass (mg) | Coating (mg) | **Hard-carbon mass (mg)** | Coating load (mg/cm²) | Hard-C load (mg/cm²) | Status |
+|---|---|---|---|---|---|---|
+| CC30 | 6.5 | 1.00 | **0.898** | 0.789 | 0.709 | cycling |
+
+> ⚠️ **Field observation (2026-07-16 batch):** on inspection this cell looked unusually thin and appeared
+> under-loaded — enough to suspect the hard-carbon coating may have detached/delaminated post-assembly, fate
+> unknown. Note the recorded **disk mass (6.5 mg) is actually the heaviest of any 8A disk seen** (punch-table
+> range 6.04–6.15 mg, §"Per-disk results" above), so this isn't a mass-record error — the anomaly is
+> physical/electrochemical, not in the weighing. Treat this cell's results with caution and flag in any
+> cross-cell comparison.
+>
+> **Na half-cell / Na in excess** → this mass sets only the working-electrode normalisation, not balancing.
+
+**Cycling:** started 2026-07-16, **in progress**. Capacity / rate results — _pending_.

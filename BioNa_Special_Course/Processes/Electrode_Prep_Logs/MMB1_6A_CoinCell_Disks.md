@@ -109,3 +109,29 @@ purely from not knowing which disk it was.
 - **Label disks at punching next time** (weigh → assign an ID → track into the cell). That collapses the
   per-cell mass uncertainty from ±3.6% to the ~±0.8% measurement value and unlocks per-cell mAh/g.
 - Fill in the real **balance**, **die**, and **micrometer** specs in `Instruments.md`, then re-run the script.
+
+---
+
+## Cell Assembly & Cycling
+
+> ⚠️ **Cycler C-rate basis differs from measured mass.** The cycling program's applied current (C-rate) was
+> set from a flat **5.55 mg foil tare + 91% active-mass assumption**, not from the per-cell hard-carbon mass
+> below. See `Biona_Academy/Open_Questions.md` for the full note — recompute specific capacity from the
+> measured mass, don't back it out from the nominal C-rate.
+
+**2 sodium half-cells assembled 2026-07-16** (CC31, CC32) from 6A disks.
+
+Electrode (total disk) mass recorded at assembly, rounded to 0.1 mg. Active mass = (disk − 5.50 mg tare) × f,
+f = 0.8878. Area 1.2668 cm².
+
+| Cell | Disk mass (mg) | Coating (mg) | **Hard-carbon mass (mg)** | Coating load (mg/cm²) | Hard-C load (mg/cm²) | Status |
+|---|---|---|---|---|---|---|
+| CC31 | 15.0 | 9.50 | **8.434** | 7.499 | 6.658 | cycling |
+| CC32 | 15.0 | 9.50 | **8.434** | 7.499 | 6.658 | cycling |
+
+> ⚠️ **Both cells sit just below the 20-disk punch range** (min disk mass 15.61 mg vs 15.0 mg here) — same
+> plausible-but-flagged caveat as the 10A cells above.
+>
+> **Na half-cell / Na in excess** → these masses set only the working-electrode normalisation, not balancing.
+
+**Cycling:** started 2026-07-16, **in progress**. Capacity / rate results — _pending_.
