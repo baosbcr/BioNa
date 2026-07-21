@@ -219,25 +219,26 @@
 
 ---
 
-## Battery Cycler — **Neware BTS** *(model name pending)*
+## Battery Cycler — **Neware BTS85**
 
-Third cycler, separate from the two Bio-Logic units below. All fields below are **read directly from the
-`.ndax` export metadata** (`TestInfo0.xml`, `VersionInfo.xml`) — they are not inferred.
+Third cycling system, separate from the two Bio-Logic units below. **Four networked BTS85 devices**
+(IDs 79–82) served by one BTS Server on the lab PC. Fields below are read from the `.ndax` export
+metadata (`TestInfo0.xml`, `VersionInfo.xml`) and from BTS Client → device tooltip (2026-07-21).
 
 | Parameter | Value |
 |---|---|
-| Manufacturer | **Neware** (`NEWARE BtsSvr(R3)`) |
-| Model | **TBD** — not stored in the export; read it off the chassis plate or BTS Client → right-click device → *Device info* |
-| Device type code | **DevType 27** |
-| Device ID | **79** |
-| Units / channels used | unit 4 (ch 6, 7); unit 5 (ch 7, 8) |
+| Manufacturer | **Neware** Technology Limited, Shenzhen (`NEWARE BtsSvr(R3)`) |
+| Device type | **BTS85** (as reported by BTS Client; = `DevType 27` in the export files) |
+| Devices present | **4** — IDs **79, 80, 81, 82** at IP `192.168.1.79`–`.82` |
+| Device used for this project | **79** (all `270079-*` files) |
+| Units / channels used | device 79: unit 4 (ch 6, 7); unit 5 (ch 7, 8) |
 | Voltage range | **5 V** |
-| Current range | **±100 mA**, 4 sub-ranges: **0.1 / 1 / 10 / 100 mA** |
+| Current range | **±100 mA**, 4 sub-ranges: **100 µA / 1 mA / 10 mA / 100 mA** |
 | Aux channels | 0 |
 | Main tester firmware | `M04310700_250417_135925_FD4A6` |
-| Controller version | `4S_8.0.26.0_20250923_112830_00` |
+| Control unit version | `4S_8.0.26.0_20250923_112830_00` (identical on all four devices) |
 | Hardware production date | 2025-06-05 |
-| Server software | `BTSServer(R3)-8.0.1.437 (2025.01.23)` |
+| Server software | `BTSServer(R3)-8.0.1.437 (2025.01.23)`, host `LAB-CZC5517DL4` (Windows 11), server on `127.0.0.1` |
 | Client software | `BTS Client 8.0.1.492 (2025.01.23)` |
 | Used for | Galvanostatic cycling of Na half-cells (CC39, CC40 confirmed) |
 
@@ -250,12 +251,15 @@ two rack cabinets, each holding a stack of pull-out **8-channel** drawer units w
 contacts. Front panels read 高性能电池检测系统 / **"Battery Testing System"**. Manufacturer sticker:
 **Neware Technology Limited, Shenzhen** (`www.neware.com.cn`).
 
-> ⚠️ **Model is the only missing field** — Neware stores the numeric DevType, not the marketing name,
-> and the sticker photographed is a **contact/address label, not a rating plate**.
+> **BTS85 is the device-type string the firmware/software reports**, and it is the identifier to quote
+> alongside the channel spec ("Neware BTS85, 5 V, ±100 mA"). Note it is a *device type*, not necessarily
+> the commercial catalogue name — Neware's sales designation for the same hardware may read differently
+> (e.g. a `CT-4008-5V100mA`-style string). **If a purchase-order model is needed for a publication,
+> check the procurement/asset record**; the earlier `CT-4008` guess was never confirmed and should not
+> be used on its own.
 >
-> **Best inference (NOT to be quoted yet): CT-4008-5V100mA.** Evidence: 8 channels per drawer unit
-> (the `-4008` suffix denotes 8 channels), export reports 5 V / ±100 mA ranges, and the export's unit/channel
-> numbering (unit 4 ch 6–7, unit 5 ch 7–8) is consistent with 8-channel units. **Confirm before use.**
+> ⚠️ **Our data is on device 79 only.** Devices 80–82 are part of the same system and carry other users'
+> tests — relevant when browsing the racks or exporting.
 >
 > **Mass basis used by this instrument** (from the export): nominal specific capacity **300 mAh/g**, and the
 > per-test "Active material" equals **(disk mass − 5.55 mg) × 0.91** exactly — confirmed to the microgram for
@@ -265,13 +269,10 @@ contacts. Front panels read 高性能电池检测系统 / **"Battery Testing Sys
 `images/Cycling/Neware_ManufacturerSticker.jpg` (Neware Shenzhen contact label — no model),
 `images/Cycling/Neware_BTS_Software.jpg` (BTS Client step-plan screen).
 
-**Where the model should be found** (still to check):
-1. **Rear of each drawer unit / rear of the cabinet** — the rating plate (model, S/N, voltage, power) is
-   normally there, not on the front or the contact sticker.
-2. **Left end of a drawer's front panel**, next to the channel-number display.
-3. **BTS Client** → device tree → right-click the device or unit → *Device info* / *Properties*.
-4. The **white QR asset labels** at the top of each cabinet (DTU inventory tags) — the asset record will
-   name the instrument even if the tag itself does not.
+**Method statement** (for reports/thesis):
+
+> Galvanostatic cycling was performed on a Neware BTS85 battery testing system (Neware Technology Ltd.,
+> Shenzhen, China; 5 V, ±100 mA channels), controlled with BTS Client 8.0.1.492 / BTS Server 8.0.1.437.
 
 ---
 

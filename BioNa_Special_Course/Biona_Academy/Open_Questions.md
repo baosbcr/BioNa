@@ -72,8 +72,9 @@ doc and remove it here.
 - ✅ **Resolved: there are THREE cyclers, not two.** Alongside the two Bio-Logic units there is a
   **Neware BTS** system (DevType 27, device 79, 5 V / ±100 mA channels) on its own PC — this is what the
   "Kuwara"/"Kuwahara" note was pointing at. Identifiers in `Instruments/Instruments.md`.
-- **TODO:** the Neware **model name** is not stored in the export (Neware writes a numeric DevType).
-  João to read it off the chassis plate / BTS Client → *Device info* (2026-07-21).
+- ✅ **Neware identified 2026-07-21: device type BTS85** (BTS Client tooltip), four devices IDs 79–82,
+  5 V / ±100 mA channels. Our data is on **device 79**. Only remaining nicety: the **commercial/PO model
+  string**, if a publication needs one — check the procurement or DTU asset record.
 - ⚠️ **TODO (affects existing data): record which instrument + channel each cell ran on.** CC19–CC41
   carry no assignment, and the dataset now spans **three** cyclers. Recoverable from the raw files:
   EC-Lab filenames carry the channel (`..._C01`, `_C02`, …) and Neware filenames encode

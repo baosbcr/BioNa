@@ -38,6 +38,8 @@ Coin-cell cycling hardware and software (see `Instruments/Instruments.md`).
 - `Neware_Rack_TwoCabinets.jpg` — the two Neware cabinets; stacked 8-channel drawer units with
   spring-clip coin-cell contacts.
 - `Neware_ManufacturerSticker.jpg` — Neware Technology Limited (Shenzhen) contact label. **No model number.**
+- `Neware_BTS85_DeviceInfo_79.jpg` — BTS Client device tooltip: **Device Type BTS85**, device 79.
+- `Neware_BTS_ServerInfo.jpg` — BTS Server tooltip (host `LAB-CZC5517DL4`, server 8.0.1.437).
 
 ## Sample_Prep/
 Powder handling, weighing, slurry materials, drying, storage.
