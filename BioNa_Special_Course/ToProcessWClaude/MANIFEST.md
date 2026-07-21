@@ -1,0 +1,429 @@
+# Data Manifest — `ToProcessWClaude/`
+
+Generated **2026-07-21** on **LASUS (Windows)**. **382 files · 2,198.0 MB** (excludes `.md` notes and Excel `~$` lock files).
+
+Use this to verify a transfer to **BPC**: compare file count, total size, and any row below.
+
+## By folder
+
+| Folder | Files | Size |
+|---|---|---|
+| `BNa_Joao_2026/BNa_CC19-33_J_textExports` | 98 | 1,638.0 MB |
+| `BNa_Joao_2026` | 241 | 484.7 MB |
+| `BioNa Jaoa/Missing_Newara_Ongoing` | 17 | 52.3 MB |
+| `BNa_Joao_Neware` | 4 | 16.1 MB |
+| `BioNa Jaoa` | 22 | 6.9 MB |
+| **TOTAL** | **382** | **2,198.0 MB** |
+
+## By type
+
+| Ext | Files | Size | What |
+|---|---|---|---|
+| `.txt` | 101 | 1,641.9 MB | Bio-Logic text export |
+| `.mpr` | 153 | 483.8 MB | Bio-Logic raw (binary) |
+| `.xlsx` | 8 | 55.1 MB | Neware Excel export |
+| `.ndax` | 14 | 13.3 MB | Neware raw (zip of XML + .ndc) |
+| `.ngb-dsv` | 3 | 1.2 MB | NETZSCH TGA/DSC raw |
+| `.emf` | 3 | 1.0 MB | TGA/DSC vector plot |
+| `.tif` | 9 | 0.8 MB | TGA/DSC plot image |
+| `.mgr` | 10 | 0.5 MB | Bio-Logic graph |
+| `.mps` | 16 | 0.2 MB | Bio-Logic settings/protocol (plain text — instrument + technique list) |
+| `.mpl` | 36 | 0.1 MB | Bio-Logic log |
+| `.csv` | 4 | 0.1 MB | TGA/DSC data export |
+| `.rve` | 25 | 0.0 MB | Bio-Logic processed |
+
+## Transfer
+
+```powershell
+# LASUS -> BPC over NSK-Guest wifi. /MIR mirrors; /R:2 limits retries; log for review.
+robocopy "<src>\ToProcessWClaude" "<dst>\ToProcessWClaude" /E /R:2 /W:5 /NP /LOG:transfer.log
+```
+
+Then re-run the manifest generator on BPC and diff the totals above.
+
+## Full file list
+
+| Size (bytes) | Path |
+|---|---|
+| 411,288 | `BioNa Jaoa/BNa-MMB1Ag_Air.ngb-dsv` |
+| 86,746 | `BioNa Jaoa/BNa-MMB1Ag_Air.tif` |
+| 100,102 | `BioNa Jaoa/BNa-MMB1Ag_Air_ns.tif` |
+| 401,052 | `BioNa Jaoa/BNa-MMB1Ag_N2.ngb-dsv` |
+| 87,834 | `BioNa Jaoa/BNa-MMB1Ag_N2.tif` |
+| 120,432 | `BioNa Jaoa/BNa-MMB1Ag_N2_ns.tif` |
+| 409,272 | `BioNa Jaoa/BNa-MMB2Am_Air.ngb-dsv` |
+| 86,750 | `BioNa Jaoa/BNa-MMB2Am_Air.tif` |
+| 98,856 | `BioNa Jaoa/BNa-MMB2Am_Air_ns.tif` |
+| 348,100 | `BioNa Jaoa/ExpAll_BNa-MMB1Ag_Air.emf` |
+| 1,354,856 | `BioNa Jaoa/ExpAll_BNa-MMB1Ag_Air.txt` |
+| 342,940 | `BioNa Jaoa/ExpAll_BNa-MMB2Am_Air.emf` |
+| 1,354,856 | `BioNa Jaoa/ExpAll_BNa-MMB2Am_Air.txt` |
+| 335,148 | `BioNa Jaoa/ExpAll_NS.51B_MMB2A-13-1Cww.emf` |
+| 1,354,886 | `BioNa Jaoa/ExpAll_NS.51B_MMB2A-13-1Cww.txt` |
+| 17,445 | `BioNa Jaoa/ExpDat_BNa-MMB1Ag_Air_joao.csv` |
+| 17,679 | `BioNa Jaoa/ExpDat_BNa-MMB1Ag_N2.csv` |
+| 17,679 | `BioNa Jaoa/ExpDat_BNa-MMB2Am_Air.csv` |
+| 17,679 | `BioNa Jaoa/ExpDat_NS.51B_MMB2A-13-1Cww.csv` |
+| 947,666 | `BioNa Jaoa/Missing_Newara_Ongoing/270079-4-4-149.ndax` |
+| 7,350,933 | `BioNa Jaoa/Missing_Newara_Ongoing/270079-4-4-149.xlsx` |
+| 947,639 | `BioNa Jaoa/Missing_Newara_Ongoing/BNa_CC37J_20261607_2026-07-16 17-23-24_BNa_CC37J_20261607_4_4.ndax` |
+| 980,953 | `BioNa Jaoa/Missing_Newara_Ongoing/BNa_CC38J_20261607-270079-4-5-150.ndax` |
+| 7,495,488 | `BioNa Jaoa/Missing_Newara_Ongoing/BNa_CC38J_20261607-270079-4-5-150.xlsx` |
+| 978,089 | `BioNa Jaoa/Missing_Newara_Ongoing/BNa_CC38J_20261607_2026-07-16 17-25-15_BNa_CC38J_20261607_4_5.ndax` |
+| 962,261 | `BioNa Jaoa/Missing_Newara_Ongoing/BNa_CC39J_20261607_2026-07-16 17-26-32_BNa_CC39J_20261607_4_6.ndax` |
+| 928,154 | `BioNa Jaoa/Missing_Newara_Ongoing/BNa_CC40J_20261607_2026-07-16 17-27-58_BNa_CC40J_20261607_4_7.ndax` |
+| 1,159,631 | `BioNa Jaoa/Missing_Newara_Ongoing/Rate_260701_CC79-270079-4-1-146.ndax` |
+| 11,332,831 | `BioNa Jaoa/Missing_Newara_Ongoing/Rate_260701_CC79-270079-4-1-146.xlsx` |
+| 1,005,340 | `BioNa Jaoa/Missing_Newara_Ongoing/Rate_260701_CC79-270079-4-2-147.ndax` |
+| 8,171,597 | `BioNa Jaoa/Missing_Newara_Ongoing/Rate_260701_CC79-270079-4-2-147.xlsx` |
+| 1,009,732 | `BioNa Jaoa/Missing_Newara_Ongoing/Rate_260701_CC79-270079-4-3-148.ndax` |
+| 8,395,648 | `BioNa Jaoa/Missing_Newara_Ongoing/Rate_260701_CC79-270079-4-3-148.xlsx` |
+| 1,156,049 | `BioNa Jaoa/Missing_Newara_Ongoing/Rate_260701_CC79_2026-07-16 17-15-03_BNa_CC34J_20261607_4_1.ndax` |
+| 1,002,272 | `BioNa Jaoa/Missing_Newara_Ongoing/Rate_260701_CC79_2026-07-16 17-19-15_BNa_CC35J_20261607_4_2.ndax` |
+| 1,006,707 | `BioNa Jaoa/Missing_Newara_Ongoing/Rate_260701_CC79_2026-07-16 17-21-04_BNa_CC36J_20261607_4_3.ndax` |
+| 86,916 | `BioNa Jaoa/NS.51B_MMB2A-13-1Cww.tif` |
+| 99,426 | `BioNa Jaoa/NS.51B_MMB2A-13-1Cww_ns.tif` |
+| 99,426 | `BioNa Jaoa/NS.51B_MMB2A-13-1Cww_nss.tif` |
+| 34,180 | `BNa_Joao_2026/BNa_CC19-33_J_textExports/BNa_CC19_20260714_01_PEIS_C01.txt` |
+| 34,116 | `BNa_Joao_2026/BNa_CC19-33_J_textExports/BNa_CC19_20260714_03_PEIS_C01.txt` |
+| 41,704,116 | `BNa_Joao_2026/BNa_CC19-33_J_textExports/BNa_CC19_20260714_04_GCPL_C01.txt` |
+| 34,002 | `BNa_Joao_2026/BNa_CC19-33_J_textExports/BNa_CC19_20260714_06_PEIS_C01.txt` |
+| 130,522,577 | `BNa_Joao_2026/BNa_CC19-33_J_textExports/BNa_CC19_20260714_07_GCPL_C01.txt` |
+| 34,012 | `BNa_Joao_2026/BNa_CC19-33_J_textExports/BNa_CC19_20260714_09_PEIS_C01.txt` |
+| 34,175 | `BNa_Joao_2026/BNa_CC19-33_J_textExports/BNa_CC20_20260714_01_PEIS_C02.txt` |
+| 34,049 | `BNa_Joao_2026/BNa_CC19-33_J_textExports/BNa_CC20_20260714_03_PEIS_C02.txt` |
+| 41,187,716 | `BNa_Joao_2026/BNa_CC19-33_J_textExports/BNa_CC20_20260714_04_GCPL_C02.txt` |
+| 34,011 | `BNa_Joao_2026/BNa_CC19-33_J_textExports/BNa_CC20_20260714_06_PEIS_C02.txt` |
+| 129,836,124 | `BNa_Joao_2026/BNa_CC19-33_J_textExports/BNa_CC20_20260714_07_GCPL_C02.txt` |
+| 34,018 | `BNa_Joao_2026/BNa_CC19-33_J_textExports/BNa_CC20_20260714_09_PEIS_C02.txt` |
+| 34,033 | `BNa_Joao_2026/BNa_CC19-33_J_textExports/BNa_CC21_20260714_01_PEIS_C03.txt` |
+| 33,998 | `BNa_Joao_2026/BNa_CC19-33_J_textExports/BNa_CC21_20260714_03_PEIS_C03.txt` |
+| 38,511,634 | `BNa_Joao_2026/BNa_CC19-33_J_textExports/BNa_CC21_20260714_04_GCPL_C03.txt` |
+| 33,937 | `BNa_Joao_2026/BNa_CC19-33_J_textExports/BNa_CC21_20260714_06_PEIS_C03.txt` |
+| 113,718,135 | `BNa_Joao_2026/BNa_CC19-33_J_textExports/BNa_CC21_20260714_07_GCPL_C03.txt` |
+| 33,943 | `BNa_Joao_2026/BNa_CC19-33_J_textExports/BNa_CC21_20260714_09_PEIS_C03.txt` |
+| 34,095 | `BNa_Joao_2026/BNa_CC19-33_J_textExports/BNa_CC22_20260715_01_PEIS_C04.txt` |
+| 33,996 | `BNa_Joao_2026/BNa_CC19-33_J_textExports/BNa_CC22_20260715_03_PEIS_C04.txt` |
+| 31,421,112 | `BNa_Joao_2026/BNa_CC19-33_J_textExports/BNa_CC22_20260715_04_GCPL_C04.txt` |
+| 33,939 | `BNa_Joao_2026/BNa_CC19-33_J_textExports/BNa_CC22_20260715_06_PEIS_C04.txt` |
+| 99,458,504 | `BNa_Joao_2026/BNa_CC19-33_J_textExports/BNa_CC22_20260715_07_GCPL_C04.txt` |
+| 33,945 | `BNa_Joao_2026/BNa_CC19-33_J_textExports/BNa_CC22_20260715_09_PEIS_C04.txt` |
+| 34,185 | `BNa_Joao_2026/BNa_CC19-33_J_textExports/BNa_CC23_20260715_01_PEIS_C05.txt` |
+| 34,055 | `BNa_Joao_2026/BNa_CC19-33_J_textExports/BNa_CC23_20260715_03_PEIS_C05.txt` |
+| 24,704,581 | `BNa_Joao_2026/BNa_CC19-33_J_textExports/BNa_CC23_20260715_04_GCPL_C05.txt` |
+| 34,021 | `BNa_Joao_2026/BNa_CC19-33_J_textExports/BNa_CC23_20260715_06_PEIS_C05.txt` |
+| 95,150,697 | `BNa_Joao_2026/BNa_CC19-33_J_textExports/BNa_CC23_20260715_07_GCPL_C05.txt` |
+| 34,027 | `BNa_Joao_2026/BNa_CC19-33_J_textExports/BNa_CC23_20260715_09_PEIS_C05.txt` |
+| 34,157 | `BNa_Joao_2026/BNa_CC19-33_J_textExports/BNa_CC24_20260715_01_PEIS_C06.txt` |
+| 34,130 | `BNa_Joao_2026/BNa_CC19-33_J_textExports/BNa_CC24_20260715_03_PEIS_C06.txt` |
+| 22,754,860 | `BNa_Joao_2026/BNa_CC19-33_J_textExports/BNa_CC24_20260715_04_GCPL_C06.txt` |
+| 34,016 | `BNa_Joao_2026/BNa_CC19-33_J_textExports/BNa_CC24_20260715_06_PEIS_C06.txt` |
+| 74,125,100 | `BNa_Joao_2026/BNa_CC19-33_J_textExports/BNa_CC24_20260715_07_GCPL_C06.txt` |
+| 34,024 | `BNa_Joao_2026/BNa_CC19-33_J_textExports/BNa_CC24_20260715_09_PEIS_C06.txt` |
+| 34,154 | `BNa_Joao_2026/BNa_CC19-33_J_textExports/BNa_CC25_2026075_01_PEIS_C07.txt` |
+| 34,078 | `BNa_Joao_2026/BNa_CC19-33_J_textExports/BNa_CC25_2026075_03_PEIS_C07.txt` |
+| 25,368,432 | `BNa_Joao_2026/BNa_CC19-33_J_textExports/BNa_CC25_2026075_04_GCPL_C07.txt` |
+| 34,010 | `BNa_Joao_2026/BNa_CC19-33_J_textExports/BNa_CC25_2026075_06_PEIS_C07.txt` |
+| 104,668,215 | `BNa_Joao_2026/BNa_CC19-33_J_textExports/BNa_CC25_2026075_07_GCPL_C07.txt` |
+| 34,017 | `BNa_Joao_2026/BNa_CC19-33_J_textExports/BNa_CC25_2026075_09_PEIS_C07.txt` |
+| 34,243 | `BNa_Joao_2026/BNa_CC19-33_J_textExports/BNa_CC26_20260715_01_PEIS_C08.txt` |
+| 34,135 | `BNa_Joao_2026/BNa_CC19-33_J_textExports/BNa_CC26_20260715_03_PEIS_C08.txt` |
+| 24,523,858 | `BNa_Joao_2026/BNa_CC19-33_J_textExports/BNa_CC26_20260715_04_GCPL_C08.txt` |
+| 34,014 | `BNa_Joao_2026/BNa_CC19-33_J_textExports/BNa_CC26_20260715_06_PEIS_C08.txt` |
+| 100,688,440 | `BNa_Joao_2026/BNa_CC19-33_J_textExports/BNa_CC26_20260715_07_GCPL_C08.txt` |
+| 34,017 | `BNa_Joao_2026/BNa_CC19-33_J_textExports/BNa_CC26_20260715_09_PEIS_C08.txt` |
+| 5,553 | `BNa_Joao_2026/BNa_CC19-33_J_textExports/BNa_CC27_20260715_01_PEIS_C09.txt` |
+| 7,273 | `BNa_Joao_2026/BNa_CC19-33_J_textExports/BNa_CC27_20260715_03_PEIS_C09.txt` |
+| 19,570,747 | `BNa_Joao_2026/BNa_CC19-33_J_textExports/BNa_CC27_20260715_04_GCPL_C09.txt` |
+| 2,549 | `BNa_Joao_2026/BNa_CC19-33_J_textExports/BNa_CC27_20260715_06_PEIS_C09.txt` |
+| 2,549 | `BNa_Joao_2026/BNa_CC19-33_J_textExports/BNa_CC27_20260715_09_PEIS_C09.txt` |
+| 28,919 | `BNa_Joao_2026/BNa_CC19-33_J_textExports/BNa_CC27_20260715_restart_01_PEIS_C09.txt` |
+| 29,006 | `BNa_Joao_2026/BNa_CC19-33_J_textExports/BNa_CC27_20260715_restart_03_PEIS_C09.txt` |
+| 11,528,508 | `BNa_Joao_2026/BNa_CC19-33_J_textExports/BNa_CC27_20260715_restart_04_GCPL_C09.txt` |
+| 3,558 | `BNa_Joao_2026/BNa_CC19-33_J_textExports/BNa_CC27_20260715_restart_06_PEIS_C09.txt` |
+| 85,035,991 | `BNa_Joao_2026/BNa_CC19-33_J_textExports/BNa_CC27_20260715_restart_07_GCPL_C09.txt` |
+| 2,557 | `BNa_Joao_2026/BNa_CC19-33_J_textExports/BNa_CC27_20260715_restart_09_PEIS_C09.txt` |
+| 28,912 | `BNa_Joao_2026/BNa_CC19-33_J_textExports/BNa_CC28J_20260716_01_PEIS_C10.txt` |
+| 28,900 | `BNa_Joao_2026/BNa_CC19-33_J_textExports/BNa_CC28J_20260716_03_PEIS_C10.txt` |
+| 38,348,949 | `BNa_Joao_2026/BNa_CC19-33_J_textExports/BNa_CC28J_20260716_04_GCPL_C10.txt` |
+| 28,860 | `BNa_Joao_2026/BNa_CC19-33_J_textExports/BNa_CC28J_20260716_06_PEIS_C10.txt` |
+| 84,241,456 | `BNa_Joao_2026/BNa_CC19-33_J_textExports/BNa_CC28J_20260716_07_GCPL_C10.txt` |
+| 2,550 | `BNa_Joao_2026/BNa_CC19-33_J_textExports/BNa_CC28J_20260716_09_PEIS_C10.txt` |
+| 28,882 | `BNa_Joao_2026/BNa_CC19-33_J_textExports/BNa_CC29J_20260716_01_PEIS_C11.txt` |
+| 28,874 | `BNa_Joao_2026/BNa_CC19-33_J_textExports/BNa_CC29J_20260716_03_PEIS_C11.txt` |
+| 37,702,109 | `BNa_Joao_2026/BNa_CC19-33_J_textExports/BNa_CC29J_20260716_04_GCPL_C11.txt` |
+| 28,792 | `BNa_Joao_2026/BNa_CC19-33_J_textExports/BNa_CC29J_20260716_06_PEIS_C11.txt` |
+| 86,602,336 | `BNa_Joao_2026/BNa_CC19-33_J_textExports/BNa_CC29J_20260716_07_GCPL_C11.txt` |
+| 2,482 | `BNa_Joao_2026/BNa_CC19-33_J_textExports/BNa_CC29J_20260716_09_PEIS_C11.txt` |
+| 29,054 | `BNa_Joao_2026/BNa_CC19-33_J_textExports/BNa_CC30J_20260716_01_PEIS_C12.txt` |
+| 29,076 | `BNa_Joao_2026/BNa_CC19-33_J_textExports/BNa_CC30J_20260716_03_PEIS_C12.txt` |
+| 12,186,962 | `BNa_Joao_2026/BNa_CC19-33_J_textExports/BNa_CC30J_20260716_04_GCPL_C12.txt` |
+| 29,169 | `BNa_Joao_2026/BNa_CC19-33_J_textExports/BNa_CC30J_20260716_06_PEIS_C12.txt` |
+| 39,729,021 | `BNa_Joao_2026/BNa_CC19-33_J_textExports/BNa_CC30J_20260716_07_GCPL_C12.txt` |
+| 29,008 | `BNa_Joao_2026/BNa_CC19-33_J_textExports/BNa_CC30J_20260716_09_PEIS_C12.txt` |
+| 5,555 | `BNa_Joao_2026/BNa_CC19-33_J_textExports/BNa_CC31J_20260716_01_PEIS_C13.txt` |
+| 12,768 | `BNa_Joao_2026/BNa_CC19-33_J_textExports/BNa_CC31J_20260716_01_PEIS_C15.txt` |
+| 28,972 | `BNa_Joao_2026/BNa_CC19-33_J_textExports/BNa_CC31J_20260716_03_PEIS_C13.txt` |
+| 2,550 | `BNa_Joao_2026/BNa_CC19-33_J_textExports/BNa_CC31J_20260716_03_PEIS_C15.txt` |
+| 27,434 | `BNa_Joao_2026/BNa_CC19-33_J_textExports/BNa_CC31J_20260716_04_GCPL_C13.txt` |
+| 2,550 | `BNa_Joao_2026/BNa_CC19-33_J_textExports/BNa_CC31J_20260716_06_PEIS_C13.txt` |
+| 2,550 | `BNa_Joao_2026/BNa_CC19-33_J_textExports/BNa_CC31J_20260716_06_PEIS_C15.txt` |
+| 2,550 | `BNa_Joao_2026/BNa_CC19-33_J_textExports/BNa_CC31J_20260716_09_PEIS_C13.txt` |
+| 2,550 | `BNa_Joao_2026/BNa_CC19-33_J_textExports/BNa_CC31J_20260716_09_PEIS_C15.txt` |
+| 29,261 | `BNa_Joao_2026/BNa_CC19-33_J_textExports/BNa_CC32J_20260716_01_PEIS_C15.txt` |
+| 29,249 | `BNa_Joao_2026/BNa_CC19-33_J_textExports/BNa_CC32J_20260716_03_PEIS_C15.txt` |
+| 38,938,864 | `BNa_Joao_2026/BNa_CC19-33_J_textExports/BNa_CC32J_20260716_04_GCPL_C15.txt` |
+| 28,902 | `BNa_Joao_2026/BNa_CC19-33_J_textExports/BNa_CC32J_20260716_06_PEIS_C15.txt` |
+| 41,076,018 | `BNa_Joao_2026/BNa_CC19-33_J_textExports/BNa_CC32J_20260716_07_GCPL_C15.txt` |
+| 28,902 | `BNa_Joao_2026/BNa_CC19-33_J_textExports/BNa_CC32J_20260716_09_PEIS_C15.txt` |
+| 29,095 | `BNa_Joao_2026/BNa_CC19-33_J_textExports/BNa_CC33J_20260716_01_PEIS_C16.txt` |
+| 29,079 | `BNa_Joao_2026/BNa_CC19-33_J_textExports/BNa_CC33J_20260716_03_PEIS_C16.txt` |
+| 50,886,190 | `BNa_Joao_2026/BNa_CC19-33_J_textExports/BNa_CC33J_20260716_04_GCPL_C16.txt` |
+| 28,867 | `BNa_Joao_2026/BNa_CC19-33_J_textExports/BNa_CC33J_20260716_06_PEIS_C16.txt` |
+| 71,604,797 | `BNa_Joao_2026/BNa_CC19-33_J_textExports/BNa_CC33J_20260716_07_GCPL_C16.txt` |
+| 2,548 | `BNa_Joao_2026/BNa_CC19-33_J_textExports/BNa_CC33J_20260716_09_PEIS_C16.txt` |
+| 15,579 | `BNa_Joao_2026/BNa_CC19_20260714.mps` |
+| 51,622 | `BNa_Joao_2026/BNa_CC19_20260714_01_PEIS_C01.mgr` |
+| 31,872 | `BNa_Joao_2026/BNa_CC19_20260714_01_PEIS_C01.mpr` |
+| 390,331 | `BNa_Joao_2026/BNa_CC19_20260714_02_OCV_C01.mpr` |
+| 31,872 | `BNa_Joao_2026/BNa_CC19_20260714_03_PEIS_C01.mpr` |
+| 51,628 | `BNa_Joao_2026/BNa_CC19_20260714_04_GCPL_C01.mgr` |
+| 12,138,290 | `BNa_Joao_2026/BNa_CC19_20260714_04_GCPL_C01.mpr` |
+| 15,938 | `BNa_Joao_2026/BNa_CC19_20260714_05_WAIT_C01.mpr` |
+| 31,872 | `BNa_Joao_2026/BNa_CC19_20260714_06_PEIS_C01.mpr` |
+| 51,626 | `BNa_Joao_2026/BNa_CC19_20260714_07_GCPL_C01.mgr` |
+| 38,022,542 | `BNa_Joao_2026/BNa_CC19_20260714_07_GCPL_C01.mpr` |
+| 15,938 | `BNa_Joao_2026/BNa_CC19_20260714_08_WAIT_C01.mpr` |
+| 31,872 | `BNa_Joao_2026/BNa_CC19_20260714_09_PEIS_C01.mpr` |
+| 15,588 | `BNa_Joao_2026/BNa_CC20_20260714.mps` |
+| 31,872 | `BNa_Joao_2026/BNa_CC20_20260714_01_PEIS_C02.mpr` |
+| 390,331 | `BNa_Joao_2026/BNa_CC20_20260714_02_OCV_C02.mpr` |
+| 31,872 | `BNa_Joao_2026/BNa_CC20_20260714_03_PEIS_C02.mpr` |
+| 51,626 | `BNa_Joao_2026/BNa_CC20_20260714_04_GCPL_C02.mgr` |
+| 11,988,147 | `BNa_Joao_2026/BNa_CC20_20260714_04_GCPL_C02.mpr` |
+| 15,938 | `BNa_Joao_2026/BNa_CC20_20260714_05_WAIT_C02.mpr` |
+| 31,872 | `BNa_Joao_2026/BNa_CC20_20260714_06_PEIS_C02.mpr` |
+| 51,624 | `BNa_Joao_2026/BNa_CC20_20260714_07_GCPL_C02.mgr` |
+| 37,818,465 | `BNa_Joao_2026/BNa_CC20_20260714_07_GCPL_C02.mpr` |
+| 15,938 | `BNa_Joao_2026/BNa_CC20_20260714_08_WAIT_C02.mpr` |
+| 31,872 | `BNa_Joao_2026/BNa_CC20_20260714_09_PEIS_C02.mpr` |
+| 15,588 | `BNa_Joao_2026/BNa_CC21_20260714.mps` |
+| 31,872 | `BNa_Joao_2026/BNa_CC21_20260714_01_PEIS_C03.mpr` |
+| 390,331 | `BNa_Joao_2026/BNa_CC21_20260714_02_OCV_C03.mpr` |
+| 31,872 | `BNa_Joao_2026/BNa_CC21_20260714_03_PEIS_C03.mpr` |
+| 11,210,376 | `BNa_Joao_2026/BNa_CC21_20260714_04_GCPL_C03.mpr` |
+| 15,938 | `BNa_Joao_2026/BNa_CC21_20260714_05_WAIT_C03.mpr` |
+| 31,872 | `BNa_Joao_2026/BNa_CC21_20260714_06_PEIS_C03.mpr` |
+| 51,624 | `BNa_Joao_2026/BNa_CC21_20260714_07_GCPL_C03.mgr` |
+| 33,128,165 | `BNa_Joao_2026/BNa_CC21_20260714_07_GCPL_C03.mpr` |
+| 15,938 | `BNa_Joao_2026/BNa_CC21_20260714_08_WAIT_C03.mpr` |
+| 31,872 | `BNa_Joao_2026/BNa_CC21_20260714_09_PEIS_C03.mpr` |
+| 15,588 | `BNa_Joao_2026/BNa_CC22_20260715.mps` |
+| 31,872 | `BNa_Joao_2026/BNa_CC22_20260715_01_PEIS_C04.mpr` |
+| 390,331 | `BNa_Joao_2026/BNa_CC22_20260715_02_OCV_C04.mpr` |
+| 31,872 | `BNa_Joao_2026/BNa_CC22_20260715_03_PEIS_C04.mpr` |
+| 9,151,450 | `BNa_Joao_2026/BNa_CC22_20260715_04_GCPL_C04.mpr` |
+| 15,938 | `BNa_Joao_2026/BNa_CC22_20260715_05_WAIT_C04.mpr` |
+| 31,872 | `BNa_Joao_2026/BNa_CC22_20260715_06_PEIS_C04.mpr` |
+| 28,979,430 | `BNa_Joao_2026/BNa_CC22_20260715_07_GCPL_C04.mpr` |
+| 15,938 | `BNa_Joao_2026/BNa_CC22_20260715_08_WAIT_C04.mpr` |
+| 31,872 | `BNa_Joao_2026/BNa_CC22_20260715_09_PEIS_C04.mpr` |
+| 15,588 | `BNa_Joao_2026/BNa_CC23_20260715.mps` |
+| 31,872 | `BNa_Joao_2026/BNa_CC23_20260715_01_PEIS_C05.mpr` |
+| 305,389 | `BNa_Joao_2026/BNa_CC23_20260715_02_OCV_C05.mpr` |
+| 31,872 | `BNa_Joao_2026/BNa_CC23_20260715_03_PEIS_C05.mpr` |
+| 7,200,303 | `BNa_Joao_2026/BNa_CC23_20260715_04_GCPL_C05.mpr` |
+| 15,938 | `BNa_Joao_2026/BNa_CC23_20260715_05_WAIT_C05.mpr` |
+| 31,872 | `BNa_Joao_2026/BNa_CC23_20260715_06_PEIS_C05.mpr` |
+| 27,734,587 | `BNa_Joao_2026/BNa_CC23_20260715_07_GCPL_C05.mpr` |
+| 15,938 | `BNa_Joao_2026/BNa_CC23_20260715_08_WAIT_C05.mpr` |
+| 31,872 | `BNa_Joao_2026/BNa_CC23_20260715_09_PEIS_C05.mpr` |
+| 15,588 | `BNa_Joao_2026/BNa_CC24_20260715.mps` |
+| 31,872 | `BNa_Joao_2026/BNa_CC24_20260715_01_PEIS_C06.mpr` |
+| 173,634 | `BNa_Joao_2026/BNa_CC24_20260715_02_OCV_C06.mpr` |
+| 31,872 | `BNa_Joao_2026/BNa_CC24_20260715_03_PEIS_C06.mpr` |
+| 6,625,630 | `BNa_Joao_2026/BNa_CC24_20260715_04_GCPL_C06.mpr` |
+| 15,938 | `BNa_Joao_2026/BNa_CC24_20260715_05_WAIT_C06.mpr` |
+| 31,872 | `BNa_Joao_2026/BNa_CC24_20260715_06_PEIS_C06.mpr` |
+| 21,599,461 | `BNa_Joao_2026/BNa_CC24_20260715_07_GCPL_C06.mpr` |
+| 15,938 | `BNa_Joao_2026/BNa_CC24_20260715_08_WAIT_C06.mpr` |
+| 31,872 | `BNa_Joao_2026/BNa_CC24_20260715_09_PEIS_C06.mpr` |
+| 15,587 | `BNa_Joao_2026/BNa_CC25_2026075.mps` |
+| 31,872 | `BNa_Joao_2026/BNa_CC25_2026075_01_PEIS_C07.mpr` |
+| 219,550 | `BNa_Joao_2026/BNa_CC25_2026075_02_OCV_C07.mpr` |
+| 31,872 | `BNa_Joao_2026/BNa_CC25_2026075_03_PEIS_C07.mpr` |
+| 7,393,967 | `BNa_Joao_2026/BNa_CC25_2026075_04_GCPL_C07.mpr` |
+| 15,938 | `BNa_Joao_2026/BNa_CC25_2026075_05_WAIT_C07.mpr` |
+| 31,872 | `BNa_Joao_2026/BNa_CC25_2026075_06_PEIS_C07.mpr` |
+| 30,507,204 | `BNa_Joao_2026/BNa_CC25_2026075_07_GCPL_C07.mpr` |
+| 15,938 | `BNa_Joao_2026/BNa_CC25_2026075_08_WAIT_C07.mpr` |
+| 31,872 | `BNa_Joao_2026/BNa_CC25_2026075_09_PEIS_C07.mpr` |
+| 15,588 | `BNa_Joao_2026/BNa_CC26_20260715.mps` |
+| 31,872 | `BNa_Joao_2026/BNa_CC26_20260715_01_PEIS_C08.mpr` |
+| 390,331 | `BNa_Joao_2026/BNa_CC26_20260715_02_OCV_C08.mpr` |
+| 31,872 | `BNa_Joao_2026/BNa_CC26_20260715_03_PEIS_C08.mpr` |
+| 7,148,149 | `BNa_Joao_2026/BNa_CC26_20260715_04_GCPL_C08.mpr` |
+| 15,938 | `BNa_Joao_2026/BNa_CC26_20260715_05_WAIT_C08.mpr` |
+| 31,872 | `BNa_Joao_2026/BNa_CC26_20260715_06_PEIS_C08.mpr` |
+| 29,347,712 | `BNa_Joao_2026/BNa_CC26_20260715_07_GCPL_C08.mpr` |
+| 15,938 | `BNa_Joao_2026/BNa_CC26_20260715_08_WAIT_C08.mpr` |
+| 31,872 | `BNa_Joao_2026/BNa_CC26_20260715_09_PEIS_C08.mpr` |
+| 15,589 | `BNa_Joao_2026/BNa_CC27_20260715.mps` |
+| 17,616 | `BNa_Joao_2026/BNa_CC27_20260715_01_PEIS_C09.mpr` |
+| 390,344 | `BNa_Joao_2026/BNa_CC27_20260715_02_OCV_C09.mpr` |
+| 18,480 | `BNa_Joao_2026/BNa_CC27_20260715_03_PEIS_C09.mpr` |
+| 5,693,889 | `BNa_Joao_2026/BNa_CC27_20260715_04_GCPL_C09.mpr` |
+| 15,938 | `BNa_Joao_2026/BNa_CC27_20260715_05_WAIT_C09.mpr` |
+| 16,104 | `BNa_Joao_2026/BNa_CC27_20260715_06_PEIS_C09.mpr` |
+| 16,516 | `BNa_Joao_2026/BNa_CC27_20260715_07_GCPL_C09.mpr` |
+| 227 | `BNa_Joao_2026/BNa_CC27_20260715_07_GCPL_C09.rve` |
+| 15,938 | `BNa_Joao_2026/BNa_CC27_20260715_08_WAIT_C09.mpr` |
+| 16,104 | `BNa_Joao_2026/BNa_CC27_20260715_09_PEIS_C09.mpr` |
+| 15,597 | `BNa_Joao_2026/BNa_CC27_20260715_restart.mps` |
+| 2,442 | `BNa_Joao_2026/BNa_CC27_20260715_restart_01_PEIS_C09.mpl` |
+| 21,112 | `BNa_Joao_2026/BNa_CC27_20260715_restart_01_PEIS_C09.mpr` |
+| 227 | `BNa_Joao_2026/BNa_CC27_20260715_restart_01_PEIS_C09.rve` |
+| 1,574 | `BNa_Joao_2026/BNa_CC27_20260715_restart_02_OCV_C09.mpl` |
+| 13,836 | `BNa_Joao_2026/BNa_CC27_20260715_restart_02_OCV_C09.mpr` |
+| 227 | `BNa_Joao_2026/BNa_CC27_20260715_restart_02_OCV_C09.rve` |
+| 2,442 | `BNa_Joao_2026/BNa_CC27_20260715_restart_03_PEIS_C09.mpl` |
+| 21,112 | `BNa_Joao_2026/BNa_CC27_20260715_restart_03_PEIS_C09.mpr` |
+| 227 | `BNa_Joao_2026/BNa_CC27_20260715_restart_03_PEIS_C09.rve` |
+| 6,816 | `BNa_Joao_2026/BNa_CC27_20260715_restart_04_GCPL_C09.mpl` |
+| 3,372,596 | `BNa_Joao_2026/BNa_CC27_20260715_restart_04_GCPL_C09.mpr` |
+| 227 | `BNa_Joao_2026/BNa_CC27_20260715_restart_04_GCPL_C09.rve` |
+| 1,727 | `BNa_Joao_2026/BNa_CC27_20260715_restart_05_WAIT_C09.mpl` |
+| 7,853 | `BNa_Joao_2026/BNa_CC27_20260715_restart_05_WAIT_C09.mpr` |
+| 2,442 | `BNa_Joao_2026/BNa_CC27_20260715_restart_06_PEIS_C09.mpl` |
+| 8,440 | `BNa_Joao_2026/BNa_CC27_20260715_restart_06_PEIS_C09.mpr` |
+| 227 | `BNa_Joao_2026/BNa_CC27_20260715_restart_06_PEIS_C09.rve` |
+| 4,096 | `BNa_Joao_2026/BNa_CC27_20260715_restart_07_GCPL_C09.mpl` |
+| 24,774,083 | `BNa_Joao_2026/BNa_CC27_20260715_restart_07_GCPL_C09.mpr` |
+| 227 | `BNa_Joao_2026/BNa_CC27_20260715_restart_07_GCPL_C09.rve` |
+| 1,727 | `BNa_Joao_2026/BNa_CC27_20260715_restart_08_WAIT_C09.mpl` |
+| 7,853 | `BNa_Joao_2026/BNa_CC27_20260715_restart_08_WAIT_C09.mpr` |
+| 2,442 | `BNa_Joao_2026/BNa_CC27_20260715_restart_09_PEIS_C09.mpl` |
+| 7,936 | `BNa_Joao_2026/BNa_CC27_20260715_restart_09_PEIS_C09.mpr` |
+| 15,589 | `BNa_Joao_2026/BNa_CC28J_20260716.mps` |
+| 2,435 | `BNa_Joao_2026/BNa_CC28J_20260716_01_PEIS_C10.mpl` |
+| 21,112 | `BNa_Joao_2026/BNa_CC28J_20260716_01_PEIS_C10.mpr` |
+| 227 | `BNa_Joao_2026/BNa_CC28J_20260716_01_PEIS_C10.rve` |
+| 1,567 | `BNa_Joao_2026/BNa_CC28J_20260716_02_OCV_C10.mpl` |
+| 382,256 | `BNa_Joao_2026/BNa_CC28J_20260716_02_OCV_C10.mpr` |
+| 227 | `BNa_Joao_2026/BNa_CC28J_20260716_02_OCV_C10.rve` |
+| 2,435 | `BNa_Joao_2026/BNa_CC28J_20260716_03_PEIS_C10.mpl` |
+| 21,112 | `BNa_Joao_2026/BNa_CC28J_20260716_03_PEIS_C10.mpr` |
+| 227 | `BNa_Joao_2026/BNa_CC28J_20260716_03_PEIS_C10.rve` |
+| 6,809 | `BNa_Joao_2026/BNa_CC28J_20260716_04_GCPL_C10.mpl` |
+| 11,156,536 | `BNa_Joao_2026/BNa_CC28J_20260716_04_GCPL_C10.mpr` |
+| 227 | `BNa_Joao_2026/BNa_CC28J_20260716_04_GCPL_C10.rve` |
+| 1,720 | `BNa_Joao_2026/BNa_CC28J_20260716_05_WAIT_C10.mpl` |
+| 7,853 | `BNa_Joao_2026/BNa_CC28J_20260716_05_WAIT_C10.mpr` |
+| 2,435 | `BNa_Joao_2026/BNa_CC28J_20260716_06_PEIS_C10.mpl` |
+| 21,112 | `BNa_Joao_2026/BNa_CC28J_20260716_06_PEIS_C10.mpr` |
+| 227 | `BNa_Joao_2026/BNa_CC28J_20260716_06_PEIS_C10.rve` |
+| 4,089 | `BNa_Joao_2026/BNa_CC28J_20260716_07_GCPL_C10.mpl` |
+| 24,530,935 | `BNa_Joao_2026/BNa_CC28J_20260716_07_GCPL_C10.mpr` |
+| 227 | `BNa_Joao_2026/BNa_CC28J_20260716_07_GCPL_C10.rve` |
+| 1,720 | `BNa_Joao_2026/BNa_CC28J_20260716_08_WAIT_C10.mpl` |
+| 7,853 | `BNa_Joao_2026/BNa_CC28J_20260716_08_WAIT_C10.mpr` |
+| 2,435 | `BNa_Joao_2026/BNa_CC28J_20260716_09_PEIS_C10.mpl` |
+| 7,936 | `BNa_Joao_2026/BNa_CC28J_20260716_09_PEIS_C10.mpr` |
+| 15,589 | `BNa_Joao_2026/BNa_CC29J_20260716.mps` |
+| 2,367 | `BNa_Joao_2026/BNa_CC29J_20260716_01_PEIS_C11.mpl` |
+| 21,112 | `BNa_Joao_2026/BNa_CC29J_20260716_01_PEIS_C11.mpr` |
+| 227 | `BNa_Joao_2026/BNa_CC29J_20260716_01_PEIS_C11.rve` |
+| 1,499 | `BNa_Joao_2026/BNa_CC29J_20260716_02_OCV_C11.mpl` |
+| 235,434 | `BNa_Joao_2026/BNa_CC29J_20260716_02_OCV_C11.mpr` |
+| 227 | `BNa_Joao_2026/BNa_CC29J_20260716_02_OCV_C11.rve` |
+| 2,367 | `BNa_Joao_2026/BNa_CC29J_20260716_03_PEIS_C11.mpl` |
+| 21,112 | `BNa_Joao_2026/BNa_CC29J_20260716_03_PEIS_C11.mpr` |
+| 227 | `BNa_Joao_2026/BNa_CC29J_20260716_03_PEIS_C11.rve` |
+| 6,741 | `BNa_Joao_2026/BNa_CC29J_20260716_04_GCPL_C11.mpl` |
+| 10,967,856 | `BNa_Joao_2026/BNa_CC29J_20260716_04_GCPL_C11.mpr` |
+| 227 | `BNa_Joao_2026/BNa_CC29J_20260716_04_GCPL_C11.rve` |
+| 1,652 | `BNa_Joao_2026/BNa_CC29J_20260716_05_WAIT_C11.mpl` |
+| 7,853 | `BNa_Joao_2026/BNa_CC29J_20260716_05_WAIT_C11.mpr` |
+| 2,367 | `BNa_Joao_2026/BNa_CC29J_20260716_06_PEIS_C11.mpl` |
+| 21,112 | `BNa_Joao_2026/BNa_CC29J_20260716_06_PEIS_C11.mpr` |
+| 227 | `BNa_Joao_2026/BNa_CC29J_20260716_06_PEIS_C11.rve` |
+| 51,624 | `BNa_Joao_2026/BNa_CC29J_20260716_07_GCPL_C11.mgr` |
+| 4,021 | `BNa_Joao_2026/BNa_CC29J_20260716_07_GCPL_C11.mpl` |
+| 25,213,565 | `BNa_Joao_2026/BNa_CC29J_20260716_07_GCPL_C11.mpr` |
+| 227 | `BNa_Joao_2026/BNa_CC29J_20260716_07_GCPL_C11.rve` |
+| 1,652 | `BNa_Joao_2026/BNa_CC29J_20260716_08_WAIT_C11.mpl` |
+| 7,853 | `BNa_Joao_2026/BNa_CC29J_20260716_08_WAIT_C11.mpr` |
+| 2,367 | `BNa_Joao_2026/BNa_CC29J_20260716_09_PEIS_C11.mpl` |
+| 7,936 | `BNa_Joao_2026/BNa_CC29J_20260716_09_PEIS_C11.mpr` |
+| 15,588 | `BNa_Joao_2026/BNa_CC30J_20260716.mps` |
+| 35,602 | `BNa_Joao_2026/BNa_CC30J_20260716_01_PEIS_C12.mpr` |
+| 396,560 | `BNa_Joao_2026/BNa_CC30J_20260716_02_OCV_C12.mpr` |
+| 35,602 | `BNa_Joao_2026/BNa_CC30J_20260716_03_PEIS_C12.mpr` |
+| 3,565,116 | `BNa_Joao_2026/BNa_CC30J_20260716_04_GCPL_C12.mpr` |
+| 22,177 | `BNa_Joao_2026/BNa_CC30J_20260716_05_WAIT_C12.mpr` |
+| 35,602 | `BNa_Joao_2026/BNa_CC30J_20260716_06_PEIS_C12.mpr` |
+| 11,575,422 | `BNa_Joao_2026/BNa_CC30J_20260716_07_GCPL_C12.mpr` |
+| 22,177 | `BNa_Joao_2026/BNa_CC30J_20260716_08_WAIT_C12.mpr` |
+| 35,602 | `BNa_Joao_2026/BNa_CC30J_20260716_09_PEIS_C12.mpr` |
+| 15,588 | `BNa_Joao_2026/BNa_CC31J_20260716.mps` |
+| 17,616 | `BNa_Joao_2026/BNa_CC31J_20260716_01_PEIS_C13.mpr` |
+| 21,144 | `BNa_Joao_2026/BNa_CC31J_20260716_01_PEIS_C15.mpr` |
+| 390,344 | `BNa_Joao_2026/BNa_CC31J_20260716_02_OCV_C13.mpr` |
+| 15,918 | `BNa_Joao_2026/BNa_CC31J_20260716_02_OCV_C15.mpr` |
+| 29,280 | `BNa_Joao_2026/BNa_CC31J_20260716_03_PEIS_C13.mpr` |
+| 16,104 | `BNa_Joao_2026/BNa_CC31J_20260716_03_PEIS_C15.mpr` |
+| 51,628 | `BNa_Joao_2026/BNa_CC31J_20260716_04_GCPL_C13.mgr` |
+| 23,343 | `BNa_Joao_2026/BNa_CC31J_20260716_04_GCPL_C13.mpr` |
+| 17,380 | `BNa_Joao_2026/BNa_CC31J_20260716_04_GCPL_C15.mpr` |
+| 15,938 | `BNa_Joao_2026/BNa_CC31J_20260716_05_WAIT_C13.mpr` |
+| 15,938 | `BNa_Joao_2026/BNa_CC31J_20260716_05_WAIT_C15.mpr` |
+| 16,104 | `BNa_Joao_2026/BNa_CC31J_20260716_06_PEIS_C13.mpr` |
+| 16,104 | `BNa_Joao_2026/BNa_CC31J_20260716_06_PEIS_C15.mpr` |
+| 51,563 | `BNa_Joao_2026/BNa_CC31J_20260716_07_GCPL_C13.mgr` |
+| 16,516 | `BNa_Joao_2026/BNa_CC31J_20260716_07_GCPL_C13.mpr` |
+| 16,516 | `BNa_Joao_2026/BNa_CC31J_20260716_07_GCPL_C15.mpr` |
+| 15,938 | `BNa_Joao_2026/BNa_CC31J_20260716_08_WAIT_C13.mpr` |
+| 15,938 | `BNa_Joao_2026/BNa_CC31J_20260716_08_WAIT_C15.mpr` |
+| 16,104 | `BNa_Joao_2026/BNa_CC31J_20260716_09_PEIS_C13.mpr` |
+| 16,104 | `BNa_Joao_2026/BNa_CC31J_20260716_09_PEIS_C15.mpr` |
+| 15,588 | `BNa_Joao_2026/BNa_CC32J_20260716.mps` |
+| 29,280 | `BNa_Joao_2026/BNa_CC32J_20260716_01_PEIS_C15.mpr` |
+| 390,331 | `BNa_Joao_2026/BNa_CC32J_20260716_02_OCV_C15.mpr` |
+| 29,280 | `BNa_Joao_2026/BNa_CC32J_20260716_03_PEIS_C15.mpr` |
+| 11,318,689 | `BNa_Joao_2026/BNa_CC32J_20260716_04_GCPL_C15.mpr` |
+| 15,938 | `BNa_Joao_2026/BNa_CC32J_20260716_05_WAIT_C15.mpr` |
+| 29,280 | `BNa_Joao_2026/BNa_CC32J_20260716_06_PEIS_C15.mpr` |
+| 11,962,986 | `BNa_Joao_2026/BNa_CC32J_20260716_07_GCPL_C15.mpr` |
+| 15,938 | `BNa_Joao_2026/BNa_CC32J_20260716_08_WAIT_C15.mpr` |
+| 29,280 | `BNa_Joao_2026/BNa_CC32J_20260716_09_PEIS_C15.mpr` |
+| 15,586 | `BNa_Joao_2026/BNa_CC33J_20260716.mps` |
+| 2,433 | `BNa_Joao_2026/BNa_CC33J_20260716_01_PEIS_C16.mpl` |
+| 21,112 | `BNa_Joao_2026/BNa_CC33J_20260716_01_PEIS_C16.mpr` |
+| 227 | `BNa_Joao_2026/BNa_CC33J_20260716_01_PEIS_C16.rve` |
+| 1,565 | `BNa_Joao_2026/BNa_CC33J_20260716_02_OCV_C16.mpl` |
+| 382,256 | `BNa_Joao_2026/BNa_CC33J_20260716_02_OCV_C16.mpr` |
+| 227 | `BNa_Joao_2026/BNa_CC33J_20260716_02_OCV_C16.rve` |
+| 2,433 | `BNa_Joao_2026/BNa_CC33J_20260716_03_PEIS_C16.mpl` |
+| 21,112 | `BNa_Joao_2026/BNa_CC33J_20260716_03_PEIS_C16.mpr` |
+| 227 | `BNa_Joao_2026/BNa_CC33J_20260716_03_PEIS_C16.rve` |
+| 6,807 | `BNa_Joao_2026/BNa_CC33J_20260716_04_GCPL_C16.mpl` |
+| 14,802,421 | `BNa_Joao_2026/BNa_CC33J_20260716_04_GCPL_C16.mpr` |
+| 227 | `BNa_Joao_2026/BNa_CC33J_20260716_04_GCPL_C16.rve` |
+| 1,718 | `BNa_Joao_2026/BNa_CC33J_20260716_05_WAIT_C16.mpl` |
+| 7,853 | `BNa_Joao_2026/BNa_CC33J_20260716_05_WAIT_C16.mpr` |
+| 2,433 | `BNa_Joao_2026/BNa_CC33J_20260716_06_PEIS_C16.mpl` |
+| 21,112 | `BNa_Joao_2026/BNa_CC33J_20260716_06_PEIS_C16.mpr` |
+| 227 | `BNa_Joao_2026/BNa_CC33J_20260716_06_PEIS_C16.rve` |
+| 51,624 | `BNa_Joao_2026/BNa_CC33J_20260716_07_GCPL_C16.mgr` |
+| 4,087 | `BNa_Joao_2026/BNa_CC33J_20260716_07_GCPL_C16.mpl` |
+| 20,826,844 | `BNa_Joao_2026/BNa_CC33J_20260716_07_GCPL_C16.mpr` |
+| 227 | `BNa_Joao_2026/BNa_CC33J_20260716_07_GCPL_C16.rve` |
+| 1,718 | `BNa_Joao_2026/BNa_CC33J_20260716_08_WAIT_C16.mpl` |
+| 7,853 | `BNa_Joao_2026/BNa_CC33J_20260716_08_WAIT_C16.mpr` |
+| 2,433 | `BNa_Joao_2026/BNa_CC33J_20260716_09_PEIS_C16.mpl` |
+| 7,936 | `BNa_Joao_2026/BNa_CC33J_20260716_09_PEIS_C16.mpr` |
+| 6,169 | `BNa_Joao_2026/Data examine.xlsx` |
+| 962,287 | `BNa_Joao_Neware/270079-4-6-151.ndax` |
+| 7,765,488 | `BNa_Joao_Neware/270079-4-6-151.xlsx` |
+| 928,177 | `BNa_Joao_Neware/270079-4-7-152.ndax` |
+| 7,236,422 | `BNa_Joao_Neware/270079-4-7-152.xlsx` |
