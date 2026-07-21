@@ -4,7 +4,7 @@
 **Date:** 2026-07-09
 **Purpose:** working electrodes for **sodium half-cells** (Na counter, Na always in excess)
 **Disks punched:** 20 → **3 discarded (light outliers), 17 kept** · **Cutting die:** 12.7 mm Ø (½″) → **area 1.2668 cm²**
-**Foil tare (carbon-coated foil, conductive-C layer, no slurry):** 0.0055 g (5.50 mg) *(assumed same as 6A/8A — confirm)*
+**Foil tare (carbon-coated foil, conductive-C layer, no slurry):** 0.00555 g (5.55 mg) *(assumed same as 6A/8A — confirm)*
 **Compute script:** `Processes/Electrode_Prep_Logs/disk_loading.py`
 
 > **Disks are unlabeled and indistinguishable** — masses known as a *set* (same as 6A/8A/10A). See "Uncertainty".
@@ -42,23 +42,23 @@ Coating load = coating mass / 1.2668 cm². `± u` is the **per-disk measurement 
 
 | # | Disk wt (mg) | Coating (mg) | Coating load (mg/cm²) | Hard-C load (mg/cm²) |
 |---|---|---|---|---|
-| 1  | 20.82 | 15.32 | 12.094 ± 0.099 | 10.731 |
-| 2  | 20.64 | 15.14 | 11.952 ± 0.098 | 10.605 |
-| 3  | 20.19 | 14.69 | 11.596 ± 0.095 | 10.290 |
-| 4  | 22.11 | 16.61 | 13.112 ± 0.107 | 11.634 |
-| 5  | 21.16 | 15.66 | 12.362 ± 0.101 | 10.969 |
-| 6  | 21.21 | 15.71 | 12.402 ± 0.101 | 11.004 |
-| 7  | 20.24 | 14.74 | 11.636 ± 0.095 | 10.325 |
-| 8  | 20.69 | 15.19 | 11.991 ± 0.098 | 10.640 |
-| 9  | 20.62 | 15.12 | 11.936 ± 0.098 | 10.591 |
-| 10 | 20.59 | 15.09 | 11.912 ± 0.097 | 10.570 |
-| 11 | 20.90 | 15.40 | 12.157 ± 0.099 | 10.787 |
-| 12 | 20.24 | 14.74 | 11.636 ± 0.095 | 10.325 |
-| 13 | 20.46 | 14.96 | 11.810 ± 0.097 | 10.479 |
-| 14 | 21.04 | 15.54 | 12.267 ± 0.100 | 10.885 |
-| 15 | 20.87 | 15.37 | 12.133 ± 0.099 | 10.766 |
-| 16 | 21.41 | 15.91 | 12.560 ± 0.102 | 11.144 |
-| 17 | 21.28 | 15.78 | 12.457 ± 0.102 | 11.053 |
+| 1  | 20.82 | 15.27 | 12.054 ± 0.099 | 10.696 |
+| 2  | 20.64 | 15.09 | 11.912 ± 0.097 | 10.570 |
+| 3  | 20.19 | 14.64 | 11.557 ± 0.095 | 10.254 |
+| 4  | 22.11 | 16.56 | 13.073 ± 0.106 | 11.599 |
+| 5  | 21.16 | 15.61 | 12.323 ± 0.101 | 10.934 |
+| 6  | 21.21 | 15.66 | 12.362 ± 0.101 | 10.969 |
+| 7  | 20.24 | 14.69 | 11.596 ± 0.095 | 10.290 |
+| 8  | 20.69 | 15.14 | 11.952 ± 0.098 | 10.605 |
+| 9  | 20.62 | 15.07 | 11.896 ± 0.097 | 10.556 |
+| 10 | 20.59 | 15.04 | 11.873 ± 0.097 | 10.535 |
+| 11 | 20.90 | 15.35 | 12.117 ± 0.099 | 10.752 |
+| 12 | 20.24 | 14.69 | 11.596 ± 0.095 | 10.290 |
+| 13 | 20.46 | 14.91 | 11.770 ± 0.096 | 10.444 |
+| 14 | 21.04 | 15.49 | 12.228 ± 0.100 | 10.850 |
+| 15 | 20.87 | 15.32 | 12.094 ± 0.099 | 10.731 |
+| 16 | 21.41 | 15.86 | 12.520 ± 0.102 | 11.109 |
+| 17 | 21.28 | 15.73 | 12.417 ± 0.101 | 11.018 |
 
 *Discarded (not in stats):* 19.52, 19.76, 19.42 mg.
 
@@ -66,9 +66,9 @@ Coating load = coating mass / 1.2668 cm². `± u` is the **per-disk measurement 
 
 | Quantity | Mean | SD (spread) | CV | SEM | Min | Max |
 |---|---|---|---|---|---|---|
-| Coating mass (mg) | 15.351 | 0.492 | 3.2% | 0.119 | 14.690 | 16.610 |
-| Coating load (mg/cm²) | **12.118** | 0.388 | 3.2% | 0.094 | 11.596 | 13.112 |
-| Hard-carbon load (mg/cm²) | **10.753** | 0.345 | 3.2% | 0.084 | 10.290 | 11.634 |
+| Coating mass (mg) | 15.301 | 0.492 | 3.2% | 0.119 | 14.640 | 16.560 |
+| Coating load (mg/cm²) | **12.079** | 0.388 | 3.2% | 0.094 | 11.557 | 13.073 |
+| Hard-carbon load (mg/cm²) | **10.718** | 0.345 | 3.2% | 0.084 | 10.254 | 11.599 |
 
 ---
 
@@ -85,8 +85,8 @@ the *true* punch-to-punch spread is somewhat wider than 3.2%.
 
 ### Consequence for the experiment
 
-- **Highest loading of the set** (12.12 mg/cm² coating, 10.75 mg/cm² hard carbon).
-- Unlabeled disks → a single cell's active mass known only as the population **10.75 ± 0.35 mg/cm² (±3.2%)**;
+- **Highest loading of the set** (12.08 mg/cm² coating, 10.72 mg/cm² hard carbon).
+- Unlabeled disks → a single cell's active mass known only as the population **10.72 ± 0.35 mg/cm² (±3.2%)**;
   propagates linearly into per-cell gravimetric capacity.
 - **Na half-cell / Na in excess:** affects only working-electrode **mass normalisation**, not balancing.
 
@@ -103,36 +103,37 @@ the *true* punch-to-punch spread is somewhat wider than 3.2%.
 
 | Sample | Temp / ramp | n | Coating load (mg/cm²) | Hard-C load (mg/cm²) | CV | Meas. u | Note |
 |---|---|---|---|---|---|---|---|
-| 6A  | 600 °C  | 20 | 8.48  | 7.53  | 3.6% | ±0.85% (die)  | baseline |
-| 8A  | 800 °C  | 21 | 0.479 | 0.430 | 4.3% | ±5.6% (tare)  | anomalously thin (~5 µm) |
-| 10A | 1000 °C | 20 | 11.58 | 10.28 | 2.1% | ±0.82% (die)  | most uniform (top band cut) |
-| 12A_1C | 1200 °C, 1 °C/min | 17 | **12.12** | **10.75** | 3.2% | ±0.82% (die) | heaviest; 3 outliers culled |
+| 6A  | 600 °C  | 20 | 8.44  | 7.50  | 3.6% | ±0.85% (die)  | baseline |
+| 8A  | 800 °C  | 21 | 0.439 | 0.394 | 4.7% | ±6.1% (tare)  | anomalously thin (~5 µm) |
+| 10A | 1000 °C | 20 | 11.54 | 10.25 | 2.2% | ±0.82% (die)  | most uniform (top band cut) |
+| 12A_1C | 1200 °C, 1 °C/min | 17 | **12.08** | **10.72** | 3.2% | ±0.82% (die) | heaviest; 3 outliers culled |
 
 > **8A is the outlier** — its ~18–25× lighter loading (from the ~5 µm coating anomaly) makes it hard to compare
-> on equal footing. 6A / 10A / 12A_1C form a consistent 7.5–10.8 mg/cm² hard-carbon band.
+> on equal footing. 6A / 10A / 12A_1C form a consistent 7.5–10.7 mg/cm² hard-carbon band.
 
 ---
 
 ## Cell Assembly & Cycling
 
 > ⚠️ **Cycler C-rate basis differs from measured mass.** The cycling program's applied current (C-rate) was
-> set from a flat **5.55 mg foil tare + 91% active-mass assumption**, not from the per-cell hard-carbon mass
-> below. See `Biona_Academy/Open_Questions.md` for the full note — recompute specific capacity from the
+> set from a flat **91% active-mass assumption**, not the measured per-sample f used below. (The 5.55 mg
+> foil tare now matches on both sides — adopted repo-wide 2026-07-21 — so the **active fraction is the only
+> remaining difference**.) See `Biona_Academy/Open_Questions.md` for the full note — recompute specific capacity from the
 > measured mass, don't back it out from the nominal C-rate.
 
 **3 sodium half-cells assembled 2026-07-14** from 12A_1C disks — **the first labelled cells** (addresses the
 "label disks" recommendation above), so per-cell active mass is now known individually rather than as a set.
 
-Electrode (total disk) mass recorded at assembly, rounded to 0.1 mg. Active mass = (disk − 5.50 mg tare) × f,
+Electrode (total disk) mass recorded at assembly, rounded to 0.1 mg. Active mass = (disk − 5.55 mg tare) × f,
 f = 0.8873. Area 1.2668 cm².
 
 | Cell | Disk mass (mg) | Coating (mg) | **Hard-carbon mass (mg)** | Coating load (mg/cm²) | Hard-C load (mg/cm²) | Status |
 |---|---|---|---|---|---|---|
-| CC19 | 20.2 | 14.70 | **13.043** | 11.604 | 10.296 | cycling |
-| CC20 | 19.6 | 14.10 | **12.511** | 11.130 | 9.876 | cycling |
-| CC21 | 20.0 | 14.50 | **12.866** | 11.446 | 10.156 | cycling |
+| CC19 | 20.2 | 14.65 | **12.999** | 11.565 | 10.261 | cycling |
+| CC20 | 19.6 | 14.05 | **12.467** | 11.091 | 9.841 | cycling |
+| CC21 | 20.0 | 14.45 | **12.821** | 11.407 | 10.121 | cycling |
 
-**Use the per-cell hard-carbon mass** (13.043 / 12.511 / 12.866 mg) to normalise each cell's gravimetric
+**Use the per-cell hard-carbon mass** (12.999 / 12.467 / 12.821 mg) to normalise each cell's gravimetric
 capacity (mAh/g) — no longer the population value.
 
 > ⚠️ **Traceability notes:**
@@ -147,12 +148,12 @@ capacity (mAh/g) — no longer the population value.
 
 ### 2 more cells assembled 2026-07-16 (CC35, CC36)
 
-Same formula as above (f = 0.8873, area 1.2668 cm², tare 5.50 mg).
+Same formula as above (f = 0.8873, area 1.2668 cm², tare 5.55 mg).
 
 | Cell | Disk mass (mg) | Coating (mg) | **Hard-carbon mass (mg)** | Coating load (mg/cm²) | Hard-C load (mg/cm²) | Status |
 |---|---|---|---|---|---|---|
-| CC35 | 19.6 | 14.10 | **12.511** | 11.131 | 9.876 | cycling |
-| CC36 | 18.9 | 13.40 | **11.890** | 10.578 | 9.386 | cycling |
+| CC35 | 19.6 | 14.05 | **12.467** | 11.091 | 9.841 | cycling |
+| CC36 | 18.9 | 13.35 | **11.845** | 10.539 | 9.351 | cycling |
 
 CC35 matches CC20's disk mass exactly (19.6 mg → identical derived values); coincidence, not a duplicate
 record — separate cell, separate assembly date. CC36 sits below the 17-kept punch range (min 20.19 mg), same

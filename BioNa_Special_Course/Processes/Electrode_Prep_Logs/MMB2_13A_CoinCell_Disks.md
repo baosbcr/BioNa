@@ -11,7 +11,7 @@ Serves a similar **reference/benchmark** role to Kuranode, but is a different ba
 **Disks punched:** unknown (supplied pre-cut) · **Cutting die:** assumed standard 12.7 mm Ø (½″) → area
 1.2668 cm² *(confirmed by João to use the same standard die as the rest of the project)*
 **Foil tare:** unknown — not confirmed whether the supervisor's current collector matches the project's
-0.0055 g (5.50 mg) carbon-coated foil.
+0.00555 g (5.55 mg) carbon-coated foil.
 
 > ⚠️ **Slurry/coating composition unknown.** No hard-carbon mass fraction (f) is available, so coating mass
 > and hard-carbon load **cannot be computed** the way they are for the MMB1/Kuranode logs — only the raw

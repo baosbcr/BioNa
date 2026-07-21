@@ -4,7 +4,7 @@
 **Date:** 2026-07-15
 **Purpose:** working electrodes for **sodium half-cells** (Na counter, Na always in excess)
 **Disks punched:** **19 → split into 13 standard + 6 thick** · **Cutting die:** 12.7 mm Ø (½″) → **area 1.2668 cm²**
-**Foil tare (carbon-coated foil, conductive-C layer, no slurry):** 0.0055 g (5.50 mg) *(assumed same as 6A/8A/1C — confirm with a fresh blank)*
+**Foil tare (carbon-coated foil, conductive-C layer, no slurry):** 0.00555 g (5.55 mg) *(assumed same as 6A/8A/1C — confirm with a fresh blank)*
 **Compute script:** `Processes/Electrode_Prep_Logs/disk_loading.py`
 
 > **Disks are unlabeled and indistinguishable within each set** — masses known per-set (same as 6A/8A/10A/1C).
@@ -40,27 +40,27 @@ Coating load = coating mass / 1.2668 cm². `± u` = per-disk measurement uncerta
 
 | # | Disk wt (mg) | Coating (mg) | Coating load (mg/cm²) | Hard-C load (mg/cm²) |
 |---|---|---|---|---|
-| 1 | 28.28 | 22.78 | 17.982 ± 0.144 | 15.956 |
-| 2 | 29.43 | 23.93 | 18.890 ± 0.151 | 16.761 |
-| 3 | 30.37 | 24.87 | 19.632 ± 0.157 | 17.420 |
-| 4 | 28.45 | 22.95 | 18.117 ± 0.145 | 16.075 |
-| 5 | 30.46 | 24.96 | 19.703 ± 0.157 | 17.483 |
-| 6 | 30.82 | 25.32 | 19.987 ± 0.160 | 17.735 |
-| 7 | 29.82 | 24.32 | 19.198 ± 0.154 | 17.034 |
-| 8 | 30.04 | 24.54 | 19.372 ± 0.155 | 17.188 |
-| 9 | 30.82 | 25.32 | 19.987 ± 0.160 | 17.735 |
-| 10 | 29.82 | 24.32 | 19.198 ± 0.154 | 17.034 |
-| 11 | 27.72 | 22.22 | 17.540 ± 0.141 | 15.563 |
-| 12 | 29.52 | 24.02 | 18.961 ± 0.152 | 16.824 |
-| 13 | 30.02 | 24.52 | 19.356 ± 0.155 | 17.174 |
+| 1 | 28.28 | 22.73 | 17.943 ± 0.144 | 15.921 |
+| 2 | 29.43 | 23.88 | 18.851 ± 0.151 | 16.727 |
+| 3 | 30.37 | 24.82 | 19.593 ± 0.157 | 17.385 |
+| 4 | 28.45 | 22.90 | 18.077 ± 0.145 | 16.040 |
+| 5 | 30.46 | 24.91 | 19.664 ± 0.157 | 17.448 |
+| 6 | 30.82 | 25.27 | 19.948 ± 0.159 | 17.700 |
+| 7 | 29.82 | 24.27 | 19.159 ± 0.153 | 17.000 |
+| 8 | 30.04 | 24.49 | 19.333 ± 0.155 | 17.154 |
+| 9 | 30.82 | 25.27 | 19.948 ± 0.159 | 17.700 |
+| 10 | 29.82 | 24.27 | 19.159 ± 0.153 | 17.000 |
+| 11 | 27.72 | 22.17 | 17.501 ± 0.140 | 15.529 |
+| 12 | 29.52 | 23.97 | 18.922 ± 0.151 | 16.790 |
+| 13 | 30.02 | 24.47 | 19.317 ± 0.154 | 17.140 |
 
 ### Population summary — Standard set (n = 13)
 
 | Quantity | Mean | SD (spread) | CV | SEM | Min | Max |
 |---|---|---|---|---|---|---|
-| Coating mass (mg) | 24.159 | 0.973 | 4.0% | 0.270 | 22.220 | 25.320 |
-| Coating load (mg/cm²) | **19.071** | 0.768 | 4.0% | 0.213 | 17.540 | 19.987 |
-| Hard-carbon load (mg/cm²) | **16.922** | 0.682 | 4.0% | 0.189 | 15.563 | 17.735 |
+| Coating mass (mg) | 24.109 | 0.973 | 4.0% | 0.270 | 22.170 | 25.270 |
+| Coating load (mg/cm²) | **19.032** | 0.768 | 4.0% | 0.213 | 17.501 | 19.948 |
+| Hard-carbon load (mg/cm²) | **16.887** | 0.682 | 4.0% | 0.189 | 15.529 | 17.700 |
 
 ---
 
@@ -68,24 +68,24 @@ Coating load = coating mass / 1.2668 cm². `± u` = per-disk measurement uncerta
 
 | # | Disk wt (mg) | Coating (mg) | Coating load (mg/cm²) | Hard-C load (mg/cm²) |
 |---|---|---|---|---|
-| 1 | 37.53 | 32.03 | 25.284 ± 0.201 | 22.435 |
-| 2 | 33.96 | 28.46 | 22.466 ± 0.179 | 19.934 |
-| 3 | 31.93 | 26.43 | 20.864 ± 0.166 | 18.512 |
-| 4 | 34.65 | 29.15 | 23.011 ± 0.183 | 20.417 |
-| 5 | 36.46 | 30.96 | 24.440 ± 0.194 | 21.685 |
-| 6 | 33.04 | 27.54 | 21.740 ± 0.173 | 19.290 |
+| 1 | 37.53 | 31.98 | 25.245 ± 0.201 | 22.400 |
+| 2 | 33.96 | 28.41 | 22.427 ± 0.179 | 19.900 |
+| 3 | 31.93 | 26.38 | 20.825 ± 0.166 | 18.478 |
+| 4 | 34.65 | 29.10 | 22.972 ± 0.183 | 20.383 |
+| 5 | 36.46 | 30.91 | 24.401 ± 0.194 | 21.651 |
+| 6 | 33.04 | 27.49 | 21.701 ± 0.173 | 19.255 |
 
 ### Population summary — Thick set (n = 6)
 
 | Quantity | Mean | SD (spread) | CV | SEM | Min | Max |
 |---|---|---|---|---|---|---|
-| Coating mass (mg) | 29.095 | 2.099 | 7.2% | 0.857 | 26.430 | 32.030 |
-| Coating load (mg/cm²) | **22.967** | 1.657 | 7.2% | 0.676 | 20.864 | 25.284 |
-| Hard-carbon load (mg/cm²) | **20.379** | 1.470 | 7.2% | 0.600 | 18.512 | 22.435 |
+| Coating mass (mg) | 29.045 | 2.099 | 7.2% | 0.857 | 26.380 | 31.980 |
+| Coating load (mg/cm²) | **22.928** | 1.657 | 7.2% | 0.676 | 20.825 | 25.245 |
+| Hard-carbon load (mg/cm²) | **20.344** | 1.470 | 7.2% | 0.600 | 18.478 | 22.400 |
 
 > The split works: the **standard set is the most uniform biochar population to date (CV 4.0%)**, while the thick
-> set sits ~3.5 mg/cm² higher and is more scattered (7.2%). Build routine cells from the standard set; the thick
-> set is a **high-loading option (~20.4 mg/cm² hard carbon)** if a loading-dependence point is wanted.
+> set sits ~3.9 mg/cm² higher and is more scattered (7.2%). Build routine cells from the standard set; the thick
+> set is a **high-loading option (~20.3 mg/cm² hard carbon)** if a loading-dependence point is wanted.
 
 ---
 
@@ -101,14 +101,14 @@ lowest of the biochar series thanks to the appearance/mass sort. The thick set i
 
 ### Consequence for the experiment
 
-- **Highest-loading electrodes of the whole series** (standard 16.9, thick 20.4 mg/cm² hard carbon) — a heavy
+- **Highest-loading electrodes of the whole series** (standard 16.9, thick 20.3 mg/cm² hard carbon) — a heavy
   coating, not an intrinsic material effect.
 - Unlabeled disks within a set → per-cell active mass known as the set population value.
 
 ### Recommendation
 
 - **Label disks** (and record which set) at punching to unlock per-cell mAh/g.
-- Fresh **foil blank** to replace the assumed 5.50 mg tare.
+- Fresh **foil blank** to replace the adopted 5.55 mg tare.
 
 ---
 
@@ -116,33 +116,29 @@ lowest of the biochar series thanks to the appearance/mass sort. The thick set i
 
 | Sample | Temp / ramp | n | Coating load (mg/cm²) | Hard-C load (mg/cm²) | CV | Meas. u | Note |
 |---|---|---|---|---|---|---|---|
-| 6A  | 600 °C  | 20 | 8.48  | 7.53  | 3.6% | ±0.85% (die)  | baseline |
-| 8A  | 800 °C  | 21 | 0.479 | 0.430 | 4.3% | ±5.6% (tare)  | anomalously thin (~5 µm) |
-| 10A | 1000 °C | 20 | 11.58 | 10.28 | 2.1% | ±0.82% (die)  | most uniform (top band cut) |
-| 12A_1C | 1200 °C, 1 °C/min | 17 | 12.12 | 10.75 | 3.2% | ±0.82% (die) | 3 outliers culled |
-| 12A_2C sheet 1 | 1200 °C, 2 °C/min | 19 | 14.11 | 12.53 | 7.6% | ±0.81% (die) | gap 0.23 mm |
-| 12A_2C sheet 2 | 1200 °C, 2 °C/min | 19 | 13.65 | 12.12 | 7.5% | ±0.81% (die) | gap 0.28 mm |
-| **12A_3C standard** | 1200 °C, 3 °C/min | 13 | **19.07** | **16.92** | 4.0% | ±0.80% (die) | most uniform biochar set |
-| **12A_3C thick** | 1200 °C, 3 °C/min | 6 | **22.97** | **20.38** | 7.2% | ±0.80% (die) | high-loading set, saved separately |
-| Kuranode | commercial HC | 18 | 7.10 | 6.26 | 7.1% | ±0.88% (die) | off-standard mix; delaminated on calender |
+| 6A  | 600 °C  | 20 | 8.44  | 7.50  | 3.6% | ±0.85% (die)  | baseline |
+| 8A  | 800 °C  | 21 | 0.439 | 0.394 | 4.7% | ±6.1% (tare)  | anomalously thin (~5 µm) |
+| 10A | 1000 °C | 20 | 11.54 | 10.25 | 2.2% | ±0.82% (die)  | most uniform (top band cut) |
+| 12A_1C | 1200 °C, 1 °C/min | 17 | 12.08 | 10.72 | 3.2% | ±0.82% (die) | 3 outliers culled |
+| 12A_2C sheet 1 | 1200 °C, 2 °C/min | 19 | 14.07 | 12.49 | 7.7% | ±0.81% (die) | gap 0.23 mm |
+| 12A_2C sheet 2 | 1200 °C, 2 °C/min | 19 | 13.61 | 12.08 | 7.5% | ±0.81% (die) | gap 0.28 mm |
+| **12A_3C standard** | 1200 °C, 3 °C/min | 13 | **19.03** | **16.89** | 4.0% | ±0.80% (die) | most uniform biochar set |
+| **12A_3C thick** | 1200 °C, 3 °C/min | 6 | **22.93** | **20.34** | 7.2% | ±0.80% (die) | high-loading set, saved separately |
+| Kuranode | commercial HC | 18 | 7.06 | 6.23 | 7.2% | ±0.87% (die) | off-standard mix; delaminated on calender |
 
 ---
 
 ## Cell Assembly & Cycling
 
 > ⚠️ **Cycler C-rate basis differs from measured mass.** The cycling program's applied current (C-rate) was
-> set from a flat **5.55 mg foil tare + 91% active-mass assumption**, not from the per-cell hard-carbon mass
-> below. See `Biona_Academy/Open_Questions.md` for the full note — recompute specific capacity from the
+> set from a flat **91% active-mass assumption**, not the measured per-sample f used below. (The 5.55 mg
+> foil tare now matches on both sides — adopted repo-wide 2026-07-21 — so the **active fraction is the only
+> remaining difference**.) See `Biona_Academy/Open_Questions.md` for the full note — recompute specific capacity from the
 > measured mass, don't back it out from the nominal C-rate.
 
 **3 sodium half-cells assembled 2026-07-15** (CC25, CC26, CC27) from 12A_3C disks — **the first cells built
 from this sample**, before the labelled-disk practice below. Disk masses **received 2026-07-21** (previously
 pending from supervisor). Active mass = (disk − **5.55 mg** tare) × f, f = 0.8873. Area 1.2668 cm².
-
-> **Tare basis: 5.55 mg (supervisor's value), not the 5.50 mg used elsewhere in this file.** Adopted
-> 2026-07-21 on supervisor's instruction, pending a fresh foil-blank weighing to settle which is correct.
-> These three rows are therefore **not on the same basis as CC39/CC40 or the punch tables above** — see
-> `Biona_Academy/Open_Questions.md`.
 
 | Cell | Disk mass (mg) | Coating (mg) | **Hard-carbon mass (mg)** | Coating load (mg/cm²) | Hard-C load (mg/cm²) | Status |
 |---|---|---|---|---|---|---|
@@ -159,13 +155,13 @@ rounding, but they are two separate cells, not a duplicated record.
 
 ### 2 more cells assembled 2026-07-16 (CC39, CC40)
 
-Electrode (total disk) mass recorded at assembly, rounded to 0.1 mg. Active mass = (disk − 5.50 mg tare) × f,
+Electrode (total disk) mass recorded at assembly, rounded to 0.1 mg. Active mass = (disk − 5.55 mg tare) × f,
 f = 0.8873. Area 1.2668 cm².
 
 | Cell | Disk mass (mg) | Coating (mg) | **Hard-carbon mass (mg)** | Coating load (mg/cm²) | Hard-C load (mg/cm²) | Status |
 |---|---|---|---|---|---|---|
-| CC39 | 26.6 | 21.10 | **18.722** | 16.657 | 14.779 | cycling |
-| CC40 | 28.6 | 23.10 | **20.497** | 18.235 | 16.180 | cycling |
+| CC39 | 26.6 | 21.05 | **18.678** | 16.617 | 14.744 | cycling |
+| CC40 | 28.6 | 23.05 | **20.452** | 18.196 | 16.145 | cycling |
 
 Both sit within/near the **standard set** range (27.72–30.82 mg disk mass) — CC39 slightly below (26.6 mg),
 CC40 near the low end (28.6 mg); not flagged as anomalous, consistent with normal disk-to-disk spread (CV 4%).

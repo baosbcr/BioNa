@@ -4,16 +4,16 @@
 **Date:** 2026-07-09
 **Purpose:** working electrodes for **sodium half-cells** (Na counter, Na always in excess)
 **Disks punched:** 21 · **Cutting die:** 12.7 mm Ø (½″) → **area 1.2668 cm²**
-**Foil tare (carbon-coated foil, conductive-C layer, no slurry):** 0.0055 g (5.50 mg)
+**Foil tare (carbon-coated foil, conductive-C layer, no slurry):** 0.00555 g (5.55 mg)
 **Compute script:** `Processes/Electrode_Prep_Logs/disk_loading.py`
 
 > **21 disks (one extra cut).** Some may be discarded later as outliers (as anticipated for 12A).
 > Disks are **unlabeled and indistinguishable** — masses are known as a *set*; a given mass cannot be
 > matched back to the disk built into a given cell (same as 6A). See "Uncertainty".
 
-> ⚠️ **Read this before using these loadings.** 8A's coating is **anomalously thin** (~0.6 mg/disk,
-> ~0.48 mg/cm² — about **18× lighter than 6A's 8.48 mg/cm²**), consistent with the ~5 µm as-coated
-> thickness flagged in the prep log. The coating is only ~**11 % of the 5.50 mg foil tare**, so every
+> ⚠️ **Read this before using these loadings.** 8A's coating is **anomalously thin** (~0.55 mg/disk,
+> ~0.44 mg/cm² — about **19× lighter than 6A's 8.44 mg/cm²**), consistent with the ~5 µm as-coated
+> thickness flagged in the prep log. The coating is only ~**10 % of the 5.55 mg foil tare**, so every
 > loading here is a **small difference of two larger masses** and the numbers are dominated by
 > tare-subtraction uncertainty, not by real coating variation. Treat absolute loadings as approximate.
 
@@ -46,35 +46,35 @@ Coating load = coating mass / 1.2668 cm². `± u` is the **per-disk measurement 
 
 | # | Disk wt (mg) | Coating (mg) | Coating load (mg/cm²) | Hard-C load (mg/cm²) |
 |---|---|---|---|---|
-| 1  | 6.11 | 0.610 | 0.482 ± 0.027 | 0.432 |
-| 2  | 6.08 | 0.580 | 0.458 ± 0.027 | 0.411 |
-| 3  | 6.04 | 0.540 | 0.426 ± 0.027 | 0.383 |
-| 4  | 6.12 | 0.620 | 0.489 ± 0.027 | 0.439 |
-| 5  | 6.11 | 0.610 | 0.482 ± 0.027 | 0.432 |
-| 6  | 6.09 | 0.590 | 0.466 ± 0.027 | 0.418 |
-| 7  | 6.12 | 0.620 | 0.489 ± 0.027 | 0.439 |
-| 8  | 6.08 | 0.580 | 0.458 ± 0.027 | 0.411 |
-| 9  | 6.08 | 0.580 | 0.458 ± 0.027 | 0.411 |
-| 10 | 6.11 | 0.610 | 0.482 ± 0.027 | 0.432 |
-| 11 | 6.12 | 0.620 | 0.489 ± 0.027 | 0.439 |
-| 12 | 6.12 | 0.620 | 0.489 ± 0.027 | 0.439 |
-| 13 | 6.08 | 0.580 | 0.458 ± 0.027 | 0.411 |
-| 14 | 6.14 | 0.640 | 0.505 ± 0.027 | 0.454 |
-| 15 | 6.14 | 0.640 | 0.505 ± 0.027 | 0.454 |
-| 16 | 6.13 | 0.630 | 0.497 ± 0.027 | 0.446 |
-| 17 | 6.15 | 0.650 | 0.513 ± 0.027 | 0.461 |
-| 18 | 6.09 | 0.590 | 0.466 ± 0.027 | 0.418 |
-| 19 | 6.10 | 0.600 | 0.474 ± 0.027 | 0.425 |
-| 20 | 6.12 | 0.620 | 0.489 ± 0.027 | 0.439 |
-| 21 | 6.11 | 0.610 | 0.482 ± 0.027 | 0.432 |
+| 1  | 6.11 | 0.560 | 0.442 ± 0.027 | 0.397 |
+| 2  | 6.08 | 0.530 | 0.418 ± 0.027 | 0.376 |
+| 3  | 6.04 | 0.490 | 0.387 ± 0.027 | 0.347 |
+| 4  | 6.12 | 0.570 | 0.450 ± 0.027 | 0.404 |
+| 5  | 6.11 | 0.560 | 0.442 ± 0.027 | 0.397 |
+| 6  | 6.09 | 0.540 | 0.426 ± 0.027 | 0.383 |
+| 7  | 6.12 | 0.570 | 0.450 ± 0.027 | 0.404 |
+| 8  | 6.08 | 0.530 | 0.418 ± 0.027 | 0.376 |
+| 9  | 6.08 | 0.530 | 0.418 ± 0.027 | 0.376 |
+| 10 | 6.11 | 0.560 | 0.442 ± 0.027 | 0.397 |
+| 11 | 6.12 | 0.570 | 0.450 ± 0.027 | 0.404 |
+| 12 | 6.12 | 0.570 | 0.450 ± 0.027 | 0.404 |
+| 13 | 6.08 | 0.530 | 0.418 ± 0.027 | 0.376 |
+| 14 | 6.14 | 0.590 | 0.466 ± 0.027 | 0.418 |
+| 15 | 6.14 | 0.590 | 0.466 ± 0.027 | 0.418 |
+| 16 | 6.13 | 0.580 | 0.458 ± 0.027 | 0.411 |
+| 17 | 6.15 | 0.600 | 0.474 ± 0.027 | 0.425 |
+| 18 | 6.09 | 0.540 | 0.426 ± 0.027 | 0.383 |
+| 19 | 6.10 | 0.550 | 0.434 ± 0.027 | 0.390 |
+| 20 | 6.12 | 0.570 | 0.450 ± 0.027 | 0.404 |
+| 21 | 6.11 | 0.560 | 0.442 ± 0.027 | 0.397 |
 
 ### Population summary (n = 21)
 
 | Quantity | Mean | SD (spread) | CV | SEM | Min | Max |
 |---|---|---|---|---|---|---|
-| Coating mass (mg) | 0.607 | 0.026 | 4.3% | 0.006 | 0.540 | 0.650 |
-| Coating load (mg/cm²) | **0.479** | 0.020 | 4.3% | 0.004 | 0.426 | 0.513 |
-| Hard-carbon load (mg/cm²) | **0.430** | 0.018 | 4.3% | 0.004 | 0.383 | 0.461 |
+| Coating mass (mg) | 0.557 | 0.026 | 4.7% | 0.006 | 0.490 | 0.600 |
+| Coating load (mg/cm²) | **0.439** | 0.020 | 4.7% | 0.004 | 0.387 | 0.474 |
+| Hard-carbon load (mg/cm²) | **0.394** | 0.018 | 4.7% | 0.004 | 0.347 | 0.425 |
 
 ---
 
@@ -82,23 +82,23 @@ Coating load = coating mass / 1.2668 cm². `± u` is the **per-disk measurement 
 
 Two distinct uncertainties — **do not conflate them**:
 
-**1. Measurement uncertainty (per disk, device-limited): ≈ ±0.027 mg/cm² (±5.6%).**
+**1. Measurement uncertainty (per disk, device-limited): ≈ ±0.027 mg/cm² (±6.1%).**
 Propagated as u(load)/load = √[(u(coat)/coat)² + (2·u(d)/d)²], with u(coat) = 0.034 mg.
 
 | Source | Value (1σ) | Contribution to load |
 |---|---|---|
 | Balance (Mettler Toledo AX205, fine range) | 0.015 mg | in u(coat) |
-| Foil tare (recorded to 0.1 mg) | 0.029 mg | **u(coat)/coat = 5.5% (dominant)** |
+| Foil tare (recorded to 0.1 mg) | 0.030 mg | **u(coat)/coat = 6.0% (dominant)** |
 | Die diameter (CES cutter) | ±0.05 mm *(assumed)* | 2·0.05/12.70 = 0.79% |
 
-> ⚠️ **Tare-dominated, unlike 6A.** Because the coating (~0.6 mg) is tiny next to the 5.50 mg foil tare,
-> the u(coat)/coat term (~5.5%) now **swamps** the die term (0.79%) — the reverse of 6A. The single
+> ⚠️ **Tare-dominated, unlike 6A.** Because the coating (~0.55 mg) is tiny next to the 5.55 mg foil tare,
+> the u(coat)/coat term (~6.0%) now **swamps** the die term (0.79%) — the reverse of 6A. The single
 > constant tare also hides any **disk-to-disk foil-mass variation**, which here could be comparable to the
-> entire ~0.6 mg coating. **Getting a per-disk (or at least better-resolved) foil tare is the highest-value
+> entire ~0.55 mg coating. **Getting a per-disk (or at least better-resolved) foil tare is the highest-value
 > fix for 8A**, more so than the die spec.
 
-**2. Disk-to-disk spread (physical): SD = 0.020 mg/cm² (4.3%).**
-For 8A this spread (4.3%) is **comparable to the measurement uncertainty (5.6%)** — so, unlike 6A (where
+**2. Disk-to-disk spread (physical): SD = 0.020 mg/cm² (4.7%).**
+For 8A this spread (4.7%) is **smaller than the measurement uncertainty (6.1%)** — so, unlike 6A (where
 spread was ~4× the measurement noise), the disk-to-disk variation here is **not clearly resolvable above
 measurement/tare noise**. It cannot be claimed as real coating non-uniformity.
 
@@ -126,18 +126,19 @@ measurement/tare noise**. It cannot be claimed as real coating non-uniformity.
 ## Cell Assembly & Cycling
 
 > ⚠️ **Cycler C-rate basis differs from measured mass.** The cycling program's applied current (C-rate) was
-> set from a flat **5.55 mg foil tare + 91% active-mass assumption**, not from the per-cell hard-carbon mass
-> below. See `Biona_Academy/Open_Questions.md` for the full note — recompute specific capacity from the
+> set from a flat **91% active-mass assumption**, not the measured per-sample f used below. (The 5.55 mg
+> foil tare now matches on both sides — adopted repo-wide 2026-07-21 — so the **active fraction is the only
+> remaining difference**.) See `Biona_Academy/Open_Questions.md` for the full note — recompute specific capacity from the
 > measured mass, don't back it out from the nominal C-rate.
 
 **1 sodium half-cell assembled 2026-07-16** (CC30) from an 8A disk.
 
-Electrode (total disk) mass recorded at assembly, rounded to 0.1 mg. Active mass = (disk − 5.50 mg tare) × f,
+Electrode (total disk) mass recorded at assembly, rounded to 0.1 mg. Active mass = (disk − 5.55 mg tare) × f,
 f = 0.8977. Area 1.2668 cm².
 
 | Cell | Disk mass (mg) | Coating (mg) | **Hard-carbon mass (mg)** | Coating load (mg/cm²) | Hard-C load (mg/cm²) | Status |
 |---|---|---|---|---|---|---|
-| CC30 | 6.5 | 1.00 | **0.898** | 0.789 | 0.709 | cycling |
+| CC30 | 6.5 | 0.95 | **0.853** | 0.750 | 0.673 | cycling |
 
 > ⚠️ **Field observation (2026-07-16 batch):** on inspection this cell looked unusually thin and appeared
 > under-loaded — enough to suspect the hard-carbon coating may have detached/delaminated post-assembly, fate

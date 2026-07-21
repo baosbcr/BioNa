@@ -24,6 +24,13 @@ U_FOIL = 0.00003   # g, foil-tare uncertainty. Tare recorded to 0.1 mg -> resolu
 D_MM   = 12.70     # cutting-die diameter, mm (nominal 1/2", CES disk cutter)
 U_D_MM = 0.05      # mm, ASSUMED die-diameter tolerance — CES spec UNKNOWN. Dominant term; confirm.
 
+# ---- foil tare ----
+# 5.55 mg: the supervisor's value, and the basis the cycler C-rate programs were built on.
+# Adopted repo-wide 2026-07-21 (was 5.50 mg, recorded on the 6A punch day 2026-07-08).
+# UNRESOLVED: weigh several fresh foil blanks to settle this — see Biona_Academy/Open_Questions.md.
+# Changing this constant changes EVERY published loading; re-run and regenerate the .md tables.
+FOIL_TARE_G = 0.00555
+
 def analyse(name, weights_g, foil_g, comp):
     w = np.array(weights_g, float)
     n = len(w)
@@ -72,7 +79,7 @@ if __name__ == "__main__":
     ]
     # dried slurry solids as weighed for MMB1_6A (see MMB1_6A_Electrode_Prep.md)
     comp_6A = dict(hard_carbon=3.6399, cmc=0.0999, c45=0.166, sbr=0.194)
-    analyse("MMB1_6A coin-cell disks", MMB1_6A_disks, foil_g=0.0055, comp=comp_6A)
+    analyse("MMB1_6A coin-cell disks", MMB1_6A_disks, foil_g=FOIL_TARE_G, comp=comp_6A)
 
     MMB1_8A_disks = [
         0.00611,0.00608,0.00604,0.00612,0.00611,0.00609,0.00612,0.00608,0.00608,0.00611,
@@ -82,7 +89,7 @@ if __name__ == "__main__":
     # dried slurry solids as weighed for MMB1_8A (see MMB1_8A_Electrode_Prep.md).
     # SBR UNCERTAIN: 0.1228 g measured + 1 unmeasured drop -> best estimate ~0.148 g.
     comp_8A = dict(hard_carbon=3.6400, cmc=0.1002, c45=0.1665, sbr=0.148)
-    analyse("MMB1_8A coin-cell disks", MMB1_8A_disks, foil_g=0.0055, comp=comp_8A)
+    analyse("MMB1_8A coin-cell disks", MMB1_8A_disks, foil_g=FOIL_TARE_G, comp=comp_8A)
 
     MMB1_10A_disks = [
         0.02023,0.02082,0.02005,0.02035,0.02014,0.02006,0.02037,0.02029,0.01996,0.02044,
@@ -91,7 +98,7 @@ if __name__ == "__main__":
     # dried slurry solids as weighed for MMB1_10A (see MMB1_10A_Electrode_Prep.md).
     # SBR NOT weighed ("0.g"); 200 uL calibrated pipette -> best estimate ~0.195 g (standard value).
     comp_10A = dict(hard_carbon=3.6715, cmc=0.1002, c45=0.1673, sbr=0.195)
-    analyse("MMB1_10A coin-cell disks", MMB1_10A_disks, foil_g=0.0055, comp=comp_10A)
+    analyse("MMB1_10A coin-cell disks", MMB1_10A_disks, foil_g=FOIL_TARE_G, comp=comp_10A)
 
     # MMB1_12A_1C: 20 punched, 3 discarded as light outliers (0.01952, 0.01976, 0.01942 g) -> 17 kept.
     MMB1_12A_1C_disks = [
@@ -102,4 +109,36 @@ if __name__ == "__main__":
     # SBR NOT weighed; 200 uL calibrated pipette -> best estimate ~0.195 g. Taped-blade run is
     # irrelevant to mass loading (only affects thickness comparison).
     comp_12A_1C = dict(hard_carbon=3.6398, cmc=0.1000, c45=0.1673, sbr=0.195)
-    analyse("MMB1_12A_1C coin-cell disks", MMB1_12A_1C_disks, foil_g=0.0055, comp=comp_12A_1C)
+    analyse("MMB1_12A_1C coin-cell disks", MMB1_12A_1C_disks, foil_g=FOIL_TARE_G, comp=comp_12A_1C)
+
+    # ---- MMB1_12A_2C: two sheets punched and weighed as independent populations ----
+    MMB1_12A_2C_sheet1 = [
+        0.02207,0.02508,0.02561,0.02223,0.02166,0.02193,0.02375,0.02543,0.02164,0.02326,
+        0.02330,0.02400,0.02340,0.02358,0.02501,0.02494,0.02347,0.02240,0.02145,
+    ]
+    MMB1_12A_2C_sheet2 = [
+        0.02513,0.02243,0.02267,0.02244,0.02575,0.02187,0.02351,0.02149,0.02295,0.02209,
+        0.02335,0.02253,0.02135,0.02390,0.02183,0.02364,0.02075,0.02383,0.02161,
+    ]
+    comp_12A_2C = dict(hard_carbon=3.64361, cmc=0.10019, c45=0.16707, sbr=0.195)
+    analyse("MMB1_12A_2C sheet 1 (gap 0.23 mm)", MMB1_12A_2C_sheet1, foil_g=FOIL_TARE_G, comp=comp_12A_2C)
+    analyse("MMB1_12A_2C sheet 2 (gap 0.28 mm)", MMB1_12A_2C_sheet2, foil_g=FOIL_TARE_G, comp=comp_12A_2C)
+
+    # ---- MMB1_12A_3C: 19 punched, sorted at punching into 13 standard + 6 thick ----
+    MMB1_12A_3C_standard = [
+        0.02828,0.02943,0.03037,0.02845,0.03046,0.03082,0.02982,0.03004,0.03082,0.02982,
+        0.02772,0.02952,0.03002,
+    ]
+    MMB1_12A_3C_thick = [0.03753,0.03396,0.03193,0.03465,0.03646,0.03304]
+    comp_12A_3C = dict(hard_carbon=3.64020, cmc=0.10003, c45=0.16745, sbr=0.195)
+    analyse("MMB1_12A_3C standard set", MMB1_12A_3C_standard, foil_g=FOIL_TARE_G, comp=comp_12A_3C)
+    analyse("MMB1_12A_3C thick set", MMB1_12A_3C_thick, foil_g=FOIL_TARE_G, comp=comp_12A_3C)
+
+    # ---- Kuranode commercial HC: OFF-STANDARD mix (SBR before HC + extra drop) ----
+    Kuranode_disks = [
+        0.01436,0.01431,0.01425,0.01421,0.01415,0.01421,0.01434,0.01431,0.01415,0.01438,
+        0.01453,0.01410,0.01648,0.01439,0.01596,0.01442,0.01421,0.01418,
+    ]
+    comp_Kuranode = dict(hard_carbon=3.64010, cmc=0.10083, c45=0.16690, sbr=0.22)
+    analyse("Kuranode commercial HC disks", Kuranode_disks, foil_g=FOIL_TARE_G, comp=comp_Kuranode)
+
