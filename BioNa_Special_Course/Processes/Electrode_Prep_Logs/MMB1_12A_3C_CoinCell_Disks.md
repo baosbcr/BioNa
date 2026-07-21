@@ -136,14 +136,24 @@ lowest of the biochar series thanks to the appearance/mass sort. The thick set i
 > measured mass, don't back it out from the nominal C-rate.
 
 **3 sodium half-cells assembled 2026-07-15** (CC25, CC26, CC27) from 12A_3C disks — **the first cells built
-from this sample**, before the labelled-disk practice below. Per-cell hard-carbon masses **pending from
-supervisor** — see `Biona_Academy/Open_Questions.md` ("Missing coin-cell electrode weights").
+from this sample**, before the labelled-disk practice below. Disk masses **received 2026-07-21** (previously
+pending from supervisor). Active mass = (disk − **5.55 mg** tare) × f, f = 0.8873. Area 1.2668 cm².
 
-| Cell | Disk mass (mg) | Coating (mg) | Hard-carbon mass (mg) | Coating load (mg/cm²) | Hard-C load (mg/cm²) | Status |
+> **Tare basis: 5.55 mg (supervisor's value), not the 5.50 mg used elsewhere in this file.** Adopted
+> 2026-07-21 on supervisor's instruction, pending a fresh foil-blank weighing to settle which is correct.
+> These three rows are therefore **not on the same basis as CC39/CC40 or the punch tables above** — see
+> `Biona_Academy/Open_Questions.md`.
+
+| Cell | Disk mass (mg) | Coating (mg) | **Hard-carbon mass (mg)** | Coating load (mg/cm²) | Hard-C load (mg/cm²) | Status |
 |---|---|---|---|---|---|---|
-| CC25 | _TBD_ | — | — | — | — | cycling |
-| CC26 | _TBD_ | — | — | — | — | cycling |
-| CC27 | _TBD_ | — | — | — | — | cycling |
+| CC25 | 28.2 | 22.65 | **20.097** | 17.880 | 15.865 | cycling |
+| CC26 | 28.2 | 22.65 | **20.097** | 17.880 | 15.865 | cycling |
+| CC27 | 26.9 | 21.35 | **18.944** | 16.854 | 14.954 | cycling |
+
+CC25 and CC26 land within the **standard set** range (27.72–30.82 mg); CC27 (26.9) sits just below it, in the
+same slightly-low band as CC39 (26.6) — not flagged, consistent with the 4% disk-to-disk CV. **CC25 and CC26
+share an identical recorded mass** (28.2 mg) and therefore identical derived values — plausible at 0.1 mg
+rounding, but they are two separate cells, not a duplicated record.
 
 **Cycling:** started 2026-07-15, **in progress**.
 

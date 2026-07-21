@@ -42,14 +42,28 @@ doc and remove it here.
 - Recurring failure mode: square edges of the blade catch particles/kinks and leave a **growing
   triangular scratch pattern** (seen on 6A and 10A).
 
-## Missing coin-cell electrode weights (first 6 cells: 12A_2C ×3 + 12A_3C ×3)
+## ~~Missing coin-cell electrode weights (first 6 cells: 12A_2C ×3 + 12A_3C ×3)~~ — RESOLVED 2026-07-21
 
-- **TODO:** hard-carbon electrode (disk) weights for the **first 6 cells built and put on cycling**
-  — three MMB1_12A_2C + three MMB1_12A_3C, assembled/cycling **before** the MMB1_10A batch (whose
-  cells carry the first recorded weights: 18.9, 18.4 mg) — are still missing.
-- **Source:** supervisor has these values; pending hand-off to João.
-- Once received, add them to the "Cell Assembly & Cycling" section of `MMB1_12A_2C_CoinCell_Disks.md`
-  and `MMB1_12A_3C_CoinCell_Disks.md`, following the format established for 12A_1C (CC19-21).
+- Disk weights for the **first 6 cells built and put on cycling** (CC22–CC27) received from supervisor
+  and entered in `MMB1_12A_2C_CoinCell_Disks.md` (CC22–24) and `MMB1_12A_3C_CoinCell_Disks.md` (CC25–27):
+
+  | Cell | Sample | Disk mass (mg) |
+  |---|---|---|
+  | CC22 | 12A_2C | 20.8 |
+  | CC23 | 12A_2C | 24.1 |
+  | CC24 | 12A_2C | 20.2 |
+  | CC25 | 12A_3C | 28.2 |
+  | CC26 | 12A_3C | 28.2 |
+  | CC27 | 12A_3C | 26.9 |
+
+- **Assumptions applied:** **5.55 mg foil tare** (supervisor's value, adopted 2026-07-21 — see the tare
+  conflict item below), sample-specific f (0.8874 / 0.8873), area 1.2668 cm². Values are to 0.1 mg, vs
+  0.01 mg for the punch-day sets.
+- ⚠️ **Follow-up:** the three 12A_2C cells all fall at or below the punch-population range (20.75–25.75 mg)
+  and below both sheet means — see the note in `MMB1_12A_2C_CoinCell_Disks.md`. Worth confirming the
+  supervisor's balance/tare basis before comparing CC22–24 against CC37/CC38 as one population.
+- The cell→value mapping assumes the six numbers were given in **CC22→CC27 order**; the 3C values fitting
+  the 3C range and the 2C values the 2C range supports this, but confirm if any result looks off.
 
 ## Cycling / electrochemical-testing instruments (Biologic + second cycler)
 
@@ -75,6 +89,27 @@ doc and remove it here.
   foil tare used by the supervisor for the MMB2_13A pre-cut reference electrode (CC41). Without these,
   its coating/hard-carbon load cannot be computed — see
   `Processes/Electrode_Prep_Logs/MMB2_13A_CoinCell_Disks.md`.
+
+## ⚠️ Foil tare conflict: 5.50 vs 5.55 mg — UNRESOLVED, repo currently mixed
+
+- **Two competing values are in use:**
+  - **5.50 mg** — recorded in this repo since the 6A punch (2026-07-08), to 0.1 mg on the AX205.
+    Used for **every per-disk table and population statistic** in all `*_CoinCell_Disks.md` files, and
+    hard-coded as `foil_g=0.0055` in `disk_loading.py`.
+  - **5.55 mg** — the supervisor's value, and the basis the **cycler C-rate programs** were built on.
+- **Decision 2026-07-21 (João):** go with the **supervisor's 5.55 mg** until confirmation numbers arrive.
+  Applied so far to **CC22–CC27 only**; the rest of the repo is still on 5.50 mg → **the repo is currently
+  mixed and cross-cell comparisons are not clean.**
+- **Impact is small for most samples but NOT for 8A:**
+  - Typical disks (coating 15–23 mg): 0.05 mg shift = **~0.3%**, well inside the ±0.8% die-dominated
+    measurement uncertainty. Effectively cosmetic.
+  - **MMB1_8A (coating ~0.6 mg): 0.05 mg shift = ~8%**, and for CC30 (disk 6.5 mg) the coating goes
+    1.00 → 0.95 mg, hard carbon 0.898 → 0.853 mg. 8A is **tare-dominated**, so the tare choice materially
+    changes its numbers. Any 8A conclusion must state which tare was used.
+- **TODO (resolves this properly):** punch and weigh a **fresh foil blank** — several, for a mean ± spread.
+  This is already an open action in the 2C/3C disk logs and would settle it without deferring to either value.
+- **TODO:** once settled, recompute *all* disk tables from `disk_loading.py` on the single agreed tare so the
+  dataset is internally consistent.
 
 ## ⚠️ Cycler C-rate mass basis differs from the measured electrode data (applies to ALL cells, CC19–41)
 

@@ -158,14 +158,26 @@ was largely preserved rather than homogenised.
 > measured mass, don't back it out from the nominal C-rate.
 
 **3 sodium half-cells assembled 2026-07-15** (CC22, CC23, CC24) from 12A_2C disks — **the first cells built
-from this sample**, before the labelled-disk practice below. Per-cell hard-carbon masses **pending from
-supervisor** — see `Biona_Academy/Open_Questions.md` ("Missing coin-cell electrode weights").
+from this sample**, before the labelled-disk practice below. Disk masses **received 2026-07-21** (previously
+pending from supervisor). Active mass = (disk − **5.55 mg** tare) × f, f = 0.8874. Area 1.2668 cm².
 
-| Cell | Disk mass (mg) | Coating (mg) | Hard-carbon mass (mg) | Coating load (mg/cm²) | Hard-C load (mg/cm²) | Status |
+> **Tare basis: 5.55 mg (supervisor's value), not the 5.50 mg used elsewhere in this file.** Adopted
+> 2026-07-21 on supervisor's instruction, pending a fresh foil-blank weighing to settle which is correct.
+> These three rows are therefore **not on the same basis as CC37/CC38 or the punch tables above** — see
+> `Biona_Academy/Open_Questions.md`.
+
+| Cell | Disk mass (mg) | Coating (mg) | **Hard-carbon mass (mg)** | Coating load (mg/cm²) | Hard-C load (mg/cm²) | Status |
 |---|---|---|---|---|---|---|
-| CC22 | _TBD_ | — | — | — | — | cycling |
-| CC23 | _TBD_ | — | — | — | — | cycling |
-| CC24 | _TBD_ | — | — | — | — | cycling |
+| CC22 | 20.8 | 15.25 | **13.533** | 12.039 | 10.683 | cycling |
+| CC23 | 24.1 | 18.55 | **16.461** | 14.644 | 12.995 | cycling |
+| CC24 | 20.2 | 14.65 | **13.000** | 11.565 | 10.263 | cycling |
+
+> ⚠️ **All three sit at or below the punch-population range** (sheet 1+2 disk masses 20.75–25.75 mg): CC24 (20.2)
+> and CC22 (20.8) are at/below the observed minimum, and all three fall below both sheet means (22.9 / 22.7 mg).
+> Two readings apart it could be spread; three-for-three low is a pattern. Most likely causes: these were the
+> **first cells built**, punched/selected before the process settled, or the supervisor's balance/tare basis
+> differs from the punch-day weighing. **Do not treat these as drawn from the same population as CC37/CC38**
+> without checking. Values recorded to 0.1 mg, vs 0.01 mg for the punch set.
 
 **Cycling:** started 2026-07-15, **in progress**.
 
