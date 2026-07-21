@@ -64,17 +64,22 @@ doc and remove it here.
 - The cell→value mapping assumes the six numbers were given in **CC22→CC27 order**; the 3C values fitting
   the 3C range and the 2C values the 2C range supports this, but confirm if any result looks off.
 
-## Cycling / electrochemical-testing instruments (Biologic + second cycler)
+## Cycling / electrochemical-testing instruments — ~~identification~~ RESOLVED 2026-07-21; protocols still open
 
-- **TODO:** make/model for both cyclers used for coin-cell galvanostatic cycling and electrochemical
-  characterisation: a **Biologic** potentiostat/cycler, and a second instrument (name TBC — sounds
-  like "Kuwara"/"Kuwahara"? — confirm spelling).
-- **TODO:** the specific programs/protocols run on each (e.g. **OCV**, **PEIS**, **GCPL**/GSCD-type
-  galvanostatic cycling) and their settings (voltage windows, rates, rest times, etc.).
-- **Source:** pending from João.
-- Once received, add both instruments to `Instruments/Instruments.md` (there are already TBD stubs
-  for "Battery Cycler / Potentiostat" and "Coin-Cell Crimper / Press") and document the standard
-  cycling protocol in a new `Processes/` doc (analogous to `RamanSesh.md`).
+- ~~**Make/model of both cyclers**~~ — **DONE.** Both are **Bio-Logic SAS**, on one PC / one EC-Lab
+  session: **VMP3 (s/n 0509)** and **MPG-2 (s/n 0124)**, software **EC-Lab V11.62**. Full specs in
+  `Instruments/Instruments.md`; photos in `images/Cycling/`.
+- ⚠️ **The "Kuwara"/"Kuwahara" name does not match either unit.** Either it was a mishearing of MPG-2,
+  or there is a **third instrument** not on this PC. **Confirm** — it changes whether the dataset spans
+  two or three cyclers.
+- ⚠️ **TODO (new, and it affects existing data):** record **which instrument and channel each cell ran
+  on**. CC19–CC41 are all logged without this. VMP3 and MPG-2 are different hardware, so an
+  instrument-dependent artefact would currently be undetectable. Assign retrospectively if the EC-Lab
+  data files still carry it (the device ID is stored in the raw `.mpr`/`.mpt` headers).
+- **TODO (still open):** the specific programs/protocols run on each (e.g. **OCV**, **PEIS**,
+  **GCPL**/GSCD-type galvanostatic cycling) and their settings (voltage windows, rates, rest times).
+  Document in a new `Processes/` doc, analogous to `RamanSesh.md`.
+- **TODO (still open):** the **Coin-Cell Crimper / Press** stub in `Instruments/Instruments.md`.
 
 ## Coin-cell assembly SOP
 

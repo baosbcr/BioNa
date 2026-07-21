@@ -203,11 +203,41 @@
 
 ---
 
-## Battery Cycler / Potentiostat — *TBD (not yet documented)*
+## Battery Cyclers / Potentiostats — **Bio-Logic VMP3 + MPG-2**
 
-| Parameter | Value |
-|---|---|
-| Model | TBD |
-| Used for | Galvanostatic cycling / electrochemical testing of the Na half-cells |
+Two **Bio-Logic SAS** (Made in France) multichannel instruments, both driven from the **same PC and the
+same EC-Lab session** — they appear together in the EC-Lab *Devices* list.
+Documented 2026-07-21 from the instrument labels and the software screen
+(`images/Cycling/`).
 
-> Needed to turn the punched disks into measured capacities — not yet in the instrument list.
+| Parameter | Instrument 1 | Instrument 2 |
+|---|---|---|
+| Manufacturer | Bio-Logic SAS (France) | Bio-Logic SAS (France) |
+| Model | **VMP3** | **MPG-2** |
+| Serial number | **0509** | **0124** |
+| EC-Lab device ID | `VMP3-USB-509` | `MPG-2-USB-124` |
+| Connection | USB | USB |
+| Mains | 110–240 Vac, 50/60 Hz | 110–240 Vac, 50/60 Hz |
+| Fuses | 6.3 AF | 6.3 AF |
+| Max power | 600 W | 600 W |
+| Used for | Galvanostatic cycling / electrochemical testing of the Na half-cells | same |
+
+**Software:** **EC-Lab V11.62** (Bio-Logic), single install controlling both instruments.
+Techniques available/used include OCV, PEIS and GCPL — see `Biona_Academy/Open_Questions.md` for the
+protocol details still to be recorded.
+
+**Photos:** `images/Cycling/Biologic_VMP3_sn0509_Label.jpg`,
+`images/Cycling/Biologic_MPG2_sn0124_Label.jpg`, `images/Cycling/ECLab_V11.62_DeviceList.jpg`.
+
+> ⚠️ **Not yet recorded: which cells ran on which instrument.** All cells to date (CC19–CC41) are logged
+> without an instrument/channel assignment. VMP3 and MPG-2 are different hardware (the MPG-2 is a
+> battery-cycling-oriented unit; the VMP3 is the general-purpose modular potentiostat), so any
+> instrument-dependent artefact would be invisible in the current logs. **Record instrument + channel
+> per cell from here on.**
+>
+> ⚠️ **EC-Lab version** read off a photographed screen — **V11.62** is legible but worth confirming in
+> *Help → About* before quoting it in a report.
+>
+> ⚠️ The second cycler was previously noted as sounding like *"Kuwara"/"Kuwahara"* — that does **not**
+> match either unit here. Either it was a mishearing of MPG-2, or a **third instrument** exists that is
+> not on this PC. Confirm.

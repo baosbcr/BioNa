@@ -28,6 +28,13 @@ Coating and calendering (see `Processes/Calendering_Notes.md`).
 - `Thickness_Substrate_vs_PostcalenderedSample.jpg` — handwritten thickness log:
   bare substrate 0.076 mm (≈16–17 µm readings) vs coated 0.203 mm (≈184–237 µm readings).
 
+## Cycling/
+Coin-cell cycling hardware and software (see `Instruments/Instruments.md`).
+- `Biologic_VMP3_sn0509_Label.jpg` — Bio-Logic VMP3 rating plate (s/n 0509, 110–240 Vac, 600 W).
+- `Biologic_MPG2_sn0124_Label.jpg` — Bio-Logic MPG-2 rating plate (s/n 0124, 110–240 Vac, 600 W).
+- `ECLab_V11.62_DeviceList.jpg` — EC-Lab V11.62 Devices pane showing both units connected
+  (`MPG-2-USB-124`, `VMP3-USB-509`).
+
 ## Sample_Prep/
 Powder handling, weighing, slurry materials, drying, storage.
 - `Grinding_MortarPestle_Setup.jpg` — manual grinding (mortar & pestle).
