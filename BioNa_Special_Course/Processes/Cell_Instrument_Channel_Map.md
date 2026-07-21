@@ -61,16 +61,18 @@ CC32-C15 overlap in time, they cannot both be that channel.
 | CC39 | 4 | 6 | 151 | 12A_3C |
 | CC40 | 4 | 7 | 152 | 12A_3C |
 | CC41 | 4 | 8 | 153 | MMB2_13A (supervisor reference) |
-| **CC42** | 5 | 1 | — | ❓ **not in any log** |
-| **CC43** | 5 | 2 | — | ❓ **not in any log** |
-| **CC44** | 5 | 3 | — | ❓ **not in any log** |
-| **CC45** | 5 | 4 | — | ❓ **not in any log** |
-| **CC46** | 5 | 5 | — | ❓ **not in any log** |
-| **CC47** | 5 | 6 | — | ❓ **not in any log** |
+| CC42 | 5 | 1 | 154 | ❓ **ownership unconfirmed** |
+| CC43 | 5 | 2 | 155 | ❓ **ownership unconfirmed** |
+| CC44 | 5 | 3 | 156 | ❓ **ownership unconfirmed** |
+| CC45 | 5 | 4 | 157 | ❓ **ownership unconfirmed** |
+| CC46 | 5 | 5 | 158 | ❓ **ownership unconfirmed** |
+| CC47 | 5 | 6 | 159 | ❓ **ownership unconfirmed** |
 
-> ⚠️ **CC42–CC47 exist on the cycler but appear in no coin-cell disk log.** Filenames date them
-> `20261707`. Six cells with no recorded sample, disk mass or assembly date — **identify them before the
-> data analysis**, or they cannot be normalised to a specific capacity.
+> ⚠️ **CC42–CC47 may not be this project's cells.** They appear in no disk log, sit on **unit 5** (João
+> used only unit 4), lack the `J` suffix carried by CC28J–CC41J, and their schedules were **copied from
+> CC41** — so their `Creator = negsa` is *inherited*, not evidence of ownership (all six share CC41's
+> `PN = 2026-07-16 17-29-21`). **Confirm with the lab before including them.**
+> Detail: `ToProcessWClaude/Notes_21_7_26.md` §2, §4b.
 
 ---
 

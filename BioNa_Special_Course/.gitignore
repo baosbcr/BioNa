@@ -10,6 +10,7 @@ Experimental_Data/
 # Bulk data lives on OneDrive / transfers machine-to-machine, never in git.
 # Inventory + what's in here: Biona_Academy/Open_Questions.md ("Electrochemical data analysis").
 ToProcessWClaude/
+!ToProcessWClaude/*.md
 
 # --- Literature PDFs (per CLAUDE.md) ---
 Literature_Review/**/*.pdf
