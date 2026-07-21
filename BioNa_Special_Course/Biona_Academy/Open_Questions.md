@@ -56,9 +56,8 @@ doc and remove it here.
   | CC26 | 12A_3C | 28.2 |
   | CC27 | 12A_3C | 26.9 |
 
-- **Assumptions applied:** **5.55 mg foil tare** (supervisor's value, adopted 2026-07-21 — see the tare
-  conflict item below), sample-specific f (0.8874 / 0.8873), area 1.2668 cm². Values are to 0.1 mg, vs
-  0.01 mg for the punch-day sets.
+- **Basis applied:** **5.5255 mg measured foil tare** (see the tare item below), sample-specific f
+  (0.8874 / 0.8873), area 1.2668 cm². Values are to 0.1 mg, vs 0.01 mg for the punch-day sets.
 - ⚠️ **Follow-up:** the three 12A_2C cells all fall at or below the punch-population range (20.75–25.75 mg)
   and below both sheet means — see the note in `MMB1_12A_2C_CoinCell_Disks.md`. Worth confirming the
   supervisor's balance/tare basis before comparing CC22–24 against CC37/CC38 as one population.
@@ -90,45 +89,30 @@ doc and remove it here.
   its coating/hard-carbon load cannot be computed — see
   `Processes/Electrode_Prep_Logs/MMB2_13A_CoinCell_Disks.md`.
 
-## ⚠️ Foil tare: switched 5.50 → 5.55 mg repo-wide (2026-07-21) — value still UNCONFIRMED
+## ~~Foil tare: 5.50 vs 5.55 mg~~ — **RESOLVED 2026-07-21 by measurement**
 
-- **What changed.** The whole dataset was recomputed on the **supervisor's 5.55 mg** foil tare on
-  **2026-07-21**, on João's instruction, replacing the 5.50 mg recorded here since the 6A punch
-  (2026-07-08). Every per-disk table, population summary, cell-assembly table and cross-sample comparison
-  in all `*_CoinCell_Disks.md` files was regenerated; `disk_loading.py` now carries the value once as
-  `FOIL_TARE_G = 0.00555`. **The repo is internally consistent — one tare everywhere.**
-- **The value itself is still not confirmed.** 5.50 mg was a reading recorded to 0.1 mg on the AX205;
-  5.55 mg is the supervisor's number and the basis the cycler C-rate programs were built on. Neither has
-  been verified against a freshly weighed blank.
-- **Effect of the switch (loadings all shifted DOWN slightly):**
-
-  | Sample | Hard-C load before → after (mg/cm²) |
-  |---|---|
-  | 6A | 7.53 → 7.50 |
-  | 8A | 0.430 → **0.394** |
-  | 10A | 10.28 → 10.25 |
-  | 12A_1C | 10.75 → 10.72 |
-  | 12A_2C sheet 1 / 2 | 12.53 → 12.49 / 12.12 → 12.08 |
-  | 12A_3C standard / thick | 16.92 → 16.89 / 20.38 → 20.34 |
-  | Kuranode | 6.26 → 6.23 |
-
-- **Negligible for every sample except 8A.** For normal coatings (9–29 mg) the 0.05 mg shift is ~0.2–0.4%,
-  well inside the ±0.8% die-dominated measurement uncertainty. **8A's coating is only ~0.55 mg**, so the
-  same shift moved it **~8%** (0.430 → 0.394 mg/cm² hard carbon; CC30's hard-carbon mass 0.898 → 0.853 mg).
-  8A is **tare-dominated** — its per-disk measurement uncertainty rose 5.6% → **6.1%**, which now **exceeds
-  its 4.7% disk-to-disk spread**, so 8A's spread is no longer resolvable above tare noise. **Any 8A
-  conclusion must state the tare used.**
-- **TODO (settles this properly):** punch and weigh **several fresh foil blanks** for a mean ± spread,
-  rather than deferring to either number. Highest value for 8A and Kuranode (thinnest coatings).
-- **To change the tare again:** edit `FOIL_TARE_G` in `disk_loading.py` and regenerate every table — it is
-  the single input that moves every published loading in the project.
+- **Measured: 5.5255 mg** (mean of 11 carbon-coated foil blanks cut with the **same 12.7 mm die** as every
+  electrode disk). Full record, including the 9-vs-10 count correction: `Processes/Foil_Tare_Measurement.md`.
+- **Both prior assumptions were within 0.5%** and the truth sits between them: 5.50 mg was −0.46%,
+  the supervisor's 5.55 mg +0.44%. Neither was meaningfully wrong for normal coatings.
+- Adopted repo-wide as `FOIL_TARE_G = 0.0055255` in `disk_loading.py`; all tables regenerated from it.
+- ⚠️ **The remaining weakness is the spread, not the mean.** Only 2 of the 11 blanks were resolved
+  individually → the 0.057 mg disk-to-disk SD has **1 dof**. It is still *larger* than the 0.029 mg
+  resolution-based placeholder it replaced, so per-disk uncertainty went **up**, not down:
+  thick coatings 0.80–0.85% → 0.81–0.96%, Kuranode → 1.02%, and **8A 6.1% → 10.1%**.
+- **Consequence for 8A:** its 4.5% disk-to-disk spread is now less than half its 10.1% measurement
+  uncertainty — 8A's variation is **not resolvable above tare noise** and cannot be reported as real
+  coating non-uniformity.
+- **TODO:** weigh the 11 blanks **individually** to convert the 1-dof SD into a proper n=11 estimate.
+- **TODO:** the **die tolerance (±0.05 mm, assumed)** is now the dominant uncertainty for every sample
+  except 8A — get the CES cutter spec.
 
 ## ⚠️ Cycler C-rate mass basis differs from the measured electrode data (applies to ALL cells, CC19–41)
 
 - **The cycling programs (theoretical-capacity → C-rate current calculation) use a different, flat mass
   basis than the per-cell measured values recorded in the Electrode_Prep_Logs:**
-  - ~~**Foil tare: 5.55 vs 5.50 mg**~~ — **no longer a difference.** The repo adopted the cycler's
-    5.55 mg on 2026-07-21 (see the tare item above), so both sides now use the same tare.
+  - **Foil tare: 5.55 mg** (cycler) vs the **measured 5.5255 mg** now used here — a +0.44% difference,
+    small enough to ignore next to the f mismatch below.
   - **Active (hard-carbon) mass fraction: flat 91%** applied to *every* electrode on the cycler side,
     regardless of sample — vs the actual per-sample measured values (**87.7–89.8%**, f = 0.877–0.898,
     see each sample's "Slurry solids composition" table). Reason: João did not have the per-sample f
@@ -140,5 +124,5 @@ doc and remove it here.
   hard-carbon mass**, not backed out from the nominal C-rate/theoretical capacity used to set the current.
 - **TODO:** for each cell, quantify the offset between the assumed 91% f and the measured per-sample f
   (0.882–0.898) so the true delivered C-rate can be corrected when reporting rate-capability data. The
-  offset is now **f-only** (~1.3–3.2% relative), since the tare halves agree.
+  offset is now **dominated by f** (~1.3–3.2% relative); the tare difference contributes only +0.44%.
 - Applies to **every cell cycled to date** (CC19–CC21, CC22–CC41).

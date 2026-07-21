@@ -19,17 +19,20 @@ import numpy as np
 # ---- device uncertainties (1 sigma) ----
 # Balance: Mettler Toledo AX205, d = 0.01 mg (fine) / 0.1 mg (full); repeatability ~0.015 mg fine range.
 U_BAL  = 0.000015  # g, per disk weighing (fine range, 0.01 mg readability; AX205 repeatability).
-U_FOIL = 0.00003   # g, foil-tare uncertainty. Tare recorded to 0.1 mg -> resolution 0.1/sqrt(12)=0.029 mg.
-                   # NOTE: real foil disk-to-disk mass variation may exceed this.
+U_FOIL = 0.0000566 # g, foil-tare uncertainty = MEASURED disk-to-disk SD of the blanks (0.057 mg, 1.0%).
+                   # Supersedes the old 0.029 mg resolution-based placeholder, which understated it.
+                   # WEAK ESTIMATE: only 2 of the 11 blanks were resolved individually -> 1 dof.
+                   # Weigh the 11 blanks one at a time to firm this up (cheap, and 8A depends on it).
 D_MM   = 12.70     # cutting-die diameter, mm (nominal 1/2", CES disk cutter)
 U_D_MM = 0.05      # mm, ASSUMED die-diameter tolerance — CES spec UNKNOWN. Dominant term; confirm.
 
-# ---- foil tare ----
-# 5.55 mg: the supervisor's value, and the basis the cycler C-rate programs were built on.
-# Adopted repo-wide 2026-07-21 (was 5.50 mg, recorded on the 6A punch day 2026-07-08).
-# UNRESOLVED: weigh several fresh foil blanks to settle this — see Biona_Academy/Open_Questions.md.
+# ---- foil tare: MEASURED 2026-07-21, no longer assumed ----
+# 5.5255 mg = mean of 11 carbon-coated foil blanks cut with the SAME 12.7 mm die as every
+# electrode disk in this project, weighed cumulatively (see Biona_Academy/Open_Questions.md).
+# Supersedes both the old 5.50 mg (-0.46%) and the supervisor's 5.55 mg (+0.44%) — it sits
+# almost exactly between them, and both were within 0.5% of the truth.
 # Changing this constant changes EVERY published loading; re-run and regenerate the .md tables.
-FOIL_TARE_G = 0.00555
+FOIL_TARE_G = 0.0055255
 
 def analyse(name, weights_g, foil_g, comp):
     w = np.array(weights_g, float)

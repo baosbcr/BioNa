@@ -21,8 +21,10 @@
 | Repeatability (typ.) | ~0.015 mg fine range *(manufacturer typical — confirm from datasheet)* |
 | Used for | Slurry component weighing; electrode-disk mass; foil tare |
 
-> Disk masses were recorded to 0.01 mg (fine range); the 0.00555 g foil tare to 0.1 mg.
-> Tare basis switched 5.50 -> 5.55 mg on 2026-07-21 (supervisor's value); unconfirmed, see Open_Questions.md.
+> Disk masses were recorded to 0.01 mg (fine range).
+> **Foil tare MEASURED 2026-07-21: 5.5255 mg** (mean of 11 blanks cut with the standard 12.7 mm die,
+> SD 0.057 mg) — supersedes the earlier assumed 5.50 / 5.55 mg values.
+> Full record: `Processes/Foil_Tare_Measurement.md`.
 > Uncertainty used in `Processes/Electrode_Prep_Logs/disk_loading.py`.
 
 ---
