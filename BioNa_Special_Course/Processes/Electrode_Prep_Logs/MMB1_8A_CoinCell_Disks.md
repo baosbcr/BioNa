@@ -138,14 +138,21 @@ f = 0.8977. Area 1.2668 cm².
 
 | Cell | Disk mass (mg) | Coating (mg) | **Hard-carbon mass (mg)** | Coating load (mg/cm²) | Hard-C load (mg/cm²) | Status |
 |---|---|---|---|---|---|---|
-| CC30 | 6.5 | 0.97 | **0.875** | 0.769 | 0.691 | cycling |
+| CC30 | 6.15 | 0.62 | **0.561** | 0.493 | 0.443 | cycling |
+
+> ✏️ **Mass corrected 2026-07-21 (João): 6.5 mg → 6.15 mg — the 6.5 was a transcription typo.**
+> The original 6.5 mg sat 0.35 mg *above* the maximum of all 21 punched 8A disks (range 6.04–6.15 mg,
+> §"Per-disk results" above) — roughly 6σ off the population, and it implied 0.97 mg of coating when no
+> real disk exceeds 0.595 mg. 6.15 mg is the population maximum and is consistent. Derived values above
+> recomputed accordingly: coating 6.15 − 5.5255 = **0.6245 mg**, hard carbon × f(0.8977) = **0.561 mg**.
+> The superseded figures were 0.97 / 0.875 / 0.769 / 0.691 — anything computed against those is stale.
 
 > ⚠️ **Field observation (2026-07-16 batch):** on inspection this cell looked unusually thin and appeared
 > under-loaded — enough to suspect the hard-carbon coating may have detached/delaminated post-assembly, fate
-> unknown. Note the recorded **disk mass (6.5 mg) is actually the heaviest of any 8A disk seen** (punch-table
-> range 6.04–6.15 mg, §"Per-disk results" above), so this isn't a mass-record error — the anomaly is
-> physical/electrochemical, not in the weighing. Treat this cell's results with caution and flag in any
-> cross-cell comparison.
+> unknown. With the mass correction above, the recorded disk mass no longer contradicts that observation:
+> CC30 is at the *top* of the punch range but its coating is ~0.62 mg, i.e. genuinely near-bare foil like
+> the rest of the 8A set. The anomaly is in the **coating**, not the weighing. Treat this cell's results
+> with caution and flag in any cross-cell comparison.
 >
 > **Na half-cell / Na in excess** → this mass sets only the working-electrode normalisation, not balancing.
 

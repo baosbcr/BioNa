@@ -29,23 +29,30 @@ Instrument specs: `Instruments/Instruments.md`. Cell masses/loadings: `Processes
 | CC28 | MPG-2 | C10 | 10A |
 | CC29 | MPG-2 | C11 | 10A |
 | CC30 | MPG-2 | C12 | 8A |
-| CC31 | MPG-2 | **C13 and C15** ⚠️ | 6A — see conflict below |
-| CC32 | MPG-2 | C15 ⚠️ | 6A |
+| CC31 | MPG-2 | **C13** ✅ | 6A — **dead run, no data** (see below) |
+| CC32 | MPG-2 | C15 ✅ | 6A |
 | CC33 | MPG-2 | C16 | Kuranode |
 
 > **Channel numbering appears continuous across the two instruments** (VMP3 = C01–C08, MPG-2 = C09–C16),
 > consistent with both devices being in one EC-Lab session. Confirm against the EC-Lab channel view before
 > relying on it to identify a *physical* channel.
 
-### ⚠️ CC31 / CC32 channel conflict — resolve before using either
+### ✅ CC31 / CC32 channel conflict — RESOLVED 2026-07-21. No data is mislabelled.
 
-`CC31` has a **complete duplicate technique set on both C13 and C15** (01_PEIS … 09_PEIS on each), and
-`CC32` sits on **C15**. If C15 is one physical channel, then one of these two datasets is mislabelled —
-either CC31 was started on C15 and moved to C13, or a run was saved under the wrong cell name.
+The apparent conflict (`CC31` carrying a full duplicate technique set on **both C13 and C15**, colliding
+with `CC32` on C15) was a **template artifact, not a mix-up**. Three independent lines agree:
 
-**Both CC31 and CC32 are 6A cells**, so a mix-up would be invisible in the results (same sample, similar
-loading: 15.0 mg disk each). Check the start timestamps inside the `.mpr` headers: if CC31-C15 and
-CC32-C15 overlap in time, they cannot both be that channel.
+1. **João's own tracking sheet** assigns CC31 → Ch13 and CC32 → Ch15.
+2. **Timestamps rule out a swap.** CC33 started **16:39:31** and loads `BNa_CC31J_20260716.mps` — i.e.
+   *before* CC31's own run started at **16:40:54**. CC31's `.mps` was therefore authored first with
+   **both C13 and C15 selected**, then reused as the template for CC32 (16:40:31) and CC33. That is
+   where the phantom C15 set came from.
+3. **The CC31-on-C15 files are empty stubs**; the real C15 data is CC32's.
+
+> ⚠️ **CC31 is a dead run.** `BNa_CC31J_20260716_04_GCPL_C13` holds **67 points**: a 60-point rest, then
+> sodiation ran **6 points over 3.6 s at −0.48 µA** and stopped. There is no `_07` file. Open circuit /
+> no contact — **no recoverable data**. The 6A (600 °C) condition therefore rests on **CC32 alone, with
+> no replicate**. Full analysis: `Processes/Cycling_Data_Review_2026-07-21.md` §4.2–4.3.
 
 ---
 

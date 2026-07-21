@@ -1,5 +1,12 @@
 # Notes — 2026-07-21 · raw cycling data triage
 
+> ⚠️ **SUPERSEDED IN PART, 2026-07-21.** The analysis these notes queue up has been **done** —
+> see `Processes/Cycling_Data_Review_2026-07-21.md` and `Figures/`. The `ToProcessWClaude/`
+> folder described below **no longer exists**: it was dismantled into
+> `Experimental_Data/Cycling/` (+ `TGA_DSC/`), and the 98 redundant Bio-Logic text exports
+> (1.64 GB) were deleted after verifying the `.mpr` binaries reproduce them exactly.
+> Kept here for provenance and for the metadata findings in §1–§8, which remain valid.
+
 > ## ▶️ START HERE — picking this up with Claude Fable
 >
 > **Task:** analyse the Na half-cell cycling data (+ the TGA/DSC set). Run it with **Claude Fable** and
@@ -246,10 +253,20 @@ are presumably re-plots; confirm which is authoritative.
 
 - [ ] **Establish who owns CC42–CC47** — `Creator` is inherited from CC41 and cannot answer it. Then
       identify sample/disk mass/assembly date. Blocks normalisation. **Not deleted.**
-- [ ] Resolve **CC31 vs CC32 on C15**
-- [ ] Deduplicate Neware exports by **TestID** (not filename, not `StepName` — CC36 carries CC35's)
-- [ ] Parser: handle **`TestInfo.xml` fallback** + **GB2312** encoding
-- [ ] Renormalise everything on **measured mass** (tare 5.5255 mg, per-sample f) — not the cycler's
+- [x] ~~Resolve **CC31 vs CC32 on C15**~~ — **done 2026-07-21.** CC31 = C13, CC32 = C15, nothing
+      mislabelled; the C15 duplicate came from CC31's `.mps` being authored with both channels selected
+      and reused as a template. **CC31 is a dead run (67 points, no `_07`)** — 6A has no replicate.
+      See `Processes/Cell_Instrument_Channel_Map.md`.
+- [x] ~~Deduplicate Neware exports by **TestID**~~ — done; dedup by cell in the parser, 7 unique tests.
+- [x] ~~Parser: handle **`TestInfo.xml` fallback** + **GB2312**~~ — the `.xlsx` exports carry all needed
+      metadata (`test` sheet: `Remarks`, `Builder`, `P/N`, `Step Name`, `Active material`), so the
+      `.ndax` XML was not needed. Still required if CC41 is re-pulled as `.ndax` only.
+- [x] ~~Renormalise everything on **measured mass**~~ — done for CC19–CC40;
+      `Processes/Cycling_Data_Review_2026-07-21.md`. CC41 still un-normalisable (*f*, tare unknown).
+- [ ] **Re-export PEIS from the `.mpr` with impedance columns** — all 60 `*_PEIS_*.txt` were saved
+      **without `freq`/`Re(Z)`/`-Im(Z)`**, so the EIS is currently unusable. Highest-value fix.
+- [ ] **Diagnose the systemic capacity fade** — every cell, *including the Kuranode benchmark*, loses
+      35–45 % over 10 cycles at CE ≈ 100 %. Cell-build/test-side, not material. Blocks any retention claim.
 - [ ] Map the **TGA/DSC sample codes** to the project nomenclature
 - [ ] Check the **`Nihat`** folder in the Bio-Logic paths
 - [ ] Transfer to bpc over `NSK-Guest` wifi (~2.2 GB after the patbin deletion)

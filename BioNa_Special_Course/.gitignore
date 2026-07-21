@@ -6,9 +6,9 @@ SzymonWebApp/*
 Experimental_Data/
 !Experimental_Data/.gitkeep
 
-# --- Raw instrument exports staged for analysis (2.3 GB: .mpr/.ndax/.xlsx/.ngb-dsv) ---
-# Bulk data lives on OneDrive / transfers machine-to-machine, never in git.
-# Inventory + what's in here: Biona_Academy/Open_Questions.md ("Electrochemical data analysis").
+# --- ToProcessWClaude/ was dismantled 2026-07-21 into Experimental_Data/ ---
+# Raw exports now live under Experimental_Data/Cycling/ and TGA_DSC/ (ignored above).
+# Kept as a guard in case the staging folder is ever recreated by a transfer.
 ToProcessWClaude/
 !ToProcessWClaude/*.md
 
@@ -20,3 +20,9 @@ Literature_Review/**/*.pdf
 Thumbs.db
 __MACOSX/
 *.tmp
+
+# --- Analysis pipeline: scripts AND their JSON output ARE tracked (228 KB total) ---
+# so Figures/ can be regenerated without the gitignored 553 MB of raw instrument data.
+# Python cruft only:
+__pycache__/
+*.pyc

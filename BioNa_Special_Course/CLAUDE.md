@@ -47,7 +47,11 @@ See `Samples/Sample_Nomenclature.md` for the full matrix.
 ```
 BioNa_Special_Course/
 ├── Experimental_Data/   # Raw data per sample/experiment (gitignored — OneDrive)
-│                        #   └── Raman/  raw .txt spectra
+│                        #   ├── Cycling/  BioLogic_CC19-CC33 (.mpr), Neware_CC34-CC41
+│                        #   │             (.ndax/.xlsx) — see Cycling/README.md
+│                        #   ├── Raman/    raw .txt spectra
+│                        #   └── TGA_DSC/  NETZSCH .ngb-dsv + plots
+├── Figures/             # Generated figures + reading guide (Figures/README.md)
 ├── Formal_Docs/         # Reports, supervisor updates, thesis chapters
 ├── images/              # Lab photos by process step (Pyrolysis, Raman, XRD,
 │                        #   Electrode_Calendering, Sample_Prep); see images/README.md
