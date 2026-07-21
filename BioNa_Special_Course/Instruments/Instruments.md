@@ -245,15 +245,33 @@ Third cycler, separate from the two Bio-Logic units below. All fields below are 
 DevType 27, device 79, unit 4, channel 6, test 151. **This means every Neware file already carries its own
 channel assignment**, unlike the cell logs.
 
-> ⚠️ **Model is the only missing field** — Neware stores the numeric DevType, not the marketing name.
-> The 5 V / ±100 mA channel with those four sub-ranges is characteristic of the BTS4000 / CT-4008 family,
-> but that is an **inference and must not be quoted** until the printed name is checked (João, 2026-07-21).
+**Chassis observations (2026-07-21, `images/Cycling/Neware_Rack_TwoCabinets.jpg`):**
+two rack cabinets, each holding a stack of pull-out **8-channel** drawer units with spring-clip coin-cell
+contacts. Front panels read 高性能电池检测系统 / **"Battery Testing System"**. Manufacturer sticker:
+**Neware Technology Limited, Shenzhen** (`www.neware.com.cn`).
+
+> ⚠️ **Model is the only missing field** — Neware stores the numeric DevType, not the marketing name,
+> and the sticker photographed is a **contact/address label, not a rating plate**.
+>
+> **Best inference (NOT to be quoted yet): CT-4008-5V100mA.** Evidence: 8 channels per drawer unit
+> (the `-4008` suffix denotes 8 channels), export reports 5 V / ±100 mA ranges, and the export's unit/channel
+> numbering (unit 4 ch 6–7, unit 5 ch 7–8) is consistent with 8-channel units. **Confirm before use.**
 >
 > **Mass basis used by this instrument** (from the export): nominal specific capacity **300 mAh/g**, and the
 > per-test "Active material" equals **(disk mass − 5.55 mg) × 0.91** exactly — confirmed to the microgram for
 > CC39 (19.156 mg) and CC40 (20.976 mg). See `Biona_Academy/Open_Questions.md` for the resulting C-rate offset.
 
-**Photo:** `images/Cycling/Neware_BTS_Software.jpg` (BTS Client step-plan screen).
+**Photos:** `images/Cycling/Neware_Rack_TwoCabinets.jpg` (the two cabinets),
+`images/Cycling/Neware_ManufacturerSticker.jpg` (Neware Shenzhen contact label — no model),
+`images/Cycling/Neware_BTS_Software.jpg` (BTS Client step-plan screen).
+
+**Where the model should be found** (still to check):
+1. **Rear of each drawer unit / rear of the cabinet** — the rating plate (model, S/N, voltage, power) is
+   normally there, not on the front or the contact sticker.
+2. **Left end of a drawer's front panel**, next to the channel-number display.
+3. **BTS Client** → device tree → right-click the device or unit → *Device info* / *Properties*.
+4. The **white QR asset labels** at the top of each cabinet (DTU inventory tags) — the asset record will
+   name the instrument even if the tag itself does not.
 
 ---
 

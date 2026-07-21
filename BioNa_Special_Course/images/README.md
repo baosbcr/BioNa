@@ -35,6 +35,9 @@ Coin-cell cycling hardware and software (see `Instruments/Instruments.md`).
 - `ECLab_V11.62_DeviceList.jpg` — EC-Lab V11.62 Devices pane showing both Bio-Logic units connected
   (`MPG-2-USB-124`, `VMP3-USB-509`).
 - `Neware_BTS_Software.jpg` — Neware BTS Client step-plan screen (server 8.0.1.437 / client 8.0.1.492).
+- `Neware_Rack_TwoCabinets.jpg` — the two Neware cabinets; stacked 8-channel drawer units with
+  spring-clip coin-cell contacts.
+- `Neware_ManufacturerSticker.jpg` — Neware Technology Limited (Shenzhen) contact label. **No model number.**
 
 ## Sample_Prep/
 Powder handling, weighing, slurry materials, drying, storage.
