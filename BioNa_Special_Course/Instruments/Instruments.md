@@ -148,15 +148,31 @@
 
 ---
 
-## XRD
+## XRD — Malvern Panalytical **Aeris** (benchtop)
 
 | Parameter | Value |
 |---|---|
-| Model | Malvern Panalytical **Aeris** (benchtop) |
-| Specs | TBD (exact configuration / source to be supplied by João) |
-| Used for | Crystallographic characterisation of hard carbon |
+| Model | Malvern Panalytical **Aeris** benchtop diffractometer |
+| X-ray tube | **Cu** (copper) |
+| Tube settings | **45 kV, 15 mA** |
+| Radiation | Cu Kα₁ = **1.5406 Å**, Cu Kα₂ = **1.5444 Å** |
+| Scan range | **2θ = 5–95°** |
+| Step size | **0.01°** |
+| Used for | Crystallographic characterisation of hard carbon (interlayer spacing d₀₀₂, stack height Lc) |
+
+**Standard method statement** (for reports/thesis):
+
+> X-ray diffraction (XRD) analysis was performed using an Aeris PANalytical benchtop diffractometer
+> equipped with a copper X-ray tube operated at 45 kV and 15 mA (Cu Kα₁ = 1.5406 Å and Cu Kα₂ = 1.5444 Å).
+> Diffraction patterns were recorded over a 2θ range of 5–95° with a step size of 0.01°.
 
 > Some XRD/Raman data supplied by supervisor (see `CLAUDE.md` note on MMB1_12A_2Crm).
+>
+> **Not yet recorded:** counting time per step (or total scan duration), sample-stage type
+> (spinner/zero-background holder), any divergence/anti-scatter slit settings, and whether Kα₂ was
+> stripped during processing. The **Kα₁/Kα₂ doublet matters for hard carbon** — the 002 band is broad and
+> the doublet is unresolved, so d₀₀₂ from a Bragg fit shifts depending on whether the weighted average
+> (1.5418 Å) or Kα₁ alone (1.5406 Å) is used. **State which wavelength was used** when reporting d₀₀₂.
 
 ---
 
@@ -200,6 +216,44 @@
 |---|---|
 | Model | TBD |
 | Used for | Sealing (crimping) coin cells after stacking |
+
+---
+
+## Battery Cycler — **Neware BTS** *(model name pending)*
+
+Third cycler, separate from the two Bio-Logic units below. All fields below are **read directly from the
+`.ndax` export metadata** (`TestInfo0.xml`, `VersionInfo.xml`) — they are not inferred.
+
+| Parameter | Value |
+|---|---|
+| Manufacturer | **Neware** (`NEWARE BtsSvr(R3)`) |
+| Model | **TBD** — not stored in the export; read it off the chassis plate or BTS Client → right-click device → *Device info* |
+| Device type code | **DevType 27** |
+| Device ID | **79** |
+| Units / channels used | unit 4 (ch 6, 7); unit 5 (ch 7, 8) |
+| Voltage range | **5 V** |
+| Current range | **±100 mA**, 4 sub-ranges: **0.1 / 1 / 10 / 100 mA** |
+| Aux channels | 0 |
+| Main tester firmware | `M04310700_250417_135925_FD4A6` |
+| Controller version | `4S_8.0.26.0_20250923_112830_00` |
+| Hardware production date | 2025-06-05 |
+| Server software | `BTSServer(R3)-8.0.1.437 (2025.01.23)` |
+| Client software | `BTS Client 8.0.1.492 (2025.01.23)` |
+| Used for | Galvanostatic cycling of Na half-cells (CC39, CC40 confirmed) |
+
+**Export filename format:** `<DevType><DevID>-<unit>-<channel>-<testID>` — e.g. `270079-4-6-151` =
+DevType 27, device 79, unit 4, channel 6, test 151. **This means every Neware file already carries its own
+channel assignment**, unlike the cell logs.
+
+> ⚠️ **Model is the only missing field** — Neware stores the numeric DevType, not the marketing name.
+> The 5 V / ±100 mA channel with those four sub-ranges is characteristic of the BTS4000 / CT-4008 family,
+> but that is an **inference and must not be quoted** until the printed name is checked (João, 2026-07-21).
+>
+> **Mass basis used by this instrument** (from the export): nominal specific capacity **300 mAh/g**, and the
+> per-test "Active material" equals **(disk mass − 5.55 mg) × 0.91** exactly — confirmed to the microgram for
+> CC39 (19.156 mg) and CC40 (20.976 mg). See `Biona_Academy/Open_Questions.md` for the resulting C-rate offset.
+
+**Photo:** `images/Cycling/Neware_BTS_Software.jpg` (BTS Client step-plan screen).
 
 ---
 

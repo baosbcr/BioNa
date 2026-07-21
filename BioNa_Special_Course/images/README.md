@@ -32,8 +32,9 @@ Coating and calendering (see `Processes/Calendering_Notes.md`).
 Coin-cell cycling hardware and software (see `Instruments/Instruments.md`).
 - `Biologic_VMP3_sn0509_Label.jpg` — Bio-Logic VMP3 rating plate (s/n 0509, 110–240 Vac, 600 W).
 - `Biologic_MPG2_sn0124_Label.jpg` — Bio-Logic MPG-2 rating plate (s/n 0124, 110–240 Vac, 600 W).
-- `ECLab_V11.62_DeviceList.jpg` — EC-Lab V11.62 Devices pane showing both units connected
+- `ECLab_V11.62_DeviceList.jpg` — EC-Lab V11.62 Devices pane showing both Bio-Logic units connected
   (`MPG-2-USB-124`, `VMP3-USB-509`).
+- `Neware_BTS_Software.jpg` — Neware BTS Client step-plan screen (server 8.0.1.437 / client 8.0.1.492).
 
 ## Sample_Prep/
 Powder handling, weighing, slurry materials, drying, storage.

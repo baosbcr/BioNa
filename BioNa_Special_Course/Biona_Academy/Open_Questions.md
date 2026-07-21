@@ -69,13 +69,16 @@ doc and remove it here.
 - ~~**Make/model of both cyclers**~~ — **DONE.** Both are **Bio-Logic SAS**, on one PC / one EC-Lab
   session: **VMP3 (s/n 0509)** and **MPG-2 (s/n 0124)**, software **EC-Lab V11.62**. Full specs in
   `Instruments/Instruments.md`; photos in `images/Cycling/`.
-- ⚠️ **The "Kuwara"/"Kuwahara" name does not match either unit.** Either it was a mishearing of MPG-2,
-  or there is a **third instrument** not on this PC. **Confirm** — it changes whether the dataset spans
-  two or three cyclers.
-- ⚠️ **TODO (new, and it affects existing data):** record **which instrument and channel each cell ran
-  on**. CC19–CC41 are all logged without this. VMP3 and MPG-2 are different hardware, so an
-  instrument-dependent artefact would currently be undetectable. Assign retrospectively if the EC-Lab
-  data files still carry it (the device ID is stored in the raw `.mpr`/`.mpt` headers).
+- ✅ **Resolved: there are THREE cyclers, not two.** Alongside the two Bio-Logic units there is a
+  **Neware BTS** system (DevType 27, device 79, 5 V / ±100 mA channels) on its own PC — this is what the
+  "Kuwara"/"Kuwahara" note was pointing at. Identifiers in `Instruments/Instruments.md`.
+- **TODO:** the Neware **model name** is not stored in the export (Neware writes a numeric DevType).
+  João to read it off the chassis plate / BTS Client → *Device info* (2026-07-21).
+- ⚠️ **TODO (affects existing data): record which instrument + channel each cell ran on.** CC19–CC41
+  carry no assignment, and the dataset now spans **three** cyclers. Recoverable from the raw files:
+  EC-Lab filenames carry the channel (`..._C01`, `_C02`, …) and Neware filenames encode
+  `<DevType><DevID>-<unit>-<channel>-<testID>` (e.g. `270079-4-6-151` → device 79, unit 4, ch 6).
+  Known so far: **CC39, CC40 → Neware** (unit 4, ch 6/7).
 - **TODO (still open):** the specific programs/protocols run on each (e.g. **OCV**, **PEIS**,
   **GCPL**/GSCD-type galvanostatic cycling) and their settings (voltage windows, rates, rest times).
   Document in a new `Processes/` doc, analogous to `RamanSesh.md`.
