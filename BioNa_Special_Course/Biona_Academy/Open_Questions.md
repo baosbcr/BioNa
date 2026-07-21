@@ -5,6 +5,42 @@ doc and remove it here.
 
 ---
 
+## ⏭️ NEXT UP: electrochemical data analysis — **use Claude Fable + `/unillm-deep`**
+
+**Do the actual cycling-data analysis with the Claude Fable model and the `/unillm-deep` skill**
+(high-redundancy offload). The dataset is far too large to pull through a normal session — it is
+**~2.3 GB** of raw instrument exports.
+
+### Where the data is (2026-07-21)
+
+Staged locally in `ToProcessWClaude/` — **git-ignored**, nothing from it is committed:
+
+| Folder | Size | Contents |
+|---|---|---|
+| `BNa_Joao_2026/` | 2.1 GB | Bio-Logic EC-Lab: 153 `.mpr`, 16 `.mps` (protocols, plain text), 101 `.txt` exports (up to 125 MB each) — **CC19–CC33** |
+| `BNa_Joao_Neware/` + `BioNa Jaoa/Missing_Newara_Ongoing/` | 160 MB | Neware: 22 `.ndax` + `.xlsx` — **CC34–CC47** |
+| `BioNa Jaoa/` | 77 MB | **TGA/DSC** (NETZSCH `.ngb-dsv` + `ExpDat_*.csv`): MMB1Ag air & N2, MMB2Am air, NS.51B — *a data type not yet covered anywhere in this repo* |
+
+**Transfer plan:** move to the other machine (bpc) over wifi (`NSK-Guest`) rather than through git.
+
+### Do these first — they block or corrupt the analysis
+
+1. **Identify CC42–CC47.** Six cells on the Neware (device 79, unit 5, ch 1–6) with **no disk log**:
+   no sample, no disk mass, no assembly date → no specific capacity possible.
+   See `Processes/Cell_Instrument_Channel_Map.md`.
+2. **Resolve the CC31/CC32 C15 conflict** — CC31 has full duplicate sets on C13 *and* C15 while CC32 is
+   on C15. Both are 6A, so a swap would be invisible in the results.
+3. **Do not mix up the two CC37/CC38.** June files by `patbin` (6.779 mg active) are different cells
+   from João's `BNa_CC37J`/`CC38J`. Match on the `J` suffix.
+4. **Normalise on measured mass, not the cycler's.** The cycler used a flat
+   **(disk − 5.55 mg) × 0.91** with **300 mAh/g** nominal — confirmed exactly from the Neware export.
+   Recompute mAh/g from the measured hard-carbon masses in `Processes/Electrode_Prep_Logs/`
+   (tare **5.5255 mg**, per-sample f). For 3C cells the nominal C-rate is **~2.4% low**.
+
+---
+
+---
+
 ## Thickness measurement / micrometer
 
 - **Substrate baseline:** the carbon-coated Al foil (current collector) is **~0.016–0.017 mm**
@@ -79,7 +115,8 @@ doc and remove it here.
   carry no assignment, and the dataset now spans **three** cyclers. Recoverable from the raw files:
   EC-Lab filenames carry the channel (`..._C01`, `_C02`, …) and Neware filenames encode
   `<DevType><DevID>-<unit>-<channel>-<testID>` (e.g. `270079-4-6-151` → device 79, unit 4, ch 6).
-  Known so far: **CC39, CC40 → Neware** (unit 4, ch 6/7).
+  ✅ **DONE 2026-07-21** — full map in `Processes/Cell_Instrument_Channel_Map.md`:
+  **CC19–CC26 → VMP3**, **CC27–CC33 → MPG-2**, **CC34–CC47 → Neware BTS85** (device 79).
 - **TODO (still open):** the specific programs/protocols run on each (e.g. **OCV**, **PEIS**,
   **GCPL**/GSCD-type galvanostatic cycling) and their settings (voltage windows, rates, rest times).
   Document in a new `Processes/` doc, analogous to `RamanSesh.md`.
