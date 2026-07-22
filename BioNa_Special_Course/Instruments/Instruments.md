@@ -176,6 +176,59 @@
 
 ---
 
+## Thermal Analyser (TGA/DTA) — **NETZSCH STA 409 PC/PG**
+
+Simultaneous thermal analysis (STA) unit. All fields below are read directly from the export headers
+in `Experimental_Data/TGA_DSC/` (`ExpDat_*.csv`, `ExpAll_*.txt`) — **not** yet confirmed against the
+instrument itself.
+
+| Parameter | Value |
+|---|---|
+| Model | **NETZSCH STA 409 PC/PG** (simultaneous TG + DTA) |
+| Signal type | `MTYPE: DTA` — the files carry **TG (Mass/%) + DTA (µV/mg)**, *not* true DSC/heat-flow |
+| Crucible | DTA/TG crucible, **Al₂O₃** (~1436–1457 mg) |
+| Reference | Empty Al₂O₃ crucible (`REFERENCE MASS = 0 mg`) |
+| TG range | 30000 mg |
+| Temperature programme | 30 °C → **900 °C at 5 K/min**, then **60 min hold at 900 °C** (2 segments) |
+| Purge gas / flow | **50 mL/min** — "gas 1" = **air**, "gas 2" = **N₂** (inferred from filename suffix) |
+| Sample mass | 6.0–8.7 mg (per run, see table) |
+| Baseline correction | `CORR. CODE 020`, baseline files `NS_TG45_baseline_900air.ngb-bsv` / `NS_TG46_baseline_900N2.ngb-bsv` |
+| Calibration files | `TCALZERO.TCX` (temperature), `SENSZERO.EXX` (sensitivity) |
+| Laboratory | "TA" |
+| Operator | **Nihat Ege Sahin** (all four runs) |
+| NETZSCH project no. | 117134 |
+| Used for | Thermal stability / ash + fixed-carbon content of biochar precursors and hard carbons |
+
+**Runs on file** (`Experimental_Data/TGA_DSC/`):
+
+| Identity | Date (2026) | Atmos. | Sample mass /mg | Final Mass/% (end of hold) |
+|---|---|---|---|---|
+| `BNa-MMB1Ag_Air` | 16 Jul 09:58 | air | 8.27 | 9.67 |
+| `BNa-MMB1Ag_N2` | 21 Jul 10:50 | N₂ | 6.02 | 70.30 |
+| `BNa-MMB2Am_Air` | 16 Jul 21:24 | air | 8.71 | 5.88 |
+| `NS.51B_MMB2A-13-1Cww` | 17 Jul 09:50 | air | 7.24 | 2.87 |
+
+File set per run: `.ngb-dsv` (raw), `ExpDat_*.csv` (semicolon, **comma decimal**), `ExpAll_*.txt`
+(semicolon, **point decimal**), `.emf` / `.tif` plots (`_ns` / `_nss` variants = re-plots, authoritative
+one unconfirmed). No `.ngb-dsv` is present for `NS.51B_MMB2A-13-1Cww` — CSV/TXT only.
+
+> ⚠️ **Sample codes do not follow `Samples/Sample_Nomenclature.md`.** `MMB1Ag`, `MMB2Am`,
+> `NS.51B_MMB2A-13-1Cww` are unmapped — the data cannot be attributed to a pyrolysis condition until
+> the supervisor confirms the mapping. See `Formal_Docs/Supervisor_Question_TGA_Nomenclature.md`.
+>
+> ⚠️ **Air vs N₂ is inferred from the filename**, not stated in the header (which only says "gas 1" /
+> "gas 2"). The baseline filenames (`_900air`, `_900N2`) support it but it is not a direct record.
+>
+> ⚠️ **Temperature/time inconsistency, unresolved:** the CSV exports are downsampled to 1 point/min
+> (268 rows) and the last row reads **~820 °C at t = 233 min**, whereas the programmed 30→900 °C at
+> 5 K/min plus a 60 min hold should put the sample at 900 °C. Check against the raw `.ngb-dsv` before
+> quoting any onset/residue temperature.
+>
+> "DSC" in the folder name `TGA_DSC/` is **a misnomer** — the STA 409 PC/PG on this configuration
+> records DTA. Do not report these as DSC heat-flow curves.
+
+---
+
 ## Pyrolysis Furnace
 
 | Parameter | Value |
