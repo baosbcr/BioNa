@@ -208,8 +208,12 @@ contact, not a slow cell. **CC31 has no recoverable data.**
 
 **The EIS shows it failed before cycling ever started.** `01_PEIS` on C13 aborted after **21 points** and
 returns **negative Re(Z) across the whole range** (−0.8 to −1.5 Ω) — not a cell; `03_PEIS` gives Z ≈ 0.
-The C15 sweep managed **9 points**. So CC31 was never a working cell at assembly, which independently
-confirms the §5.2 reading that the C15 files are template stubs rather than misfiled data.
+So CC31 was never a working cell at assembly.
+
+> **Do not cite the `..._C15` files as evidence about CC31.** They are the aborted misnamed run that
+> is really CC32 (§5.2), now moved to `_ABORTED_misnamed_is_CC32/`. Their 70-point `01_PEIS` says
+> nothing about CC31 — CC31's own failure is established from **C13 alone**, which is why the
+> conclusion above is unchanged by the §5.2 correction.
 
 Consequence: **the 6A (600 °C) condition now rests on CC32 alone, with no replicate.**
 
@@ -268,7 +272,7 @@ Each PEIS holds **3 repeat sweeps** (`cycle number` 1–3); use the last. Stages
 
 > ⚠️ **Check `fmin` and point count before comparing spectra.** Several sweeps aborted partway and stop at
 > high frequency — CC27 `01` (21 pts, stops at 2156 Hz), CC27 `03` (33 pts, 215 Hz), CC31 `01` on C13
-> (21 pts) and C15 (9 pts). Their "low-frequency" values are nothing of the kind, and comparing them
+> (21 pts). Their "low-frequency" values are nothing of the kind, and comparing them
 > against complete 1 Hz sweeps produces garbage. Only spectra reaching ≤2 Hz are used in §3.
 
 > **`09_PEIS` is EMPTY (0 points) for CC27, CC28, CC29, CC31 and CC33** — those runs had not finished
@@ -278,7 +282,7 @@ Each PEIS holds **3 repeat sweeps** (`cycle number` 1–3); use the last. Stages
 cells (CC22 −5.7, CC23 −7.0, CC24 −30.4, CC25 −4.0 Ω), which is unphysical and indicates a cable/inductive
 artifact at 100 kHz. Series resistance needs a proper equivalent-circuit fit, not the raw intercept.
 
-### 5.2 CC31 / CC32 channel conflict — RESOLVED ✅
+### 5.2 CC31 / CC32 channel conflict — RESOLVED ✅ — *mechanism identified 2026-07-22*
 
 `Cell_Instrument_Channel_Map.md` flagged CC31 as carrying a duplicate technique set on **C13 and C15**,
 colliding with CC32 on C15. Resolved on three independent lines:
@@ -290,6 +294,56 @@ colliding with CC32 on C15. Resolved on three independent lines:
 3. The CC31-on-C15 files are empty stubs; the real C15 data belongs to CC32 (started 16:40:31).
 
 **Conclusion: CC31 = C13 (dead), CC32 = C15 (valid). No data is mislabelled.** Blocker closed.
+
+#### What actually happened — operator catch, not a passive artifact
+
+The 2026-07-21 pass called this a "template artifact" and closed it. The conclusion was right but
+the mechanism was missed. João recalled starting a cell without updating the filename and
+correcting it within minutes; that memory is **confirmed here**, and it is *not* the CC27 event
+(§4.1) it had been attached to.
+
+The decisive evidence is the **`.mpr` internal name field**, which EC-Lab writes independently of
+the filename:
+
+| Time | Ch | Filename | **Internal name** | Event |
+|---|---|---|---|---|
+| 16:37:17 | C15 | `CC31J` | **`CC32J`** ⚠️ | CC32 started with the filename still inherited from the template. Aborted after 70 PEIS points. |
+| 16:39:31 | C16 | `CC33J` | `CC33J` | CC33 launched (loads CC31's `.mps`) |
+| 16:40:31 | C15 | `CC32J` | `CC32J` | CC32 relaunched correctly. **This is the real CC32.** |
+| 16:40:54 | C13 | `CC31J` | `CC31J` | The real CC31 launched. Dies on its own — see §4.2. |
+
+Elapsed 16:37:17 → 16:40:54 = **3.6 min**, matching the remembered "~15 min" far better than the
+31 h CC27 gap does. **No completed data was overwritten** — the stray filename came from the
+template `.mps`, and CC31 had not been run yet at 16:37, so there was no finished cell to clobber.
+
+Note the two events left *opposite* traces, which is why they were conflated: CC27 is loudly
+tagged `_restart` but its cause is unknown; this one carries **no tag at all** (correctly — CC32
+had never run, so 16:40:31 was its first proper run) yet is fully reconstructable.
+`_restart` appears on **exactly one cell in the whole dataset: CC27**.
+
+#### Action taken
+
+The nine misnamed stub files were moved to
+`Experimental_Data/Cycling/BioLogic_CC19-CC33/_ABORTED_misnamed_is_CC32/` (with a README).
+They were a live trap: any parser globbing `CC31*` picks them up alongside the real CC31 on C13.
+The real CC31 (`_C13`) and `BNa_CC31J_20260716.mps` are untouched in the parent directory.
+
+#### Reusable integrity check
+
+Filename vs internal name catches misfiled runs that timestamps alone cannot:
+
+```python
+import re
+d = open(f, 'rb').read()[:1200]
+[m.group().decode() for m in re.finditer(rb'[ -~]{8,}', d) if b'BNa' in m.group()]
+```
+
+Run across all 17 Bio-Logic GCPL files, **`CC31J/C15` was the only mismatch** — every other cell's
+internal name matches its filename, and CC22–CC27 start times are strictly monotonic in cell order
+(14:30:11 → 15:16:53), so that range is clean. Worth re-running after any future batch.
+
+> ⚠️ Filesystem mtimes in `Experimental_Data/` are **worthless** for forensics — they were rewritten
+> by the 2026-07-21 reorg (most GCPL files read `Jul 21 12:16`). Use `galvani`'s `MPRfile.timestamp`.
 
 ### 5.3 Bio-Logic settings files chain from cell to cell
 
