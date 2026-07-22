@@ -26,3 +26,17 @@ __MACOSX/
 # Python cruft only:
 __pycache__/
 *.pyc
+
+# --- LaTeX build artifacts (Formal_Docs/) ---
+# .tex sources ARE tracked; the compiled PDF and latexmk cruft are not.
+# Rebuild: see Formal_Docs/Preliminary_Presentation/README.md
+Formal_Docs/**/*.pdf
+Formal_Docs/**/*.aux
+Formal_Docs/**/*.log
+Formal_Docs/**/*.nav
+Formal_Docs/**/*.out
+Formal_Docs/**/*.snm
+Formal_Docs/**/*.toc
+Formal_Docs/**/*.fls
+Formal_Docs/**/*.fdb_latexmk
+Formal_Docs/**/*.synctex.gz

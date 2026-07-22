@@ -1,0 +1,41 @@
+\documentclass[aspectratio=169,hyperref={pdfpagelabels=false}]{beamer}
+\input{preamble.tex}
+
+% ── Speaker notes ─────────────────────────────────────────────────────────────
+% Compile silently by default. To display on a second screen:
+%   1. Uncomment the two lines below
+%   2. Re-compile
+% \usepackage{pgfpages}
+% \setbeameroption{show notes on second screen=right}
+% ──────────────────────────────────────────────────────────────────────────────
+
+\title[Hard carbon anodes for Na-ion: first cycling]{Hard Carbon Anodes for Na-ion Batteries}
+\subtitle[BioNa Special Course]{Preliminary cycling results --- BioNa Special Course}
+\author{Jo\~ao C\^orte-Real}
+\date{\today}
+\setdepartment{DTU Energy}
+\setcolor{dtured}
+
+% Font overrides (preamble.tex sets title to 33pt — override for long titles)
+\setbeamerfont{title}{size=\LARGE, series=\bfseries}
+\setbeamerfont{caption}{size=\scriptsize}
+\setbeamerfont{caption name}{size=\scriptsize, series=\bfseries}
+
+% Additional packages not loaded by preamble.tex
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{etoolbox}
+\AtBeginEnvironment{itemize}{%
+  \small%
+  \setlength{\itemsep}{2pt}%
+  \setlength{\parsep}{0pt}%
+}
+
+% ──────────────────────────────────────────────────────────────────────────────
+\begin{document}
+
+\inserttitlepage   % creates two frames: DTU logo splash, then title slide
+
+\input{body.tex}
+
+\end{document}
